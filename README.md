@@ -1,2 +1,2 @@
 # aaronmok.github.io
-The published website
+The published personal website
