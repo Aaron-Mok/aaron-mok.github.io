@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on </title>
+    <link>http://localhost:8474/projects/</link>
+    <description>Recent content in Projects on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:8474/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Presentation award: Deep and wide three-photon imaging</title>
+      <link>http://localhost:8474/projects/presentation_winner/</link>
+      <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8474/projects/presentation_winner/</guid>
+      <description>&lt;p&gt;Presentation of Better penetration at longer wavelength.&#xA;Winner of the Frontiers in Neurophotonics Highlights video contest.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interview with Optica</title>
+      <link>http://localhost:8474/projects/optica_interview/</link>
+      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8474/projects/optica_interview/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m excited to share my interview with Optica at CLEO! It was a great opportunity to present in the post-deadline section and discuss my work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A large field-of-view, single-cell-resolution two- and three-photon microscope for deep and wide imaging</title>
+      <link>http://localhost:8474/projects/lfov_paper/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8474/projects/lfov_paper/</guid>
+      <description>&lt;p&gt;It is featured in MIT Technology Review. &lt;a href=&#34;https://www.mittrchina.com/news/detail/14097&#34;&gt;The Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;We have improved the fluorescence signal generation efficiency of three-photon microscopy, achieving an imaging field two order of magnitudes larger than traditional three-photon microscopes in deep brain regions with cellular resolution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Multiphoton imaging of neural structure and activity in Drosophila through the intact cuticle</title>
+      <link>http://localhost:8474/projects/fruitefly/</link>
+      <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8474/projects/fruitefly/</guid>
+      <description>&lt;p&gt;&amp;ldquo;This study reports a way to record neural structures and activity in behaving Drosophila for up to 12 hours, without removing the cuticle. This opens the way to longer and more intact recordings, including post-imaging recovery of the flies.&amp;rdquo; eLife editor&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Spatially resolved measurements of ballistic and total transmission in microscale tissue samples from 450 nm to 1624 nm</title>
+      <link>http://localhost:8474/projects/tissuespec/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:8474/projects/tissuespec/</guid>
+      <description>&lt;p&gt;We built a simple and versatile spectrometer to measure tissue ballistic and total transmission with customizable wavelength range, spatial resolution, and sample sizes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
