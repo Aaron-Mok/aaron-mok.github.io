@@ -2,128 +2,128 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:8474/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-12-24T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:8474/es/"
+                href="http://localhost:1313/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:8474/fr/"
+                href="http://localhost:1313/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:8474/"
+                href="http://localhost:1313/"
                 />
   </url><url>
-    <loc>http://localhost:8474/projects/presentation_winner/</loc>
+    <loc>http://localhost:1313/projects/presentation_winner/</loc>
     <lastmod>2024-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-12-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/projects/optica_interview/</loc>
+    <loc>http://localhost:1313/projects/optica_interview/</loc>
     <lastmod>2024-12-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/projects/lfov_paper/</loc>
+    <loc>http://localhost:1313/projects/lfov_paper/</loc>
     <lastmod>2024-12-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/projects/fruitefly/</loc>
+    <loc>http://localhost:1313/projects/fruitefly/</loc>
     <lastmod>2024-12-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/projects/tissuespec/</loc>
+    <loc>http://localhost:1313/projects/tissuespec/</loc>
     <lastmod>2024-12-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/testimonial/graziella-nutella/</loc>
+    <loc>http://localhost:1313/testimonial/graziella-nutella/</loc>
     <lastmod>2024-11-25T21:53:18+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/testimonial/</loc>
+    <loc>http://localhost:1313/testimonial/</loc>
     <lastmod>2024-11-25T21:53:18+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/testimonial/dana-oneal-copy/</loc>
+    <loc>http://localhost:1313/testimonial/dana-oneal-copy/</loc>
     <lastmod>2024-11-25T21:50:45+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/testimonial/dana-oneal/</loc>
+    <loc>http://localhost:1313/testimonial/dana-oneal/</loc>
     <lastmod>2024-11-25T21:50:45+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/testimonial/ferdinand-shermand/</loc>
+    <loc>http://localhost:1313/testimonial/ferdinand-shermand/</loc>
     <lastmod>2024-11-25T21:30:46+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/blog/</loc>
+    <loc>http://localhost:1313/blog/</loc>
     <lastmod>2024-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/blog/deepscope/</loc>
+    <loc>http://localhost:1313/blog/deepscope/</loc>
     <lastmod>2024-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/client-work/</loc>
+    <loc>http://localhost:1313/client-work/</loc>
     <lastmod>2024-08-25T10:23:39+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/client-work/ztos/</loc>
+    <loc>http://localhost:1313/client-work/ztos/</loc>
     <lastmod>2024-08-25T10:23:39+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/client-work/zoo/</loc>
+    <loc>http://localhost:1313/client-work/zoo/</loc>
     <lastmod>2024-08-25T10:23:08+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/client-work/kanba/</loc>
+    <loc>http://localhost:1313/client-work/kanba/</loc>
     <lastmod>2024-08-25T10:22:34+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/client-work/goldline/</loc>
+    <loc>http://localhost:1313/client-work/goldline/</loc>
     <lastmod>2024-08-25T10:21:48+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/client-work/earth2.0/</loc>
+    <loc>http://localhost:1313/client-work/earth2.0/</loc>
     <lastmod>2024-08-25T10:17:12+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/client-work/asgardia/</loc>
+    <loc>http://localhost:1313/client-work/asgardia/</loc>
     <lastmod>2024-08-25T09:53:42+02:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/experience/</loc>
+    <loc>http://localhost:1313/experience/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/experience/senior_optical_system_architect/</loc>
+    <loc>http://localhost:1313/experience/senior_optical_system_architect/</loc>
     <lastmod>2022-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/experience/phd_student/</loc>
+    <loc>http://localhost:1313/experience/phd_student/</loc>
     <lastmod>2017-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/experience/mphil_student/</loc>
+    <loc>http://localhost:1313/experience/mphil_student/</loc>
     <lastmod>2015-12-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:8474/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:8474/es/categories/"
+                href="http://localhost:1313/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:8474/fr/categories/"
+                href="http://localhost:1313/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:8474/categories/"
+                href="http://localhost:1313/categories/"
                 />
   </url><url>
-    <loc>http://localhost:8474/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://localhost:8474/es/tags/"
+                href="http://localhost:1313/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://localhost:8474/fr/tags/"
+                href="http://localhost:1313/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:8474/tags/"
+                href="http://localhost:1313/tags/"
                 />
   </url>
 </urlset>
