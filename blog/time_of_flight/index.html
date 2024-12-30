@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<meta name="theme-color" content="#478079"/>
+
+<title>Aaron Mok | System Architect</title>
+<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect based in San Jose, CA, specializing in the design and optimization of complex optical systems.'>
+<meta name="generator-mode" content='production'>
+<style data-generator="critical-css">
+</style>
+  <link rel="stylesheet" href="https://aaron-mok.github.io/scss/adritian.min.c43980c726e1de153bec9c6b98a1e28b34cd282522a8f596ab3bb88d4b55c066.css" integrity="sha256-xDmAxybh3hU77JxrmKHiizTNKCUiqPWWqzu4jUtVwGY=" crossorigin="anonymous"/>
+
+<link
+  rel="preload"
+  href="/css/bundle.min.c8e582b6a12b2e4d72118a9255728afec248b4fa315913f7dc784894b498c4a7.css"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+  integrity="sha256-yOWCtqErLk1yEYqSVXKK/sJItPoxWRP33HhIlLSYxKc="
+    crossorigin="anonymous"
+/>
+<noscript>
+  <link 
+    rel="stylesheet"
+    href="/css/bundle.min.c8e582b6a12b2e4d72118a9255728afec248b4fa315913f7dc784894b498c4a7.css"
+    integrity="sha256-yOWCtqErLk1yEYqSVXKK/sJItPoxWRP33HhIlLSYxKc="
+    crossorigin="anonymous"
+  />
+</noscript>
+
+<script src='https://aaron-mok.github.io/js/library/lozad.min.js'></script>
+
+<meta property="og:url" content="https://aaron-mok.github.io/blog/time_of_flight/">
+  <meta property="og:site_name" content="Aaron Mok personal website">
+  <meta property="og:title" content="Optical Time-of-Flight (ToF) sensing and lock-in detection">
+  <meta property="og:description" content="Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical Time-of-flight. I will introduce two concepts: (a) The Time-of-Flight Principle and (b) lock-in detection/amplification to explain how optical time-of-flight works.
+The simplest model of Time-of-Flight (ToF) In a nutshell, optical time-of-flight (ToF) is a technique to measure distance from A to B. So, here is how it works.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-12-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-28T00:00:00+00:00">
+    <meta property="og:image" content="https://aaron-mok.github.io/img/og-img.png">
+ 
+
+    
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+    
+  </head>
+
+  <body>
+    
+
+<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-auto" href="https://aaron-mok.github.io/">
+          <span>Aaron</span>
+          <span>Mok</span>
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="https://aaron-mok.github.io/">HOME</a>
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#portfolio"
+                >PORTFOLIO</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/blog"
+                >BLOG</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#contact"
+                >CONTACT</a
+              >
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<section id="breadcrumb-bar" class="breadcrumb-bar container">
+        <ul class="breadcrumbs">
+            <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/blog">Blog</a></span></li><li class="breadcrum-item current">Optical Time-of-Flight (ToF) sensing and lock-in detection</li></ul>
+</section>
+
+
+    <section
+      id="blog-single"
+      class="section section--border-bottom rad-animation-group"
+    >
+      <div class="container">
+        <h1><a href="/blog/time_of_flight/">Optical Time-of-Flight (ToF) sensing and lock-in detection</a></h1>
+
+        <aside id="meta" class="light-border-bottom">
+          <div>
+            <section>
+              Published on
+              <h4 id="date">Sat Dec 28, 2024</h4>
+              ·
+              <h4 id="wordcount">775 Words</h4>
+            </section>
+             
+          </div>
+        </aside>
+
+        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+          <div class="col-12"><p><img src="/img/blog/ToF/time_of_flight.webp" alt="ToF art"></p>
+<p>Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical Time-of-flight. I will introduce two concepts: (a) The Time-of-Flight Principle and (b) lock-in detection/amplification to explain how optical time-of-flight works.</p>
+<h2 id="the-simplest-model-of-time-of-flight-tof">The simplest model of Time-of-Flight (ToF)</h2>
+<p>In a nutshell, optical time-of-flight (ToF) is a technique to measure distance from A to B.  So, here is how it works.</p>
+<figure class="center"><img src="/img/blog/ToF/simpleModel.png"
+    alt="simpleModel" width="auto">
+</figure>
+
+\[c = \frac{d}{t_{AB}}\]<p>where:</p>
+<ul>
+<li>\(c\) is the speed of light (\(\approx 3\times10^8 m/s\)),a constant.</li>
+<li>\(d\) is the distance from A to B.</li>
+<li>\(t_{AB}\) is the time needed for light to travel from A to B.</li>
+</ul>
+<p>Since c is a constant, if we know t, then we can calculate d.</p>
+<h2 id="the-simplest-model-is-not-practical">The simplest model is not practical</h2>
+<p>However, the above method will need a light source at point A and a detector at point B, and they need to be connected such that the detector knows when a light pulse get emitted from point A, mark at time 0, and when the pulse arrive at point B, mark as t. This makes no sense. Do I have to use a cable to connect the light source and detector? Do I need to place a sensor to every point I want the distance measured? How can I make tens, or hundreds, or thousands of measurements?</p>
+<p>ToF device usually has the light source and detector packaged together. If we want distance from A to B, put the device at point A, then measure the time needed for light to get reflected from point B back to point A.</p>
+<figure class="center"><img src="/img/blog/ToF/ToF_module.png"
+    alt="simpleModel" width="auto">
+</figure>
+
+\[c = \frac{2\cdot d}{t_{ABA}}\]<p>where:</p>
+<ul>
+<li>\(c\) is the speed of light (\(\approx 3\times10^8 m/s\)),a constant.</li>
+<li>\(d\) is still the distance from A to B, \(2\cdot d\) is distance from A to B, then back to A.</li>
+<li>\(t_{ABA}\) is the time needed for light to travel from A to B, then back to A.</li>
+</ul>
+<p>Now we ask&hellip;how can we measure the time needed for light to travel?</p>
+<h2 id="how-to-measure-optical-tof">How to measure optical ToF?</h2>
+<p>Let&rsquo;s say point B is at 10m, the time needed for light to travel round trip is \(~67\text{ ns}\)! If we send an optical pulse out from A, it will come back at (~67\text{ ns})! We are probably going to measure distance &lt;10m too, how are we suppose to detect that? (Well&hellip;fs laser and &gt;GHz photodetectors are avalaible, but they are not what we are looking into here.)</p>
+\[S(t) = A_1\cdot sin(2\pi ft)\]<p>where:</p>
+<ul>
+<li>\(S(t)\) is the amplitude modulated light source.</li>
+<li>\(f\) is the modulation frequency (a design choice).</li>
+<li>\(A_1\) is the amplitude.</li>
+<li>\(t\) is time, a independent variable.</li>
+</ul>
+<p>When this light \(S(t)\), emitted from point A, get reflected from point B and then get detected at A, it becomes:</p>
+\[D(t) = A_2\cdot sin(2\pi ft + \phi_{ABA})\]<p>where:</p>
+<ul>
+<li>\(D(t)\) is the detected light.</li>
+<li>\(A_2\) is the amplitude, usually much smaller than \(A_1\), depending on the reflectivity of point B.</li>
+<li>\(f\) is the modulation frequency, does not change.</li>
+<li>\(\phi_{ABA}\) is the phase shift of the detected light, from A to B, then back to A.</li>
+</ul>
+<p>Here, if we can measure \(\phi\), then can know the time needed for light to travel from A to B, then back to A, since,</p>
+\[\phi = 2\pi ft_{ABA}\]<p>We then apply lock-in detection to get \(\phi_{ABA}\).</p>
+<h2 id="lock-in-detection">Lock-in detection</h2>
+<p>A Lock-in amplifier will multiply \(D(t)\) to two reference signals, i.e.</p>
+\[R_1(t) = sin(2\pi ft)\]\[R_2(t) = cos(2\pi ft)\]<p>For the multiplication of \(R_1(t)\), it gives an in-phase component \(I\).</p>
+\[I = D(t)\cdot R_1(t) = A_2sin(2\pi ft + \phi_{ABA})\cdot sin(2\pi ft)\]<p>Using trigonometric identity, we can get,</p>
+\[I = \frac{A_2}{2}cos(\phi_{ABA}) - \frac{A_2}{2}cos(4\pi ft + \phi_{ABA})\]<p>A simple low pass filter to extract the DC term can give us:</p>
+\[I = \frac{A_2}{2}cos(\phi_{ABA})\]<p>Following the same treatment, the multiplication of \(R_2(t)\) gives an quadrature component \(Q\).
+After a low-pass filter to extract the DC term,</p>
+\[Q = \frac{A_2}{2}sin(\phi_{ABA})\]<p>We can now solve,</p>
+\[\phi = arctan\left(\frac{Q}{I}\right)\]<p>Hence, we can get \(t_{ABA}\).</p>
+<h2 id="lock-in-detection-in-action">Lock-in detection in action</h2>
+<p>Let&rsquo;s see how lock-in detection works in action. First, I define a light source with modulation frequency of 10MHz, and the distance I want to measure is exactly 1m. To demonstrate the power of lock-in detection, I also define the reflectivity of the object as 10% and added noise with a standard deviation of 0.1 to the detected signal (SNR \(\approx\)= 0.7).</p>
+<p>The detected light signal in this setting is shown below. Using the equation above, we can get the measured distance is 0.934 m. It is remarkable! With this SNR, we can get &lt;7% error in measurement. This is also why lock-in detection is also called locak-in amplification, since it is able to &ldquo;amplify&rdquo; a noisy signal. <a href="https://github.com/Aaron-Mok/blog_code/blob/main/ToF_and_lockin/ToF_and_lockin.py">View the code on GitHub</a></p>
+<figure class="center"><img src="/img/blog/ToF/Demo.png"
+    alt="simpleModel" width="auto">
+</figure>
+
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+</div>
+        </div>
+
+        <aside class="content-browser light-border-top">
+            Continue reading
+            <div>
+                
+                    <a class="previous" href="/blog/deepscope/">↩ The Dual Excitation with Adaptive Excitation Polygon-scanning Multiphoton Microscope (DEEPscope)</a>
+                
+                 ■ 
+                
+            </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <div class="footer__copy">
+        © Aaron Mok. All rights reserved.
+      </div>
+    </div>
+    <div class="footer__links">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link" href="https://aaron-mok.github.io/">🏠 HOME</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="footer__right">
+      
+    </div>
+  </div>
+</footer>
+ <script>
+  window.addEventListener("load", function() {
+    try{
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      }); 
+      observer.observe();
+    } catch(e) {
+      console.error(e);
+    }
+  });
+</script>
+<script defer src='https://aaron-mok.github.io/js/rad-animations.js'></script>
+<script defer src='https://aaron-mok.github.io/js/library/smooth-scroll.polyfills.min.js'></script>
+<script defer src='https://aaron-mok.github.io/js/sticky-header.js'></script>
+<script defer src='https://aaron-mok.github.io/js/smooth-scroll-init.js'></script>
+<script defer src='https://aaron-mok.github.io/js/library/bootstrap.min.js'></script>
+
+
+
+
+
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+
+
+
+  </body>
+</html>
+

@@ -6,8 +6,15 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aaron-mok.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optical Time-of-Flight (ToF) sensing and lock-in detection</title>
+      <link>https://aaron-mok.github.io/blog/time_of_flight/</link>
+      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://aaron-mok.github.io/blog/time_of_flight/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/ToF/time_of_flight.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical Time-of-flight. I will introduce two concepts: (a) The Time-of-Flight Principle and (b) lock-in detection/amplification to explain how optical time-of-flight works.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-simplest-model-of-time-of-flight-tof&#34;&gt;The simplest model of Time-of-Flight (ToF)&lt;/h2&gt;&#xA;&lt;p&gt;In a nutshell, optical time-of-flight (ToF) is a technique to measure distance from A to B.  So, here is how it works.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Presentation award: Deep and wide three-photon imaging</title>
       <link>https://aaron-mok.github.io/projects/presentation_winner/</link>
