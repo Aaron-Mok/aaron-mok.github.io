@@ -33,7 +33,7 @@
 
 
 
-
+<script defer src="https://aaron-mok.github.io/js/color-modes.min.9346508e1d09bdc23a70b36a4a1f2d9ebd05028a9dc2fc3c3bd6dab9e0899f83.js"></script>
 
 <script src='https://aaron-mok.github.io/js/library/lozad.min.js'></script>
 
@@ -162,6 +162,68 @@
           <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-2">
             
             
+            
+            <div id="footer-color-selector" class="nav-item dropdown dropup">
+              <button
+                class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center show"
+                id="bd-theme"
+                type="button"
+                aria-expanded="true"
+                data-bs-toggle="dropdown"
+                data-bs-display="static"
+                aria-label="Toggle theme (light)"
+              >
+                <span class="theme-icon auto d-none" aria-hidden="true"
+                  ></span
+                >
+                <span class="current-theme">✨ Auto</span>
+                <span class="d-lg-none ms-2 visually-hidden" id="bd-theme-text"
+                  >Toggle theme</span
+                >
+              </button>
+              <ul
+                class="dropdown-menu dropdown-menu-end dropup"
+                aria-labelledby="bd-theme-text"
+                data-bs-popper="static"
+              >
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center active"
+                    data-bs-theme-value="light"
+                    aria-pressed="true"
+                  >
+                    ☀️ Light
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="dark"
+                    aria-pressed="false"
+                  >
+                    🌑 Dark
+                    <span class="theme-icon dark d-none" aria-hidden="true"
+                      ></span
+                    >
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="dropdown-item d-flex align-items-center"
+                    data-bs-theme-value="auto"
+                    aria-pressed="false"
+                  >
+                    ✨ Auto
+                    <span class="theme-icon light d-none" aria-hidden="true"
+                      ></span
+                    >
+                  </button>
+                </li>
+              </ul>
+            </div>
             
           </div>
         </div>
