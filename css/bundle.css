@@ -1434,10 +1434,7 @@ body.home div.experience{
     font-weight: 500;
 }
 
-.center img {
-    margin: 0 auto;            /* Ensure the image itself is centered */
-    display: block;            /* Block-level element for centering */
-}
+
 
 article.post.summary h2{
     font-size: 24px
@@ -1608,7 +1605,33 @@ h2 {
   
 h3 {
     font-size: 24px !important;
-  }/* You can customize theme styles here */
+  }
+
+table {
+width: 100%;
+border-collapse: collapse;
+border: 1px solid black;
+}
+
+th, td {
+border: 1px solid black;
+padding: 8px;
+text-align: center;
+}
+
+th {
+background-color:black;
+}
+
+
+.center img {
+    margin: 0 auto;            /* Ensure the image itself is centered */
+    display: block;            /* Block-level element for centering */
+}
+
+.center figcaption {
+    text-align: center;
+}/* You can customize theme styles here */
 .header .navbar-brand span:first-child{
     color: #478079;
 }

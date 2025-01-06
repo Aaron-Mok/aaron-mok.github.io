@@ -7,6 +7,8 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 <meta name="theme-color" content="#478079"/>
 
+
+
 <title>Aaron Mok | System Architect</title>
 <meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect based in San Jose, CA, specializing in the design and optimization of complex optical systems.'>
 <meta name="generator-mode" content='production'>
@@ -16,33 +18,34 @@
 
 <link
   rel="preload"
-  href="/css/bundle.min.0cf54b771196e1bb82176007ba6db2ad6713f8c06d951d9088a22935d1990df4.css"
+  href="/css/bundle.min.06bb2cff0d258f0755e029d5a2b6b54b651d4cdb312da6c5d91d6b95f0110ea1.css"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  integrity="sha256-DPVLdxGW4buCF2AHum2yrWcT+MBtlR2QiKIpNdGZDfQ="
+  integrity="sha256-Brss/w0ljwdV4CnVora1S2UdTNsxLabF2R1rlfARDqE="
     crossorigin="anonymous"
 />
 <noscript>
   <link 
     rel="stylesheet"
-    href="/css/bundle.min.0cf54b771196e1bb82176007ba6db2ad6713f8c06d951d9088a22935d1990df4.css"
-    integrity="sha256-DPVLdxGW4buCF2AHum2yrWcT+MBtlR2QiKIpNdGZDfQ="
+    href="/css/bundle.min.06bb2cff0d258f0755e029d5a2b6b54b651d4cdb312da6c5d91d6b95f0110ea1.css"
+    integrity="sha256-Brss/w0ljwdV4CnVora1S2UdTNsxLabF2R1rlfARDqE="
     crossorigin="anonymous"
   />
 </noscript>
 
-<script src='https://aaron-mok.github.io/js/library/lozad.min.js'></script>
 
-<meta property="og:url" content="https://aaron-mok.github.io/blog/time_of_flight/">
-  <meta property="og:site_name" content="Aaron Mok personal website">
-  <meta property="og:title" content="Optical Time-of-Flight (ToF) sensing and lock-in detection">
-  <meta property="og:description" content="Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical time-of-flight. I will introduce two concepts: (a) The time-of-flight Principle and (b) lock-in detection/amplification to explain how it works.">
-  <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2024-12-28T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-12-28T00:00:00+00:00">
-    <meta property="og:image" content="https://aaron-mok.github.io/img/og-img.png">
+
+
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-32S011CNTY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-32S011CNTY');
+  </script>
  
 
     
@@ -143,7 +146,7 @@
               Published on
               <h4 id="date">Sat Dec 28, 2024</h4>
               ·
-              <h4 id="wordcount">1183 Words</h4>
+              <h4 id="wordcount">1166 Words</h4>
             </section>
              
           </div>
@@ -181,8 +184,8 @@
 </ul>
 <p>Now we ask&hellip;how can we measure the time needed for light to travel?</p>
 <h2 id="how-to-measure-optical-tof">How to measure optical ToF?</h2>
-<p>Let&rsquo;s say point B is at 10 m, the time needed for light to travel round trip is ~67 ns! If we send an optical pulse out from A, it will come back at ~67 ns! We are probably going to measure distance &lt;10 m too, how are we suppose to detect that ns of time difference? (Well&hellip;fs laser and &gt;GHz photodetectors are avalaible, but they are not what we are looking into here.)</p>
-<p>One way to detect this small change is by lock-in detection or amplification. We will use a light source that is amplitude modulated, i.e.</p>
+<p>Let&rsquo;s say point B is at 10 m, the time needed for light to travel round trip is ~67 ns! If we send an optical pulse out from A, it will come back at ~67 ns! We are probably going to measure distance &lt;10 m too, how are we suppose to detect that ns of time difference?</p>
+<p>A way to detect this small change is by lock-in detection or amplification. We will use a light source that is amplitude modulated, i.e.</p>
 \[S(t) = A_1\cdot sin(2\pi ft)\]<p>where:</p>
 <ul>
 <li>\(S(t)\) is the amplitude modulated light source.</li>
@@ -293,8 +296,9 @@ After a low-pass filter to extract the DC term,</p>
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Detected Amplitude: </span><span style="color:#e6db74">{</span>amplitude_detected<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Detected Phase: </span><span style="color:#e6db74">{</span>phase_detected<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> rad&#34;</span>)
 </span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Detected distance: </span><span style="color:#e6db74">{</span>distance_detected<span style="color:#e6db74">:</span><span style="color:#e6db74">.3f</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted --></div>
+</span></span></code></pre></div><!-- Interesting reading:
+https://www-science-org.ezp-prod1.hul.harvard.edu/doi/10.1126/science.abl3771
+https://www-science-org.ezp-prod1.hul.harvard.edu/doi/full/10.1126/sciadv.ade0123 --></div>
         </div>
 
         <aside class="content-browser light-border-top">
@@ -304,6 +308,8 @@ After a low-pass filter to extract the DC term,</p>
                     <a class="previous" href="/blog/deepscope/">↩ The Dual Excitation with Adaptive Excitation Polygon-scanning Multiphoton Microscope (DEEPscope)</a>
                 
                  ■ 
+                
+                    <a class="next" href="/blog/lidar/"> Light Detection and Ranging (LiDAR) (with Zemax simulation) ↪</a>
                 
             </div>
         </aside>
