@@ -6,12 +6,19 @@
     <description>Recent content in Blogs on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 02 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aaron-mok.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optics tooling and mounts</title>
+      <link>https://aaron-mok.github.io/blog/solidworks_showcase/</link>
+      <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://aaron-mok.github.io/blog/solidworks_showcase/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/Toolings/tooling_coverart.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog post showcases some optical tooling and mounts I designed in SolidWorks and Fusion.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Light Detection and Ranging (LiDAR) (with Zemax simulation)</title>
       <link>https://aaron-mok.github.io/blog/lidar/</link>
-      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://aaron-mok.github.io/blog/lidar/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/LiDAR/LiDAR.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In last blog, I have discussed optical time-of-fligth (ToF) sensing and how it works. However, it is with a single emitter that emits a single beam of light and with single-pixel detector.&#xA;We can only measure ToF in a single point in space.&lt;/p&gt;&#xA;&lt;p&gt;How do we sense depth across an area?&#xA;Light Detection and Ranging (LiDAR) is the system based on ToF sensing that can measure depth across an area.&#xA;In this blog, I will (a) discuss LiDAR and (b) simulate a type of LiDAR, Flash LiDAR, using Zemax.&lt;/p&gt;</description>
     </item>

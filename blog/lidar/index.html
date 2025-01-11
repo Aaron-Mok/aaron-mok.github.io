@@ -18,17 +18,17 @@
 
 <link
   rel="preload"
-  href="/css/bundle.min.06bb2cff0d258f0755e029d5a2b6b54b651d4cdb312da6c5d91d6b95f0110ea1.css"
+  href="/css/bundle.min.4862b0b6b4def0746a01fd8347d3c089db65ce7898c2587d08d489dba7de5a39.css"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  integrity="sha256-Brss/w0ljwdV4CnVora1S2UdTNsxLabF2R1rlfARDqE="
+  integrity="sha256-SGKwtrTe8HRqAf2DR9PAidtlzniYwlh9CNSJ26feWjk="
     crossorigin="anonymous"
 />
 <noscript>
   <link 
     rel="stylesheet"
-    href="/css/bundle.min.06bb2cff0d258f0755e029d5a2b6b54b651d4cdb312da6c5d91d6b95f0110ea1.css"
-    integrity="sha256-Brss/w0ljwdV4CnVora1S2UdTNsxLabF2R1rlfARDqE="
+    href="/css/bundle.min.4862b0b6b4def0746a01fd8347d3c089db65ce7898c2587d08d489dba7de5a39.css"
+    integrity="sha256-SGKwtrTe8HRqAf2DR9PAidtlzniYwlh9CNSJ26feWjk="
     crossorigin="anonymous"
   />
 </noscript>
@@ -144,9 +144,9 @@
           <div>
             <section>
               Published on
-              <h4 id="date">Thu Jan 2, 2025</h4>
+              <h4 id="date">Sun Jan 5, 2025</h4>
               ·
-              <h4 id="wordcount">561 Words</h4>
+              <h4 id="wordcount">746 Words</h4>
             </section>
              
           </div>
@@ -228,7 +228,7 @@ In raster scanning, the beam moves horizontally across the scene from left to ri
 <p><em><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Add some image</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></em>****</p>
 <p><br><br></p>
 <h3 id="2-wide-field-illumination">(2) Wide-field illumination</h3>
-<p>Another type of illumination is a wide field illumination of the scene that does not require any scanning. It provides a way to capture depth infromation of the whole scene. It is called Flash LiDAR. This technology is adopted in the LiDAR of Iphone and Ipad (see the image below).</p>
+<p>Another type of illumination is a wide-field illumination of the scene that does not require any scanning. It provides a way to capture depth infromation of the whole scene. It is called Flash LiDAR. This technology is adopted in the LiDAR of Iphone and Ipad (see the image below).</p>
 <figure class="center"><img src="/img/blog/LiDAR/Apple_LiDAR.webp"
     alt="Apple_LiDAR" width="500px"><figcaption>
       <p>Image from Magicplan.app<sup>1</sup></p>
@@ -237,16 +237,25 @@ In raster scanning, the beam moves horizontally across the scene from left to ri
 
 <p>This is not to be confused with the depth sensing technology in faceID. Here, we intent to keep the discussion on depth sensing based on ToF.
 In face ID, although there is also an array of dots, the depth sensing is based on &ldquo;light coding&rdquo; (stay tuned for a blog post on this!).</p>
-<p>The illustration below shows how it works. The intention is to make ToF-based sensing works like a camera. We would flood the whole scheme with light (usually Infra-red), then collect the reflected or scattered light with with an array of lock-in detectors. Check my previous <a href="/blog/time_of_flight/">blog post </a> for explaination of lock-in detection.</p>
+<p>The illustration below shows how it works. The intention is to make ToF-based sensing works like a camera. We would flood the whole scheme with light (usually Infra-red), then collect the reflected or scattered light with a sensor (Sony IMX591 for example). Then the depth information of the whole scene can be detected in one shot, like a camera flash. Hence the name Flash LiDAR.</p>
+<p>The illumination is usually a laser (Verticasl Cavity Surface-Emitting Laser, VSCEL) that is pulsed (~ns) and dot-pattened. These temporal and spatial patterning allow the increase of the signal-to-noise ratio (SNR) of the depth detection. To limit the scope of this blog post, a seperate blog post will discuss the in details the working principle. In short, pulsed laser allows temporal seperation of laser light to the enviromental light in detection. While dot pattern allows spatial seperation of laser light to the enviromental light in detection. Below shows an illustration of wide-field illumination of LiDAR.</p>
 <figure class="center"><img src="/img/blog/LiDAR/wideField_LiDAR.png"
     alt="wideField_LiDAR" width="auto">
 </figure>
 
-<p>Optical Phased Array (OPA)
-Flash LiDAR</p>
+<p>The detection would be with avalanche diodes (APDs) or silicon photomultipliers (SiPMs) that measures the ToF of the laser pulse directly with resolution at about hundreds of ps. The working principle will be explained in detail in another blog post. These diodes are packages into an 2D array, to detect the depth of the whole scene.</p>
 <h2 id="simulation-of-flash-lidar">Simulation of flash LiDAR</h2>
+<figure class="center"><img src="/img/blog/LiDAR/IlluminationOptics.png"
+    alt="IlluminationOptics" width="50%">
+</figure>
+
 <h2 id="reference">Reference</h2>
-<p>1: <a href="https://blog.magicplan.app/why-apples-lidar-scanner-opens-up-a-brave-new-world-of-indoor-mapping">https://blog.magicplan.app/why-apples-lidar-scanner-opens-up-a-brave-new-world-of-indoor-mapping</a></p></div>
+<p>1: <a href="https://blog.magicplan.app/why-apples-lidar-scanner-opens-up-a-brave-new-world-of-indoor-mapping">https://blog.magicplan.app/why-apples-lidar-scanner-opens-up-a-brave-new-world-of-indoor-mapping</a></p>
+<p>2: Modeling and Analysis of a Direct Time-of-Flight Sensor Architecture for LiDAR Applications</p>
+<p>3: Fast Separation of Direct and Global Components of a Scene using High Frequency Illumination</p>
+<ol start="4">
+<li><a href="https://support.zemax.com/hc/en-us/articles/4408930472467-Modeling-a-Flash-Lidar-System-Part-1">https://support.zemax.com/hc/en-us/articles/4408930472467-Modeling-a-Flash-Lidar-System-Part-1</a></li>
+</ol></div>
         </div>
 
         <aside class="content-browser light-border-top">
@@ -256,6 +265,8 @@ Flash LiDAR</p>
                     <a class="previous" href="/blog/time_of_flight/">↩ Optical Time-of-Flight (ToF) sensing and lock-in detection</a>
                 
                  ■ 
+                
+                    <a class="next" href="/blog/solidworks_showcase/"> Optics tooling and mounts ↪</a>
                 
             </div>
         </aside>
