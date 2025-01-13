@@ -285,7 +285,7 @@ The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF
 </figure>
 </p>
 <p>If 283 mm of illumination is insufficient, we can add two diffraction gratings oriented perpendicularly to expand the illumination Field of View (FOV). The images below show the effect of these gratings. Notice that higher-order diffraction patterns become distorted because the diffraction angle depends on the incidence angle. Different points on the VCSEL array hit the grating at slightly different angles, leading to different diffraction angle.</p>
-<p><figure class="center"><img src="/img/blog/LiDAR/illuminationOptics.png"
+<p><figure class="center"><img src="/img/blog/LiDAR/illuminationOptics.jpg"
     alt="illuminationOptics" width="50%">
 </figure>
 
@@ -304,7 +304,7 @@ The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF
 <p>The Flash LiDAR imaging system is to capture the projected dot pattern scattered from objects in the environment. This imaging system must: (1) Have a large enough FOV to capture all the dots in the pattern and (2) provide sufficient contrast to resolve each dot.</p>
 <p>With the crossed diffraction gratings, we can expanded the illumination FOV to a 600 × 600 mm area at 1 m (i.e., 3 × 200 mm). The half-FOV for the imaging system then becomes:</p>
 \[tan (\theta_{FOV}) = \frac{424}{1000} \Rightarrow  \theta_{FOV} = 23^o\]<p>We can image this FOV with a common Cooke triplet imaging lens—essentially a high-index negative lens sandwiched between two low-index positive lenses:
-<figure class="center"><img src="/img/blog/LiDAR/imagingOptics.jpg"
+<figure class="center"><img src="/img/blog/LiDAR/imagingOptics.png"
     alt="imagingOptics" width="40%"><figcaption>
       <p>Lenses from Zemax.com</p>
     </figcaption>
