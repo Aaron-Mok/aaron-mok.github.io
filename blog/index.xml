@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on </title>
-    <link>http://localhost:1313/blog/</link>
+    <link>https://aaron-mok.github.io/blog/</link>
     <description>Recent content in Blogs on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aaron-mok.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Light Detection and Ranging (LiDAR) (with Zemax simulation)</title>
-      <link>http://localhost:1313/blog/lidar/</link>
+      <link>https://aaron-mok.github.io/blog/lidar/</link>
       <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/lidar/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/LiDAR/LiDAR.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my last blog post, I discussed optical Time-of-Flight (ToF) sensing and explained how it works with a single emitter that produces a single beam of light and a single-pixel detector. Because of this setup, we could measure the ToF at only one point in space.&lt;/p&gt;&#xA;&lt;p&gt;The question, then, is: How can we sense depth across an entire area?&#xA;The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF that can measure depth over a broad region. In this blog post, I will (a) discuss the fundamentals of LiDAR and (b) demonstrate the optical system of a specific type of LiDAR, Flash LiDAR, using Zemax.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/lidar/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/LiDAR/LiDAR.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my last blog post, I discussed optical Time-of-Flight (ToF) sensing and explained how it works with a single emitter that produces a single beam of light and a single-pixel detector. Because of this setup, we could measure the ToF at only one point in space.&lt;/p&gt;&#xA;&lt;p&gt;The question, then, is: How can we sense depth across an entire area?&#xA;The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF that can measure depth over a broad region. In this blog post, I will (a) discuss the fundamentals of LiDAR and (b) demonstrate the optical system of a specific type of LiDAR, Flash LiDAR, using Zemax.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optics tooling and mounts</title>
-      <link>http://localhost:1313/blog/solidworks_showcase/</link>
+      <link>https://aaron-mok.github.io/blog/solidworks_showcase/</link>
       <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/solidworks_showcase/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/Toolings/tooling_coverart.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog post showcases some optical tooling and mounts I designed in SolidWorks and Fusion.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/solidworks_showcase/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/Toolings/tooling_coverart.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog post showcases some optical tooling and mounts I designed in SolidWorks and Fusion.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optical Time-of-Flight (ToF) sensing and lock-in detection</title>
-      <link>http://localhost:1313/blog/time_of_flight/</link>
+      <link>https://aaron-mok.github.io/blog/time_of_flight/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/time_of_flight/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/ToF/time_of_flight.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical time-of-flight. I will introduce two concepts: (a) The time-of-flight Principle and (b) lock-in detection/amplification to explain how it works.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/time_of_flight/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/ToF/time_of_flight.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical time-of-flight. I will introduce two concepts: (a) The time-of-flight Principle and (b) lock-in detection/amplification to explain how it works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Dual Excitation with Adaptive Excitation Polygon-scanning Multiphoton Microscope (DEEPscope)</title>
-      <link>http://localhost:1313/blog/deepscope/</link>
+      <link>https://aaron-mok.github.io/blog/deepscope/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/deepscope/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/Mouse3Drender.gif&#34; alt=&#34;DEEPscope Animation&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In neuroscience research, imaging neuronal activity in the deep brain is crucial for understanding neurological diseases. However, as imaging depth increases, the field of view usually decreases exponentially. We have improved the fluorescence signal generation efficiency of three-photon microscopy, achieving an imaging field two order of magnitudes larger than traditional three-photon microscopes in deep brain regions with cellular resolution.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/deepscope/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/Mouse3Drender.gif&#34; alt=&#34;DEEPscope Animation&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In neuroscience research, imaging neuronal activity in the deep brain is crucial for understanding neurological diseases. However, as imaging depth increases, the field of view usually decreases exponentially. We have improved the fluorescence signal generation efficiency of three-photon microscopy, achieving an imaging field two order of magnitudes larger than traditional three-photon microscopes in deep brain regions with cellular resolution.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

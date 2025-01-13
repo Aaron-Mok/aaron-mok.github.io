@@ -2,164 +2,164 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <link>http://localhost:1313/</link>
+    <link>https://aaron-mok.github.io/</link>
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sun, 12 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aaron-mok.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Light Detection and Ranging (LiDAR) (with Zemax simulation)</title>
-      <link>http://localhost:1313/blog/lidar/</link>
+      <link>https://aaron-mok.github.io/blog/lidar/</link>
       <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/lidar/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/LiDAR/LiDAR.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my last blog post, I discussed optical Time-of-Flight (ToF) sensing and explained how it works with a single emitter that produces a single beam of light and a single-pixel detector. Because of this setup, we could measure the ToF at only one point in space.&lt;/p&gt;&#xA;&lt;p&gt;The question, then, is: How can we sense depth across an entire area?&#xA;The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF that can measure depth over a broad region. In this blog post, I will (a) discuss the fundamentals of LiDAR and (b) demonstrate the optical system of a specific type of LiDAR, Flash LiDAR, using Zemax.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/lidar/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/LiDAR/LiDAR.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In my last blog post, I discussed optical Time-of-Flight (ToF) sensing and explained how it works with a single emitter that produces a single beam of light and a single-pixel detector. Because of this setup, we could measure the ToF at only one point in space.&lt;/p&gt;&#xA;&lt;p&gt;The question, then, is: How can we sense depth across an entire area?&#xA;The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF that can measure depth over a broad region. In this blog post, I will (a) discuss the fundamentals of LiDAR and (b) demonstrate the optical system of a specific type of LiDAR, Flash LiDAR, using Zemax.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optics tooling and mounts</title>
-      <link>http://localhost:1313/blog/solidworks_showcase/</link>
+      <link>https://aaron-mok.github.io/blog/solidworks_showcase/</link>
       <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/solidworks_showcase/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/Toolings/tooling_coverart.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog post showcases some optical tooling and mounts I designed in SolidWorks and Fusion.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/solidworks_showcase/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/Toolings/tooling_coverart.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog post showcases some optical tooling and mounts I designed in SolidWorks and Fusion.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optical Time-of-Flight (ToF) sensing and lock-in detection</title>
-      <link>http://localhost:1313/blog/time_of_flight/</link>
+      <link>https://aaron-mok.github.io/blog/time_of_flight/</link>
       <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/time_of_flight/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/ToF/time_of_flight.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical time-of-flight. I will introduce two concepts: (a) The time-of-flight Principle and (b) lock-in detection/amplification to explain how it works.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/time_of_flight/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/ToF/time_of_flight.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical time-of-flight. I will introduce two concepts: (a) The time-of-flight Principle and (b) lock-in detection/amplification to explain how it works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Presentation award: Deep and wide three-photon imaging</title>
-      <link>http://localhost:1313/projects/presentation_winner/</link>
+      <link>https://aaron-mok.github.io/projects/presentation_winner/</link>
       <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/presentation_winner/</guid>
+      <guid>https://aaron-mok.github.io/projects/presentation_winner/</guid>
       <description>&lt;p&gt;Presentation of Better penetration at longer wavelength.&#xA;Winner of the Frontiers in Neurophotonics Highlights video contest.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Interview with Optica</title>
-      <link>http://localhost:1313/projects/optica_interview/</link>
+      <link>https://aaron-mok.github.io/projects/optica_interview/</link>
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/optica_interview/</guid>
+      <guid>https://aaron-mok.github.io/projects/optica_interview/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m excited to share my interview with Optica at CLEO! It was a great opportunity to present in the post-deadline section and discuss my work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A large field-of-view, single-cell-resolution two- and three-photon microscope for deep and wide imaging</title>
-      <link>http://localhost:1313/projects/lfov_paper/</link>
+      <link>https://aaron-mok.github.io/projects/lfov_paper/</link>
       <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/lfov_paper/</guid>
+      <guid>https://aaron-mok.github.io/projects/lfov_paper/</guid>
       <description>&lt;p&gt;It is featured in MIT Technology Review. &lt;a href=&#34;https://www.mittrchina.com/news/detail/14097&#34;&gt;The Review&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;We have improved the fluorescence signal generation efficiency of three-photon microscopy, achieving an imaging field two order of magnitudes larger than traditional three-photon microscopes in deep brain regions with cellular resolution.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Multiphoton imaging of neural structure and activity in Drosophila through the intact cuticle</title>
-      <link>http://localhost:1313/projects/fruitefly/</link>
+      <link>https://aaron-mok.github.io/projects/fruitefly/</link>
       <pubDate>Sat, 21 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/fruitefly/</guid>
+      <guid>https://aaron-mok.github.io/projects/fruitefly/</guid>
       <description>&lt;p&gt;&amp;ldquo;This study reports a way to record neural structures and activity in behaving Drosophila for up to 12 hours, without removing the cuticle. This opens the way to longer and more intact recordings, including post-imaging recovery of the flies.&amp;rdquo; eLife editor&lt;/p&gt;</description>
     </item>
     <item>
       <title>Spatially resolved measurements of ballistic and total transmission in microscale tissue samples from 450 nm to 1624 nm</title>
-      <link>http://localhost:1313/projects/tissuespec/</link>
+      <link>https://aaron-mok.github.io/projects/tissuespec/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/tissuespec/</guid>
+      <guid>https://aaron-mok.github.io/projects/tissuespec/</guid>
       <description>&lt;p&gt;We built a simple and versatile spectrometer to measure tissue ballistic and total transmission with customizable wavelength range, spatial resolution, and sample sizes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Graziella Nutella</title>
-      <link>http://localhost:1313/testimonial/graziella-nutella/</link>
+      <link>https://aaron-mok.github.io/testimonial/graziella-nutella/</link>
       <pubDate>Mon, 25 Nov 2024 21:53:18 +0100</pubDate>
-      <guid>http://localhost:1313/testimonial/graziella-nutella/</guid>
+      <guid>https://aaron-mok.github.io/testimonial/graziella-nutella/</guid>
       <description>&lt;p&gt;Working with this freelancer has been an exceptional experience. They consistently deliver high-quality work, demonstrating a keen eye for detail and a deep understanding of the project requirements. Their professionalism and commitment to excellence are evident in every task they undertake. They are not only skilled and knowledgeable but also incredibly reliable and easy to work with. I highly recommend this freelancer to anyone looking for top-tier talent and a dependable partner.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dana Oneal</title>
-      <link>http://localhost:1313/testimonial/dana-oneal-copy/</link>
+      <link>https://aaron-mok.github.io/testimonial/dana-oneal-copy/</link>
       <pubDate>Mon, 25 Nov 2024 21:50:45 +0100</pubDate>
-      <guid>http://localhost:1313/testimonial/dana-oneal-copy/</guid>
+      <guid>https://aaron-mok.github.io/testimonial/dana-oneal-copy/</guid>
       <description>&lt;p&gt;I had the pleasure of working with this freelancer on several projects, and their performance has been nothing short of outstanding. They bring a high level of expertise, creativity, and dedication to every task. Their ability to understand project requirements and deliver exceptional results on time is truly impressive. They are a reliable and proactive professional who consistently exceeds expectations. I highly recommend this freelancer to anyone seeking top-notch skills and a collaborative partner.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Dana Oneal</title>
-      <link>http://localhost:1313/testimonial/dana-oneal/</link>
+      <link>https://aaron-mok.github.io/testimonial/dana-oneal/</link>
       <pubDate>Mon, 25 Nov 2024 21:50:45 +0100</pubDate>
-      <guid>http://localhost:1313/testimonial/dana-oneal/</guid>
+      <guid>https://aaron-mok.github.io/testimonial/dana-oneal/</guid>
       <description>&lt;p&gt;I had the pleasure of working with this freelancer on several projects, and their performance has been nothing short of outstanding. They bring a high level of expertise, creativity, and dedication to every task. Their ability to understand project requirements and deliver exceptional results on time is truly impressive. They are a reliable and proactive professional who consistently exceeds expectations. I highly recommend this freelancer to anyone seeking top-notch skills and a collaborative partner.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ferdinand Shermand</title>
-      <link>http://localhost:1313/testimonial/ferdinand-shermand/</link>
+      <link>https://aaron-mok.github.io/testimonial/ferdinand-shermand/</link>
       <pubDate>Mon, 25 Nov 2024 21:30:46 +0100</pubDate>
-      <guid>http://localhost:1313/testimonial/ferdinand-shermand/</guid>
+      <guid>https://aaron-mok.github.io/testimonial/ferdinand-shermand/</guid>
       <description>&lt;p&gt;Working with this colleague has been an absolute pleasure. Their dedication, professionalism, and positive attitude make them an invaluable asset to our team. They consistently go above and beyond to ensure that projects are completed on time and to the highest standard. Their ability to collaborate effectively and support their colleagues is truly commendable. I am continually impressed by their innovative thinking and problem-solving skills. This colleague is not just a team member but a true inspiration and a driving force behind our team’s success.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Dual Excitation with Adaptive Excitation Polygon-scanning Multiphoton Microscope (DEEPscope)</title>
-      <link>http://localhost:1313/blog/deepscope/</link>
+      <link>https://aaron-mok.github.io/blog/deepscope/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/deepscope/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/img/blog/Mouse3Drender.gif&#34; alt=&#34;DEEPscope Animation&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In neuroscience research, imaging neuronal activity in the deep brain is crucial for understanding neurological diseases. However, as imaging depth increases, the field of view usually decreases exponentially. We have improved the fluorescence signal generation efficiency of three-photon microscopy, achieving an imaging field two order of magnitudes larger than traditional three-photon microscopes in deep brain regions with cellular resolution.&lt;/p&gt;</description>
+      <guid>https://aaron-mok.github.io/blog/deepscope/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/Mouse3Drender.gif&#34; alt=&#34;DEEPscope Animation&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;In neuroscience research, imaging neuronal activity in the deep brain is crucial for understanding neurological diseases. However, as imaging depth increases, the field of view usually decreases exponentially. We have improved the fluorescence signal generation efficiency of three-photon microscopy, achieving an imaging field two order of magnitudes larger than traditional three-photon microscopes in deep brain regions with cellular resolution.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ztos</title>
-      <link>http://localhost:1313/client-work/ztos/</link>
+      <link>https://aaron-mok.github.io/client-work/ztos/</link>
       <pubDate>Sun, 25 Aug 2024 10:23:39 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/ztos/</guid>
+      <guid>https://aaron-mok.github.io/client-work/ztos/</guid>
       <description></description>
     </item>
     <item>
       <title>Zoo</title>
-      <link>http://localhost:1313/client-work/zoo/</link>
+      <link>https://aaron-mok.github.io/client-work/zoo/</link>
       <pubDate>Sun, 25 Aug 2024 10:23:08 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/zoo/</guid>
+      <guid>https://aaron-mok.github.io/client-work/zoo/</guid>
       <description></description>
     </item>
     <item>
       <title>Kanba</title>
-      <link>http://localhost:1313/client-work/kanba/</link>
+      <link>https://aaron-mok.github.io/client-work/kanba/</link>
       <pubDate>Sun, 25 Aug 2024 10:22:34 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/kanba/</guid>
+      <guid>https://aaron-mok.github.io/client-work/kanba/</guid>
       <description></description>
     </item>
     <item>
       <title>Goldline</title>
-      <link>http://localhost:1313/client-work/goldline/</link>
+      <link>https://aaron-mok.github.io/client-work/goldline/</link>
       <pubDate>Sun, 25 Aug 2024 10:21:48 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/goldline/</guid>
+      <guid>https://aaron-mok.github.io/client-work/goldline/</guid>
       <description></description>
     </item>
     <item>
       <title>Earth 2.0</title>
-      <link>http://localhost:1313/client-work/earth2.0/</link>
+      <link>https://aaron-mok.github.io/client-work/earth2.0/</link>
       <pubDate>Sun, 25 Aug 2024 10:17:12 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/earth2.0/</guid>
+      <guid>https://aaron-mok.github.io/client-work/earth2.0/</guid>
       <description></description>
     </item>
     <item>
       <title>Asgardia</title>
-      <link>http://localhost:1313/client-work/asgardia/</link>
+      <link>https://aaron-mok.github.io/client-work/asgardia/</link>
       <pubDate>Sun, 25 Aug 2024 09:53:42 +0200</pubDate>
-      <guid>http://localhost:1313/client-work/asgardia/</guid>
+      <guid>https://aaron-mok.github.io/client-work/asgardia/</guid>
       <description></description>
     </item>
     <item>
       <title>Senior Optical System Architect</title>
-      <link>http://localhost:1313/experience/senior_optical_system_architect/</link>
+      <link>https://aaron-mok.github.io/experience/senior_optical_system_architect/</link>
       <pubDate>Sat, 01 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/senior_optical_system_architect/</guid>
+      <guid>https://aaron-mok.github.io/experience/senior_optical_system_architect/</guid>
       <description>&lt;h3 id=&#34;leading-the-imaging-system-development-of-the-flagship-wafer-inspection-tool&#34;&gt;Leading the imaging system development of the flagship wafer inspection tool&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;strong&gt;Skills: MATLAB; Python; JMP; Prolith; Optical modeling; Optical metrology; Testing to verify imaging component; Characterization of system level performance; Mechanical tolerance analysis&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;Innovated an optical imaging model that is adopted for developing all flagship features, achieving &amp;lt;1% prediction error in new features development. Presented it to a division-wide audience of 100+ professionals.&lt;/li&gt;&#xA;&lt;li&gt;Defined 100+ requirements, including mechanical range and tolerance for optics.&#xA;Improved optical metrology accuracy by 3x to advance the next-generation products.&lt;/li&gt;&#xA;&lt;li&gt;Led cross-functional teams across optical, optomechanical, electrical, software engineering and manufacturing to integrate new optics into next-generation products.&lt;/li&gt;&#xA;&lt;li&gt;Led the development of an optical sensor that is adopted across all current and the next-generation products.&lt;/li&gt;&#xA;&lt;li&gt;Developed metrology that is widely adopted by the stage team for assessing a new mechanical stage subsystem.&lt;/li&gt;&#xA;&lt;li&gt;Led root-cause, failure and corrective-action analysis, resolving a critical customer escalation in two weeks.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>PhD Student</title>
-      <link>http://localhost:1313/experience/phd_student/</link>
+      <link>https://aaron-mok.github.io/experience/phd_student/</link>
       <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/phd_student/</guid>
+      <guid>https://aaron-mok.github.io/experience/phd_student/</guid>
       <description>&lt;h3 id=&#34;filed-a-patent-and-published-11-first-authored-and-co-authored-papers&#34;&gt;Filed a patent and published 11 first-authored and co-authored papers&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;strong&gt;Skills: MATLAB; LabVIEW; Optical simulation (Zemax) and metrology; Testing and lab work to verify imaging component, Assembly of optical systems; Characterization of system level performance; Design and characterization of imaging lens; Electrical circuit design and testing&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;Innovated the 1st infrared large field-of-view three-photon microscope (3PM), expanding the field of view of conventional 3PM by &amp;gt;100x; Filed a patent and published a first-author paper in eLight (Impact factor: 27.2). &lt;a href=&#34;https://elight.springeropen.com/articles/10.1186/s43593-024-00076-4&#34;&gt;The Paper&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Achieved the 1st non-invasive imaging of fruit fly brains which was considered impossible; Published a first-author paper in eLife (Impact factor: 7.7). &lt;a href=&#34;https://elifesciences.org/articles/69094&#34;&gt;The Paper&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Invented an infrared optical spectroscope capable of measuring 100x smaller sample than required by commercial devices; Published a first-author paper and was featured in a Zemax case study. &lt;a href=&#34;https://www.ansys.com/resource-center/case-study/cornell-university&#34;&gt;Case study&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Won 5 presentation awards. &lt;a href=&#34;https://www.youtube.com/watch?v=OuyZP8UUcDQ&#34;&gt;Presentation example&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Interviewed by Optica, a leading society in optics, for accomplishments in optical imaging. &lt;a href=&#34;https://www.linkedin.com/feed/update/urn:li:activity:7208215048811401216/&#34;&gt;The Interview&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>MPhil Student</title>
-      <link>http://localhost:1313/experience/mphil_student/</link>
+      <link>https://aaron-mok.github.io/experience/mphil_student/</link>
       <pubDate>Tue, 01 Dec 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/experience/mphil_student/</guid>
+      <guid>https://aaron-mok.github.io/experience/mphil_student/</guid>
       <description>&lt;h3 id=&#34;filed-a-patent-and-published-11-first-authored-and-co-authored-papers&#34;&gt;Filed a patent and published 11 first-authored and co-authored papers&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;em&gt;&lt;strong&gt;Skills: MATLAB; LabVIEW; Machine learning; Laser patterning; Assembly of fiber lasers, Assembly of optical systems&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;&#xA;&lt;li&gt;Built and benchmarked a 1MHz mode-locked ytterbium fiber laser in 1 µm center wavelength at 40nm bandwidth&lt;/li&gt;&#xA;&lt;li&gt;Built optical coherence tomography (OCT) imaging system and collaborated with biologist to explore regenerative mechanisms in the planarian&lt;/li&gt;&#xA;&lt;li&gt;Published a paper using machine learning to classify cell cycle of label-free breast cancer cell captured with ultrafast imaging flow cytometry &lt;a href=&#34;https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10505/105050J/Label-free-cell-cycle-analysis-by-high-throughput-quantitative-phase/10.1117/12.2291864.short&#34;&gt;The Paper&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Innovated MRI-synchronized optical systems for in-vivo optogenetics-fMRI experiment &lt;a href=&#34;https://www.pnas.org/doi/abs/10.1073/pnas.1616361113#acknowledgments&#34;&gt;Acknowledged in a PNAS Paper&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Built wild-field fluorescence imaging system and patterned optical power delivery system through fiber bundle for&#xA;endoscopic optogenetics experiment&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
