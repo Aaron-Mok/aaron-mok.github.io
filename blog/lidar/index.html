@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
@@ -11,25 +11,23 @@
 
 <title>Aaron Mok | System Architect</title>
 <meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect based in San Jose, CA, specializing in the design and optimization of complex optical systems.'>
-<meta name="generator-mode" content='production'>
+<meta name="generator-mode" content='development'>
 <style data-generator="critical-css">
 </style>
-  <link rel="stylesheet" href="https://aaron-mok.github.io/scss/adritian.min.c43980c726e1de153bec9c6b98a1e28b34cd282522a8f596ab3bb88d4b55c066.css" integrity="sha256-xDmAxybh3hU77JxrmKHiizTNKCUiqPWWqzu4jUtVwGY=" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="http://localhost:1313/scss/adritian.css" integrity="" crossorigin="anonymous"/>
 
 <link
   rel="preload"
-  href="/css/bundle.min.4862b0b6b4def0746a01fd8347d3c089db65ce7898c2587d08d489dba7de5a39.css"
+  href="/css/bundle.css"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  integrity="sha256-SGKwtrTe8HRqAf2DR9PAidtlzniYwlh9CNSJ26feWjk="
-    crossorigin="anonymous"
+  
 />
 <noscript>
   <link 
     rel="stylesheet"
-    href="/css/bundle.min.4862b0b6b4def0746a01fd8347d3c089db65ce7898c2587d08d489dba7de5a39.css"
-    integrity="sha256-SGKwtrTe8HRqAf2DR9PAidtlzniYwlh9CNSJ26feWjk="
-    crossorigin="anonymous"
+    href="/css/bundle.css"
+    
   />
 </noscript>
 
@@ -71,7 +69,7 @@
   <div class="container rad-fade-in">
     <nav class="navbar navbar-expand-lg navbar-light p-0">
       <div class="container-fluid">
-        <a class="navbar-brand mx-auto" href="https://aaron-mok.github.io/">
+        <a class="navbar-brand mx-auto" href="http://localhost:1313/">
           <span>Aaron</span>
           <span>Mok</span>
         </a>
@@ -89,7 +87,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-lg-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="https://aaron-mok.github.io/">HOME</a>
+              <a class="nav-link active" href="http://localhost:1313/">HOME</a>
             </li>
             
             <li class="nav-item">
@@ -147,9 +145,9 @@
           <div>
             <section>
               Published on
-              <h4 id="date">Sun Jan 5, 2025</h4>
+              <h4 id="date">Sun Jan 12, 2025</h4>
               ·
-              <h4 id="wordcount">746 Words</h4>
+              <h4 id="wordcount">1128 Words</h4>
             </section>
              
           </div>
@@ -157,22 +155,20 @@
 
         <div class="row flex-column-reverse flex-md-row rad-fade-down">
           <div class="col-12"><p><img src="/img/blog/LiDAR/LiDAR.webp" alt="ToF art"></p>
-<p>In last blog, I have discussed optical time-of-fligth (ToF) sensing and how it works. However, it is with a single emitter that emits a single beam of light and with single-pixel detector.
-We can only measure ToF in a single point in space.</p>
-<p>How do we sense depth across an area?
-Light Detection and Ranging (LiDAR) is the system based on ToF sensing that can measure depth across an area.
-In this blog, I will (a) discuss LiDAR and (b) simulate a type of LiDAR, Flash LiDAR, using Zemax.</p>
+<p>In my last blog post, I discussed optical Time-of-Flight (ToF) sensing and explained how it works with a single emitter that produces a single beam of light and a single-pixel detector. Because of this setup, we could measure the ToF at only one point in space.</p>
+<p>The question, then, is: How can we sense depth across an entire area?
+The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF that can measure depth over a broad region. In this blog post, I will (a) discuss the fundamentals of LiDAR and (b) demonstrate the optical system of a specific type of LiDAR, Flash LiDAR, using Zemax.</p>
 <h2 id="how-to-scan-an-area">How to scan an area?</h2>
-<p>To sense depth across an area, the first thing is to deliver light across the entire area.
-We can generalize into two main ways, namely (1) mechanical scanning of a single beam across the scene or (2) wide-field illumination of the scene.</p>
+<p>To obtain depth information over an area, we need to deliver light across the entire scene. Broadly, there are two main approaches:
+(1) Mechanical scanning of a single beam across the scene.
+(2) Wide-field illumination of the scene.</p>
 <h3 id="1-mechanical-scanning">(1) Mechanical Scanning</h3>
-<p>For mechanical scanning, a single beam is swept across the scene with an mechanical scanner. It will raster scan the scene such that the depth information of the whole scene can be mapped out.
-In raster scanning, the beam moves horizontally across the scene from left to right (or right to left). Once a full line is scanned, the beam moves vertically to the next line and repeat the process. This is illustrated in the figure below.</p>
+<p>In mechanical scanning, a single beam is swept across the scene using a mechanical scanner. This is done via raster scanning, where the beam moves horizontally (left to right or right to left), then moves down one line, and repeats until the entire field is covered. The illustration below shows the concept:</p>
 <figure class="center"><img src="/img/blog/LiDAR/scanningLiDAR.png"
     alt="scanning_LiDAR" width="auto">
 </figure>
 
-<p>There are multiple scanner to achieve this scanning. A list of scanners and general characteristics of using each is listed in the table below. Line rate is the speed the scanner can sweep the beam, scanning angle is the maximum angle that a scanning method is capable to sweep the beam. To achieve a 2D scanning, two scanning methods (can be same or different) will be chosen depending on the design criteria. The table below shows the range of speed and scanning angle for each scanning method. It is worthwhile to note that scanning angle and speed is always a trade-off, for a type of scanning method, a higher speed usually means a smaller scanning angle.</p>
+<p>Numerous scanning methods can achieve this. The table below lists several scanning technologies, along with the typical speed (line rate) and maximum achievable scanning angle for each. To perform 2D scanning, one can pair two scanning methods (identical or different), depending on specific design criteria. Note that for a given scanning method, increasing speed usually reduces the maximum scanning angle.</p>
 <table>
   <thead>
       <tr>
@@ -228,36 +224,104 @@ In raster scanning, the beam moves horizontally across the scene from left to ri
   </tbody>
 </table>
 <p><br><br></p>
-<p><em><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong>Add some image</strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></em>****</p>
-<p><br><br></p>
 <h3 id="2-wide-field-illumination">(2) Wide-field illumination</h3>
-<p>Another type of illumination is a wide-field illumination of the scene that does not require any scanning. It provides a way to capture depth infromation of the whole scene. It is called Flash LiDAR. This technology is adopted in the LiDAR of Iphone and Ipad (see the image below).</p>
+<p>In wide-field illumination, the entire scene is illuminated at once, eliminating the need for mechanical scanning. This approach is sometimes called Flash LiDAR. It is used in Apple’s iPhone and iPad LiDAR modules (see image below):</p>
 <figure class="center"><img src="/img/blog/LiDAR/Apple_LiDAR.webp"
     alt="Apple_LiDAR" width="500px"><figcaption>
-      <p>Image from Magicplan.app<sup>1</sup></p>
+      <p>Image from Magicplan.app</p>
     </figcaption>
 </figure>
 
-<p>This is not to be confused with the depth sensing technology in faceID. Here, we intent to keep the discussion on depth sensing based on ToF.
-In face ID, although there is also an array of dots, the depth sensing is based on &ldquo;light coding&rdquo; (stay tuned for a blog post on this!).</p>
-<p>The illustration below shows how it works. The intention is to make ToF-based sensing works like a camera. We would flood the whole scheme with light (usually Infra-red), then collect the reflected or scattered light with a sensor (Sony IMX591 for example). Then the depth information of the whole scene can be detected in one shot, like a camera flash. Hence the name Flash LiDAR.</p>
-<p>The illumination is usually a laser (Verticasl Cavity Surface-Emitting Laser, VSCEL) that is pulsed (~ns) and dot-pattened. These temporal and spatial patterning allow the increase of the signal-to-noise ratio (SNR) of the depth detection. To limit the scope of this blog post, a seperate blog post will discuss the in details the working principle. In short, pulsed laser allows temporal seperation of laser light to the enviromental light in detection. While dot pattern allows spatial seperation of laser light to the enviromental light in detection. Below shows an illustration of wide-field illumination of LiDAR.</p>
+<p>This is not to be confused with the Face ID depth-sensing technology, which uses “light coding”. In this post, we focus on ToF-based depth sensing.</p>
+<p>The schematic below illustrates the principle. We flood the entire scene with light (usually infrared), then capture the reflected or scattered light on a sensor (e.g., Sony IMX591). The depth for the entire scene is determined in a single shot—akin to a camera flash—thus the name Flash LiDAR.</p>
+<p>Flash LiDAR illumination typically uses VCSEL (Vertical Cavity Surface-Emitting Laser) arrays that emit short pulses (on the order of nanoseconds) and form dot patterns. Temporal (pulsing) and spatial (dot pattern) modulation both help improve the signal-to-noise ratio (SNR). We’ll cover more details in a separate post. Briefly, pulsed lasers enable temporal separation of the laser signal from ambient light and dot patterns enable spatial separation of the laser signal from ambient light. For ToF detection, avalanche photodiodes (APDs) or silicon photomultipliers (SiPMs) measure the ToF of the laser pulses directly, typically with resolutions on the order of hundreds of picoseconds. These photodiodes are arranged in a 2D array to capture the entire scene’s depth information simultaneously, just like a camera sensor.</p>
 <figure class="center"><img src="/img/blog/LiDAR/wideField_LiDAR.png"
     alt="wideField_LiDAR" width="auto">
 </figure>
 
-<p>The detection would be with avalanche diodes (APDs) or silicon photomultipliers (SiPMs) that measures the ToF of the laser pulse directly with resolution at about hundreds of ps. The working principle will be explained in detail in another blog post. These diodes are packages into an 2D array, to detect the depth of the whole scene.</p>
-<h2 id="simulation-of-flash-lidar">Simulation of flash LiDAR</h2>
-<figure class="center"><img src="/img/blog/LiDAR/IlluminationOptics.png"
-    alt="IlluminationOptics" width="50%">
+<p><br><br></p>
+<h2 id="simulation-of-flash-lidar-optical-system">Simulation of flash LiDAR optical system</h2>
+<p><br><br></p>
+<h3 id="illumination-system">Illumination system</h3>
+<p>A key goal in Flash LiDAR illumination is to project a dot-pattern over the target area. Below is an example of a VCSEL array as the light source:
+<figure class="center"><img src="/img/blog/LiDAR/VCSEL_array.png"
+    alt="VCSEL_array" width="50%"><figcaption>
+      <p>Image from lighttrans.com</p>
+    </figcaption>
+</figure>
+</p>
+<p>Our aim is to project the 1.6 × 1.6 mm square source to approximately a 160 × 160 mm area at 1 m from the last lens surface. This can be achieved using an aspheric collimating lens of fixed focal length.</p>
+<p>Using the thin-lens equation,</p>
+\[\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}\]<p>where:</p>
+<ul>
+<li>\(f\) is focal length of the lens</li>
+<li>\(d_o\) is the object distance</li>
+<li>\(d_i\) is the image distance</li>
+</ul>
+<p>and the magnification relation,</p>
+\[M = \frac{d_i}{d_o} = \frac{h_i}{h_o}\]<p>where:</p>
+<ul>
+<li>\(h_o\) is the object height</li>
+<li>\(h_i\) is the image height</li>
+<li>\(M\) is magnification of the lens</li>
+</ul>
+<p><br><br></p>
+<p>We find that a focal length \(f\) of 10 mm is needed. The collimator below shows the lens we need. The VCSEL array will be placed at the object plane. The object plane in the Zemax model is about 2.26 mm diagonally — this corresponds to the diagonal of a 1.6 mm square that the optical design must accommodate.
+<figure class="center"><img src="/img/blog/LiDAR/Collimator_optics.png"
+    alt="Collimator_optics" width="50%">
 </figure>
 
+<figure class="center"><img src="/img/blog/LiDAR/illuminationOptics_projection.png"
+    alt="illuminationOptics_projection" width="50%"><figcaption>
+      <p>Lenses from Zemax.com</p>
+    </figcaption>
+</figure>
+</p>
+<p>Using Zemax, we can visualize the intensity distribution from the 1.6 × 1.6 mm square at the image plane, which is roughly 200 mm × 200 mm (the diagonal is about 283 mm).
+<figure class="center"><img src="/img/blog/LiDAR/LiDARImage_nodiffraction_small.jpg"
+    alt="LiDARImage_nodiffraction" width="50%">
+</figure>
+</p>
+<p>If 283 mm of illumination is insufficient, we can add two diffraction gratings oriented perpendicularly to expand the illumination Field of View (FOV). The images below show the effect of these gratings. Notice that higher-order diffraction patterns become distorted because the diffraction angle depends on the incidence angle. Different points on the VCSEL array hit the grating at slightly different angles, leading to different diffraction angle.</p>
+<p><figure class="center"><img src="/img/blog/LiDAR/illuminationOptics.png"
+    alt="illuminationOptics" width="50%">
+</figure>
+
+<figure class="center"><img src="/img/blog/LiDAR/LiDARImage_withdiffraction_small.jpg"
+    alt="LiDARImage_withdiffraction" width="50%">
+</figure>
+</p>
+<p>Here, we show the intensity distribution of the whole FOV. However, if the object plane is a VCSEL array, the final projected pattern is a grid of dots. The iPhone LiDAR pattern below illustrates how Apple uses a VCSEL array and diffraction gratings for the flash LiDAR system:</p>
+<figure class="center"><img src="/img/blog/LiDAR/iphoneLidar_pattern.jpg"
+    alt="iphoneLidar_pattern" width="50%"><figcaption>
+      <p>Image from medium.com</p>
+    </figcaption>
+</figure>
+
+<h3 id="imaging-system">Imaging system</h3>
+<p>The Flash LiDAR imaging system is to capture the projected dot pattern scattered from objects in the environment. This imaging system must: (1) Have a large enough FOV to capture all the dots in the pattern and (2) provide sufficient contrast to resolve each dot.</p>
+<p>With the crossed diffraction gratings, we can expanded the illumination FOV to a 600 × 600 mm area at 1 m (i.e., 3 × 200 mm). The half-FOV for the imaging system then becomes:</p>
+\[tan (\theta_{FOV}) = \frac{424}{1000} \Rightarrow  \theta_{FOV} = 23^o\]<p>We can image this FOV with a common Cooke triplet imaging lens—essentially a high-index negative lens sandwiched between two low-index positive lenses:
+<figure class="center"><img src="/img/blog/LiDAR/imagingOptics.png"
+    alt="imagingOptics" width="40%"><figcaption>
+      <p>Lenses from Zemax.com</p>
+    </figcaption>
+</figure>
+</p>
+<p>Simulating the optical performance at a 23° FOV shows that it approaches diffraction-limited quality:
+<figure class="center"><img src="/img/blog/LiDAR/imaging_MTF.jpg"
+    alt="imaging_MTF" width="50%">
+</figure>
+</p>
+<p>In summary, by combining dot-pattern illumination (Flash LiDAR) with a suitably designed imaging lens, we can capture depth information of an entire scene in one shot. Combined with a ToF sensor, we can achieve a truly camera-like Tof depth measurement system.</p>
 <h2 id="reference">Reference</h2>
-<p>1: <a href="https://blog.magicplan.app/why-apples-lidar-scanner-opens-up-a-brave-new-world-of-indoor-mapping">https://blog.magicplan.app/why-apples-lidar-scanner-opens-up-a-brave-new-world-of-indoor-mapping</a></p>
-<p>2: Modeling and Analysis of a Direct Time-of-Flight Sensor Architecture for LiDAR Applications</p>
-<p>3: Fast Separation of Direct and Global Components of a Scene using High Frequency Illumination</p>
-<ol start="4">
-<li><a href="https://support.zemax.com/hc/en-us/articles/4408930472467-Modeling-a-Flash-Lidar-System-Part-1">https://support.zemax.com/hc/en-us/articles/4408930472467-Modeling-a-Flash-Lidar-System-Part-1</a></li>
+<ol>
+<li>https://blog.magicplan.app/why-apples-lidar-scanner-opens-up-a-brave-new-world-of-indoor-mapping</li>
+<li>https://support.zemax.com/hc/en-us/articles/4408930472467-Modeling-a-Flash-Lidar-System-Part-1</li>
+<li>https://www.lighttrans.com/index.php?id=2573&amp;utm_source=newsletter&amp;utm_medium</li>
+<li>https://4sense.medium.com/lidar-apple-lidar-and-dtof-analysis-cc18056ec41a</li>
+<li>Padmanabhan, P., Zhang, C., &amp; Charbon, E. (2019). Modeling and analysis of a direct time-of-flight sensor architecture for LiDAR applications. Sensors, 19(24), 5464.</li>
+<li>Nayar, S. K., Krishnan, G., Grossberg, M. D., &amp; Raskar, R. (2006). Fast separation of direct and global components of a scene using high frequency illumination. In ACM SIGGRAPH 2006 Papers (pp. 935-944).</li>
 </ol></div>
         </div>
 
@@ -265,11 +329,9 @@ In face ID, although there is also an array of dots, the depth sensing is based 
             Continue reading
             <div>
                 
-                    <a class="previous" href="/blog/time_of_flight/">↩ Optical Time-of-Flight (ToF) sensing and lock-in detection</a>
+                    <a class="previous" href="/blog/solidworks_showcase/">↩ Optics tooling and mounts</a>
                 
                  ■ 
-                
-                    <a class="next" href="/blog/solidworks_showcase/"> Optics tooling and mounts ↪</a>
                 
             </div>
         </aside>
@@ -286,7 +348,7 @@ In face ID, although there is also an array of dots, the depth sensing is based 
     <div class="footer__links">
       <ul class="navbar-nav ">
         <li class="nav-item">
-            <a class="nav-link" href="https://aaron-mok.github.io/">🏠 HOME</a>
+            <a class="nav-link" href="http://localhost:1313/">🏠 HOME</a>
         </li>
         
       </ul>
@@ -309,11 +371,11 @@ In face ID, although there is also an array of dots, the depth sensing is based 
     }
   });
 </script>
-<script defer src='https://aaron-mok.github.io/js/rad-animations.js'></script>
-<script defer src='https://aaron-mok.github.io/js/library/smooth-scroll.polyfills.min.js'></script>
-<script defer src='https://aaron-mok.github.io/js/sticky-header.js'></script>
-<script defer src='https://aaron-mok.github.io/js/smooth-scroll-init.js'></script>
-<script defer src='https://aaron-mok.github.io/js/library/bootstrap.min.js'></script>
+<script defer src='http://localhost:1313/js/rad-animations.js'></script>
+<script defer src='http://localhost:1313/js/library/smooth-scroll.polyfills.min.js'></script>
+<script defer src='http://localhost:1313/js/sticky-header.js'></script>
+<script defer src='http://localhost:1313/js/smooth-scroll-init.js'></script>
+<script defer src='http://localhost:1313/js/library/bootstrap.min.js'></script>
 
 
 
