@@ -51,6 +51,70 @@
 
 
 <link rel="icon" href="/icon_cropped_30x30.png" type="image/x-icon" /> 
+<style>
+ 
+.math.display + ul,
+p.math + ul,
+p:has(+ ul) {
+  margin-bottom: 0.2em !important;
+}
+
+ul {
+  margin-top: 0.2em !important;
+}
+
+table {
+  margin-bottom: 1.0em;
+}
+
+p:has(+ mjx-container[display="true"]) {
+  margin-bottom: 1.0em !important;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  margin-top: 1.0em !important;    
+  margin-bottom: 1.0em !important;
+}
+
+ 
+table + mjx-container[display="true"] {
+  margin-top: 2em !important;
+}
+
+ 
+p + mjx-container[display="true"] {
+  margin-top: 0em !important;
+  margin-bottom: 1.0em !important;
+}
+
+ul,
+ol {
+  margin-top: 0.7em !important;  
+}
+
+p:has(+ figure.center) {
+  margin-bottom: 0.7em !important;
+}
+
+ 
+figure.center {
+  margin-top: 0 !important;
+}
+
+ 
+table td,
+table th {
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2 em !important;
+}
+
+.spacer {
+  height: 1.0em !important;
+}
+
+</style>
+
 
 </head>
 

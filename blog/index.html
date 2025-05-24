@@ -51,6 +51,70 @@
 
 
 <link rel="icon" href="/icon_cropped_30x30.png" type="image/x-icon" /> 
+<style>
+ 
+.math.display + ul,
+p.math + ul,
+p:has(+ ul) {
+  margin-bottom: 0.2em !important;
+}
+
+ul {
+  margin-top: 0.2em !important;
+}
+
+table {
+  margin-bottom: 1.0em;
+}
+
+p:has(+ mjx-container[display="true"]) {
+  margin-bottom: 1.0em !important;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  margin-top: 1.0em !important;    
+  margin-bottom: 1.0em !important;
+}
+
+ 
+table + mjx-container[display="true"] {
+  margin-top: 2em !important;
+}
+
+ 
+p + mjx-container[display="true"] {
+  margin-top: 0em !important;
+  margin-bottom: 1.0em !important;
+}
+
+ul,
+ol {
+  margin-top: 0.7em !important;  
+}
+
+p:has(+ figure.center) {
+  margin-bottom: 0.7em !important;
+}
+
+ 
+figure.center {
+  margin-top: 0 !important;
+}
+
+ 
+table td,
+table th {
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2 em !important;
+}
+
+.spacer {
+  height: 1.0em !important;
+}
+
+</style>
+
 
   
 </head>
@@ -136,7 +200,40 @@
           <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
           <article class="post summary col-12">
   <header>
-    <h2><a href="/blog/lidar/">Light Detection and Ranging (LiDAR) (with Zemax simulation)</a></h2>
+    <h2><a href="/blog/bestformlens/">What is the best form lens? </a></h2>
+    <div class="post-meta">
+      <div>
+        <section>
+          Published on
+          <h4 id="date">Sat May 24, 2025</h4> · 
+          <h4 id="wordcount">698 Words</h4>
+        </section>
+         
+      </div>
+    </div>
+  </header>
+  <div class="post-summary post-content">
+  <p><img src="/img/blog/BestFormLens/bestformlens.png" alt="best form lens art"></p>
+<p>I recently came across an interesting question: “What is the best form of a singlet lens?” At first, it seemed trivial — the answer is clearly the plano-convex lens. That’s what many optical design texts suggest, since it minimizes spherical aberration and coma. But I soon discovered that this answer relies on certain assumptions.</p>
+  </div>
+
+  <footer class="">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <a class="btn btn-primary" href="/blog/bestformlens/"
+          >Read more&nbsp;&raquo;</a
+        >
+      </div>
+    </div>
+  </footer>
+</article>
+
+          </div>
+        
+          <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
+          <article class="post summary col-12">
+  <header>
+    <h2><a href="/blog/lidar/">Light Detection and Ranging (LiDAR)</a></h2>
     <div class="post-meta">
       <div>
         <section>
@@ -192,6 +289,39 @@ The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF
     <div class="row">
       <div class="col-12 col-lg-4">
         <a class="btn btn-primary" href="/blog/solidworks_showcase/"
+          >Read more&nbsp;&raquo;</a
+        >
+      </div>
+    </div>
+  </footer>
+</article>
+
+          </div>
+        
+          <div class="row row--padded rad-animation-group rad-fade-down rad-waiting rad-animate section--border-bottom">
+          <article class="post summary col-12">
+  <header>
+    <h2><a href="/blog/compactcamera/">Optical Time-of-Flight (ToF) sensing and lock-in detection</a></h2>
+    <div class="post-meta">
+      <div>
+        <section>
+          Published on
+          <h4 id="date">Sat Dec 28, 2024</h4> · 
+          <h4 id="wordcount">1172 Words</h4>
+        </section>
+         
+      </div>
+    </div>
+  </header>
+  <div class="post-summary post-content">
+  <p><img src="/img/blog/ToF/time_of_flight.webp" alt="ToF art"></p>
+<p>Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical time-of-flight. I will introduce two concepts: (a) The time-of-flight Principle and (b) lock-in detection/amplification to explain how it works.</p>
+  </div>
+
+  <footer class="">
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <a class="btn btn-primary" href="/blog/compactcamera/"
           >Read more&nbsp;&raquo;</a
         >
       </div>
