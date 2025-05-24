@@ -61,7 +61,7 @@
     margin-right: 0;
 }
 .btn [class^="icon-arrow-right"] {
-    margin-left: 6px;
+    margin-left: 1px;
     margin-right: 0;
 }
 .btn [class^="icon-arrow-right"]::before {

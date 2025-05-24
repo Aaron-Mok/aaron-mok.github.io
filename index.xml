@@ -9,6 +9,13 @@
     <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aaron-mok.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Patent: Optical pulse generator and method</title>
+      <link>https://aaron-mok.github.io/projects/patent/</link>
+      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://aaron-mok.github.io/projects/patent/</guid>
+      <description>&lt;p&gt;This patent discloses an optical beamlet-array generator designed to multiply the imaging speed of an optical scanning system.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>What is the best form lens? </title>
       <link>https://aaron-mok.github.io/blog/bestformlens/</link>
       <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
@@ -76,7 +83,7 @@
       <link>https://aaron-mok.github.io/projects/tissuespec/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://aaron-mok.github.io/projects/tissuespec/</guid>
-      <description>&lt;p&gt;We built a simple and versatile spectrometer to measure tissue ballistic and total transmission with customizable wavelength range, spatial resolution, and sample sizes.&lt;/p&gt;</description>
+      <description>&lt;p&gt;It is featured in Zemax Case study. &lt;a href=&#34;https://www.ansys.com/resource-center/case-study/cornell-university&#34;&gt;The Case study&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;We built a simple and versatile spectrometer to measure tissue ballistic and total transmission with customizable wavelength range, spatial resolution, and sample sizes.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Graziella Nutella</title>
