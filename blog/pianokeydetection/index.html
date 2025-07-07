@@ -249,13 +249,13 @@ pre {
 </span></span><span style="display:flex;"><span>    clean_reference_matched <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>match_brightness(frame, self<span style="color:#f92672">.</span>clean_reference)
 </span></span><span style="display:flex;"><span>    frame[y_min:y_max, x_min:x_max] <span style="color:#f92672">=</span> clean_reference_matched[y_min:y_max, x_min:x_max]
 </span></span></code></pre></div><p>Example result:
-<figure class="center"><img src="/img/blog/AIPianoTutor/NoHand.png"
+<figure class="center"><img src="/img/blog/AIPianoTutor/NoHand.PNG"
     alt="Hand_removed" width="95%">
 </figure>
 </p>
 <h3 id="yolov8-segmentation">YOLOv8 segmentation</h3>
 <p>I trained a YOLOv8 segmentation model using a dataset of 572 piano images from Roboflow <a href="https://universe.roboflow.com/hworkspace-efglx/piano-original/browse?queryText=&amp;pageSize=50&amp;startingIndex=0&amp;browseQuery=true">(dataset link)</a>. The example below shows the segmentation result, along with the code used to train and apply the model.</p>
-<figure class="center"><img src="/img/blog/AIPianoTutor/YOLODetection2.png"
+<figure class="center"><img src="/img/blog/AIPianoTutor/YOLODetection2.PNG"
     alt="YOLO" width="95%">
 </figure>
 
