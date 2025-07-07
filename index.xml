@@ -6,8 +6,15 @@
     <description>Recent content on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aaron-mok.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My AI Piano Tutor</title>
+      <link>https://aaron-mok.github.io/blog/pianokeydetection/</link>
+      <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://aaron-mok.github.io/blog/pianokeydetection/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/AIPianoTutor/AITutorCoverArt.png&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I am a beginner piano player—despite holding ABRSM Grade 8 in both oboe and music theory. Piano presents a new set of challenges. For me, the difficulty lies in sight-reading: identifying notes on both clefs, finding the correct keys on the keyboard, and coordinating both hands in real time. That became the inspiration for this project: building my own AI-powered piano tutor using computer vision, a webcam, and a piano to improve my sight-reading.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Patent: Optical pulse generator and method</title>
       <link>https://aaron-mok.github.io/projects/patent/</link>
@@ -35,13 +42,6 @@
       <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://aaron-mok.github.io/blog/solidworks_showcase/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/Toolings/tooling_coverart.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This blog post showcases some optical tooling and mounts I designed in SolidWorks and Fusion.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Optical Time-of-Flight (ToF) sensing and lock-in detection</title>
-      <link>https://aaron-mok.github.io/blog/compactcamera/</link>
-      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://aaron-mok.github.io/blog/compactcamera/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/ToF/time_of_flight.webp&#34; alt=&#34;ToF art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Distance measurements is important for a lot of applications, such as 3D imaging and depth sensing. One common method for distance measurement is by using optical time-of-flight. I will introduce two concepts: (a) The time-of-flight Principle and (b) lock-in detection/amplification to explain how it works.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optical Time-of-Flight (ToF) sensing and lock-in detection</title>

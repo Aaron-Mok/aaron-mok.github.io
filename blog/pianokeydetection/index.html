@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<meta name="theme-color" content="#478079"/>
+
+
+
+<title>Aaron Mok | System Architect</title>
+<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect specializing in the design and optimization of complex optical systems.'>
+<meta name="generator-mode" content='production'>
+<style data-generator="critical-css">
+</style>
+  <link rel="stylesheet" href="https://aaron-mok.github.io/scss/adritian.min.c43980c726e1de153bec9c6b98a1e28b34cd282522a8f596ab3bb88d4b55c066.css" integrity="sha256-xDmAxybh3hU77JxrmKHiizTNKCUiqPWWqzu4jUtVwGY=" crossorigin="anonymous"/>
+
+<link
+  rel="preload"
+  href="/css/bundle.min.102305a2784647e8254386fe7c72c7438fa33d258f54fb52032992a991d8caa5.css"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+  integrity="sha256-ECMFonhGR+glQ4b+fHLHQ4+jPSWPVPtSAymSqZHYyqU="
+    crossorigin="anonymous"
+/>
+<noscript>
+  <link 
+    rel="stylesheet"
+    href="/css/bundle.min.102305a2784647e8254386fe7c72c7438fa33d258f54fb52032992a991d8caa5.css"
+    integrity="sha256-ECMFonhGR+glQ4b+fHLHQ4+jPSWPVPtSAymSqZHYyqU="
+    crossorigin="anonymous"
+  />
+</noscript>
+
+
+
+
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-32S011CNTY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-32S011CNTY');
+  </script>
+
+
+
+<link rel="icon" href="/icon_cropped_30x30.png" type="image/x-icon" /> 
+<style>
+ 
+.math.display + ul,
+p.math + ul,
+p:has(+ ul) {
+  margin-bottom: 0.2em !important;
+}
+
+ul {
+  margin-top: 0.2em !important;
+}
+
+table {
+  margin-bottom: 1.0em;
+}
+
+p:has(+ mjx-container[display="true"]) {
+  margin-bottom: 1.0em !important;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  margin-top: 1.0em !important;    
+  margin-bottom: 1.0em !important;
+}
+
+ 
+table + mjx-container[display="true"] {
+  margin-top: 2em !important;
+}
+
+ 
+p + mjx-container[display="true"] {
+  margin-top: 0em !important;
+  margin-bottom: 1.0em !important;
+}
+
+ul,
+ol {
+  margin-top: 0.7em !important;  
+}
+
+p:has(+ figure.center) {
+  margin-bottom: 0.7em !important;
+}
+
+ 
+figure.center {
+  margin-top: 0 !important;
+}
+
+ 
+table td,
+table th {
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2 em !important;
+}
+
+.spacer {
+  height: 1.0em !important;
+}
+
+pre {
+  width: 95%;            
+  margin: 1em auto;      
+}
+
+</style>
+
+    
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+    
+  </head>
+
+  <body>
+    
+
+<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-auto" href="https://aaron-mok.github.io/">
+          <span>Aaron</span>
+          <span>Mok</span>
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="https://aaron-mok.github.io/">HOME</a>
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#portfolio"
+                >PORTFOLIO</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/blog"
+                >BLOG</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#contact"
+                >CONTACT</a
+              >
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<section id="breadcrumb-bar" class="breadcrumb-bar container">
+        <ul class="breadcrumbs">
+            <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/blog">Blog</a></span></li><li class="breadcrum-item current">My AI Piano Tutor</li></ul>
+</section>
+
+
+    <section
+      id="blog-single"
+      class="section section--border-bottom rad-animation-group"
+    >
+      <div class="container">
+        <h1><a href="/blog/pianokeydetection/">My AI Piano Tutor</a></h1>
+
+        <aside id="meta" class="light-border-bottom">
+          <div>
+            <section>
+              Published on
+              <h4 id="date">Sun Jul 6, 2025</h4>
+              ·
+              <h4 id="wordcount">2028 Words</h4>
+            </section>
+             
+          </div>
+        </aside>
+
+        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+          <div class="col-12"><p><img src="/img/blog/AIPianoTutor/AITutorCoverArt.png" alt="ToF art"></p>
+<p>I am a beginner piano player—despite holding ABRSM Grade 8 in both oboe and music theory. Piano presents a new set of challenges. For me, the difficulty lies in sight-reading: identifying notes on both clefs, finding the correct keys on the keyboard, and coordinating both hands in real time. That became the inspiration for this project: building my own AI-powered piano tutor using computer vision, a webcam, and a piano to improve my sight-reading.</p>
+<p>As an oboist, I am used to instinctively translating notes into fingerings. That gave me an idea: what if I could use a webcam and computer vision to detect the piano keys, label them, and show me which key to press next? This kind of real-time mapping between sheet music and hand movement might help build muscle memory and improve sight-reading over time.</p>
+<p>In this project, I demonstrate how I use a webcam and computer vision to identify individual piano keys in real time, display which key to press based on sheet music, and detect which notes are actually played using audio.</p>
+<h2 id="flow-chat-of-the-whole-process">Flow chat of the whole process</h2>
+<p>The diagram below summarizes the full workflow.
+<figure class="center"><img src="/img/blog/AIPianoTutor/FlowChart.png"
+    alt="FlowChart" width="auto">
+</figure>
+</p>
+<h2 id="section-1-keyboard-segmentation">Section 1: Keyboard segmentation</h2>
+<p>To detect individual keys in real time—even when hands are partially covering the keyboard—I implemented a hand removal step. When hands are detected using MediaPipe, the corresponding regions are replaced with a clean reference image. Since the keyboard position is fixed relative to the camera, users also have the option to lock on the key labelling. This prevents instability caused by occlusion during hand movement.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> mediapipe <span style="color:#66d9ef">as</span> mp
+</span></span><span style="display:flex;"><span>hands <span style="color:#f92672">=</span> mp<span style="color:#f92672">.</span>solutions<span style="color:#f92672">.</span>hands<span style="color:#f92672">.</span>Hands(static_image_mode<span style="color:#f92672">=</span><span style="color:#66d9ef">False</span>, max_num_hands<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>, min_detection_confidence<span style="color:#f92672">=</span><span style="color:#ae81ff">0.7</span>)
+</span></span><span style="display:flex;"><span>results_hands <span style="color:#f92672">=</span> hands<span style="color:#f92672">.</span>process(frame_rgb)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> hand_landmarks <span style="color:#f92672">in</span> results_hands<span style="color:#f92672">.</span>multi_hand_landmarks:
+</span></span><span style="display:flex;"><span>    xs <span style="color:#f92672">=</span> [int(landmark<span style="color:#f92672">.</span>x <span style="color:#f92672">*</span> w_img) <span style="color:#66d9ef">for</span> landmark <span style="color:#f92672">in</span> hand_landmarks<span style="color:#f92672">.</span>landmark]
+</span></span><span style="display:flex;"><span>    ys <span style="color:#f92672">=</span> [int(landmark<span style="color:#f92672">.</span>y <span style="color:#f92672">*</span> h_img) <span style="color:#66d9ef">for</span> landmark <span style="color:#f92672">in</span> hand_landmarks<span style="color:#f92672">.</span>landmark]
+</span></span><span style="display:flex;"><span>    x_min, x_max <span style="color:#f92672">=</span> max(min(xs) <span style="color:#f92672">-</span> <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">0</span>), min(max(xs) <span style="color:#f92672">+</span> <span style="color:#ae81ff">20</span>, w_img)
+</span></span><span style="display:flex;"><span>    y_min, y_max <span style="color:#f92672">=</span> max(min(ys) <span style="color:#f92672">-</span> <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">0</span>), min(max(ys) <span style="color:#f92672">+</span> <span style="color:#ae81ff">20</span>, h_img)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Replace the hand area with pixels from the clean reference</span>
+</span></span><span style="display:flex;"><span>    clean_reference_matched <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>match_brightness(frame, self<span style="color:#f92672">.</span>clean_reference)
+</span></span><span style="display:flex;"><span>    frame[y_min:y_max, x_min:x_max] <span style="color:#f92672">=</span> clean_reference_matched[y_min:y_max, x_min:x_max]
+</span></span></code></pre></div><p>Example result:
+<figure class="center"><img src="/img/blog/AIPianoTutor/NoHand.png"
+    alt="Hand_removed" width="95%">
+</figure>
+</p>
+<h3 id="yolov8-segmentation">YOLOv8 segmentation</h3>
+<p>I trained a YOLOv8 segmentation model using a dataset of 572 piano images from Roboflow <a href="https://universe.roboflow.com/hworkspace-efglx/piano-original/browse?queryText=&amp;pageSize=50&amp;startingIndex=0&amp;browseQuery=true">(dataset link)</a>. The example below shows the segmentation result, along with the code used to train and apply the model.</p>
+<figure class="center"><img src="/img/blog/AIPianoTutor/YOLODetection2.png"
+    alt="YOLO" width="95%">
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> ultralytics <span style="color:#f92672">import</span> YOLO
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Load a YOLOv8 segmentation model (you can start with a pretrained one)</span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> YOLO(<span style="color:#e6db74">&#34;yolov8n-seg.pt&#34;</span>)  <span style="color:#75715e"># or yolov8s-seg.pt, yolov8m-seg.pt, etc.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Train the model</span>
+</span></span><span style="display:flex;"><span>model<span style="color:#f92672">.</span>train(
+</span></span><span style="display:flex;"><span>    data<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;piano_dataset/data.yaml&#34;</span>,  <span style="color:#75715e"># path to dataset config from Roboflow export</span>
+</span></span><span style="display:flex;"><span>    epochs<span style="color:#f92672">=</span><span style="color:#ae81ff">50</span>,
+</span></span><span style="display:flex;"><span>    imgsz<span style="color:#f92672">=</span><span style="color:#ae81ff">640</span>,
+</span></span><span style="display:flex;"><span>    batch<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+</span></span><span style="display:flex;"><span>    project<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;piano_seg_yolov8&#34;</span>,
+</span></span><span style="display:flex;"><span>    name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;train&#34;</span>,
+</span></span><span style="display:flex;"><span>    task<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;segment&#34;</span>
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>model <span style="color:#f92672">=</span> YOLO(<span style="color:#e6db74">&#34;piano_seg_yolov8/runs/segment/train2/weights/best.pt&#34;</span>)
+</span></span><span style="display:flex;"><span>results <span style="color:#f92672">=</span> model(frame, conf<span style="color:#f92672">=</span><span style="color:#ae81ff">0.9</span>)[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>yolo_mask <span style="color:#f92672">=</span> results<span style="color:#f92672">.</span>masks<span style="color:#f92672">.</span>data[<span style="color:#ae81ff">0</span>]<span style="color:#f92672">.</span>cpu()<span style="color:#f92672">.</span>numpy()
+</span></span><span style="display:flex;"><span>yolo_mask <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>resize(yolo_mask, (frame<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">1</span>], frame<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]))
+</span></span><span style="display:flex;"><span>yolo_mask <span style="color:#f92672">=</span> (yolo_mask <span style="color:#f92672">*</span> <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint8)
+</span></span><span style="display:flex;"><span>_, binary_mask <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>threshold(yolo_mask, <span style="color:#ae81ff">128</span>, <span style="color:#ae81ff">255</span>, cv2<span style="color:#f92672">.</span>THRESH_BINARY)
+</span></span><span style="display:flex;"><span>x, y, w, h <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>boundingRect(binary_mask)
+</span></span></code></pre></div><h3 id="edge-detection--morphology">Edge Detection &amp; Morphology</h3>
+<p>Next, I applied CLAHE equalization to make the white key gaps stand out more. This method works well even under uneven lighting conditions. Canny edge detection highlight vertical edges of white keys. Then, a morphological closing operation fills small gaps in the edge detection result.</p>
+<figure class="center"><img src="/img/blog/AIPianoTutor/CannyEdgeDetection.png"
+    alt="CannyEdgeDetection" width="95%">
+</figure>
+
+<figure class="center"><img src="/img/blog/AIPianoTutor/ClosedCannyEdgeDetection.png"
+    alt="ClosedCannyEdgeDetection" width="95%">
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>h <span style="color:#f92672">=</span> piano<span style="color:#f92672">.</span>shape[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>white_keys <span style="color:#f92672">=</span> piano[int(h <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.7</span>):]  <span style="color:#75715e"># bottom quarter</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>clahe <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>createCLAHE(clipLimit<span style="color:#f92672">=</span><span style="color:#ae81ff">3.0</span>, tileGridSize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">8</span>))
+</span></span><span style="display:flex;"><span>equalized_white_keys <span style="color:#f92672">=</span> clahe<span style="color:#f92672">.</span>apply(white_keys)
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;Equalized white keys&#34;</span>, equalized_white_keys)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>white_key_edges <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>Canny(equalized_white_keys, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">150</span>, apertureSize<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>kernel <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>ones((<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>), np<span style="color:#f92672">.</span>uint8)
+</span></span><span style="display:flex;"><span>closed_edge <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>morphologyEx(white_key_edges, cv2<span style="color:#f92672">.</span>MORPH_CLOSE, kernel)
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;Edge detection&#34;</span>, white_key_edges)
+</span></span><span style="display:flex;"><span>cv2<span style="color:#f92672">.</span>imshow(<span style="color:#e6db74">&#34;Closed edge detection&#34;</span>, closed_edge)
+</span></span></code></pre></div><h3 id="hough-line-transform">Hough Line Transform</h3>
+<p>Using the processed edge map, I applied a probabilistic Hough transform to detect mostly vertical lines between white keys. These were then stabilized across frames and merged.</p>
+<figure class="center"><img src="/img/blog/AIPianoTutor/HoughLines.png"
+    alt="HoughLines" width="95%">
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Detect line segments using the Probabilistic Hough Transform</span>
+</span></span><span style="display:flex;"><span>lines <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>HoughLinesP(
+</span></span><span style="display:flex;"><span>    closed_edge,           <span style="color:#75715e"># Edge-detected binary image</span>
+</span></span><span style="display:flex;"><span>    rho<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,                 <span style="color:#75715e"># Distance resolution in pixels</span>
+</span></span><span style="display:flex;"><span>    theta<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>pi <span style="color:#f92672">/</span> <span style="color:#ae81ff">180</span>,     <span style="color:#75715e"># Angle resolution in radians (1 degree)</span>
+</span></span><span style="display:flex;"><span>    threshold<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>,          <span style="color:#75715e"># Minimum number of votes (intersections in Hough grid)</span>
+</span></span><span style="display:flex;"><span>    minLineLength<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>,      <span style="color:#75715e"># Minimum length of line to be accepted</span>
+</span></span><span style="display:flex;"><span>    maxLineGap<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>          <span style="color:#75715e"># Maximum allowed gap between line segments to treat them as a single line</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vertical_lines <span style="color:#f92672">=</span> []                   <span style="color:#75715e"># Store vertical line segments</span>
+</span></span><span style="display:flex;"><span>line_img <span style="color:#f92672">=</span> white_keys<span style="color:#f92672">.</span>copy()          <span style="color:#75715e"># Copy image for visualizing detected lines</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If lines are detected</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> lines <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#66d9ef">None</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> line <span style="color:#f92672">in</span> lines:
+</span></span><span style="display:flex;"><span>        x_1, y_1, x_2, y_2 <span style="color:#f92672">=</span> line[<span style="color:#ae81ff">0</span>]   <span style="color:#75715e"># Extract endpoints</span>
+</span></span><span style="display:flex;"><span>        angle <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>arctan2((y_2 <span style="color:#f92672">-</span> y_1), (x_2 <span style="color:#f92672">-</span> x_1)) <span style="color:#f92672">*</span> <span style="color:#ae81ff">180</span> <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>pi  <span style="color:#75715e"># Calculate angle of the line in degrees</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Filter out non-vertical lines (keep lines near 90°)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> abs(angle) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">80</span>:
+</span></span><span style="display:flex;"><span>            cv2<span style="color:#f92672">.</span>line(line_img, (x_1, y_1), (x_2, y_2), (<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>), <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>            vertical_lines<span style="color:#f92672">.</span>append((x_1, y_1, x_2, y_2))                 <span style="color:#75715e"># Save vertical line</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Calculate x-coordinate of the center of each detected vertical line</span>
+</span></span><span style="display:flex;"><span>frame_x_centers <span style="color:#f92672">=</span> [int((x_1 <span style="color:#f92672">+</span> x_2) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> (x_1, y_1, x_2, y_2) <span style="color:#f92672">in</span> vertical_lines]
+</span></span><span style="display:flex;"><span>frame_x_centers<span style="color:#f92672">.</span>sort()  <span style="color:#75715e"># Sort from left to right</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>merged_xs <span style="color:#f92672">=</span> []  <span style="color:#75715e"># List of merged and stabilized x-positions</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add current frame&#39;s x-centers to the buffer</span>
+</span></span><span style="display:flex;"><span>line_buffer<span style="color:#f92672">.</span>append(frame_x_centers)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> len(line_buffer) <span style="color:#f92672">&gt;</span> buffer_size:
+</span></span><span style="display:flex;"><span>    line_buffer<span style="color:#f92672">.</span>pop(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># Maintain fixed buffer size</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Once enough frames are buffered, merge x-coordinates for temporal smoothing</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> len(line_buffer) <span style="color:#f92672">==</span> buffer_size:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Flatten all x-centers across buffered frames</span>
+</span></span><span style="display:flex;"><span>    all_xs <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> frame_xs <span style="color:#f92672">in</span> line_buffer <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> frame_xs]
+</span></span><span style="display:flex;"><span>    all_xs<span style="color:#f92672">.</span>sort()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    cluster <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> xs <span style="color:#f92672">in</span> all_xs:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Group nearby x values into clusters based on threshold</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> cluster <span style="color:#f92672">or</span> abs(xs <span style="color:#f92672">-</span> cluster[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) <span style="color:#f92672">&lt;=</span> merge_thresh:
+</span></span><span style="display:flex;"><span>            cluster<span style="color:#f92672">.</span>append(xs)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Finalize cluster by averaging and reset</span>
+</span></span><span style="display:flex;"><span>            merged_xs<span style="color:#f92672">.</span>append(int(np<span style="color:#f92672">.</span>mean(cluster)))
+</span></span><span style="display:flex;"><span>            cluster <span style="color:#f92672">=</span> [xs]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Handle last cluster if it exists</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> cluster:
+</span></span><span style="display:flex;"><span>        merged_xs<span style="color:#f92672">.</span>append(int(np<span style="color:#f92672">.</span>mean(cluster)))
+</span></span></code></pre></div><p>The x-coordinate of the center of each detected vertical line is calculated, corresponding to the position of each white key gap. By drawing vertical lines at these positions, we obtain exactly 52 white key boundaries, as shown in the figure below.
+<figure class="center"><img src="/img/blog/AIPianoTutor/PianoKeySegmentation.png"
+    alt="PianoKeySegmentation" width="95%">
+</figure>
+</p>
+<h3 id="piano-key-labeling">Piano key labeling</h3>
+<p>With the x-coordinates of each key identified, I labeled them from A0 to C8. Note names are drawn using PIL.</p>
+<figure class="center"><img src="/img/blog/AIPianoTutor/PianoWithKey.PNG"
+    alt="PianoWithKey" width="95%">
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Draw white keys</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define white keys in order from A0 to C8 (88-key piano standard)</span>
+</span></span><span style="display:flex;"><span>white_keys <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;A0&#39;</span>, <span style="color:#e6db74">&#39;B0&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C1&#39;</span>, <span style="color:#e6db74">&#39;D1&#39;</span>, <span style="color:#e6db74">&#39;E1&#39;</span>, <span style="color:#e6db74">&#39;F1&#39;</span>, <span style="color:#e6db74">&#39;G1&#39;</span>, <span style="color:#e6db74">&#39;A1&#39;</span>, <span style="color:#e6db74">&#39;B1&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C2&#39;</span>, <span style="color:#e6db74">&#39;D2&#39;</span>, <span style="color:#e6db74">&#39;E2&#39;</span>, <span style="color:#e6db74">&#39;F2&#39;</span>, <span style="color:#e6db74">&#39;G2&#39;</span>, <span style="color:#e6db74">&#39;A2&#39;</span>, <span style="color:#e6db74">&#39;B2&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C3&#39;</span>, <span style="color:#e6db74">&#39;D3&#39;</span>, <span style="color:#e6db74">&#39;E3&#39;</span>, <span style="color:#e6db74">&#39;F3&#39;</span>, <span style="color:#e6db74">&#39;G3&#39;</span>, <span style="color:#e6db74">&#39;A3&#39;</span>, <span style="color:#e6db74">&#39;B3&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C4&#39;</span>, <span style="color:#e6db74">&#39;D4&#39;</span>, <span style="color:#e6db74">&#39;E4&#39;</span>, <span style="color:#e6db74">&#39;F4&#39;</span>, <span style="color:#e6db74">&#39;G4&#39;</span>, <span style="color:#e6db74">&#39;A4&#39;</span>, <span style="color:#e6db74">&#39;B4&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C5&#39;</span>, <span style="color:#e6db74">&#39;D5&#39;</span>, <span style="color:#e6db74">&#39;E5&#39;</span>, <span style="color:#e6db74">&#39;F5&#39;</span>, <span style="color:#e6db74">&#39;G5&#39;</span>, <span style="color:#e6db74">&#39;A5&#39;</span>, <span style="color:#e6db74">&#39;B5&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C6&#39;</span>, <span style="color:#e6db74">&#39;D6&#39;</span>, <span style="color:#e6db74">&#39;E6&#39;</span>, <span style="color:#e6db74">&#39;F6&#39;</span>, <span style="color:#e6db74">&#39;G6&#39;</span>, <span style="color:#e6db74">&#39;A6&#39;</span>, <span style="color:#e6db74">&#39;B6&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C7&#39;</span>, <span style="color:#e6db74">&#39;D7&#39;</span>, <span style="color:#e6db74">&#39;E7&#39;</span>, <span style="color:#e6db74">&#39;F7&#39;</span>, <span style="color:#e6db74">&#39;G7&#39;</span>, <span style="color:#e6db74">&#39;A7&#39;</span>, <span style="color:#e6db74">&#39;B7&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;C8&#39;</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define black keys (sharps/flats), skipping where there&#39;s no black key (e.g., between E and F)</span>
+</span></span><span style="display:flex;"><span>black_keys <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb0&#34;</span>, <span style="color:#e6db74">&#34;C#1&#34;</span>, <span style="color:#e6db74">&#34;Eb1&#34;</span>, <span style="color:#e6db74">&#34;F#1&#34;</span>, <span style="color:#e6db74">&#34;Ab1&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb1&#34;</span>, <span style="color:#e6db74">&#34;C#2&#34;</span>, <span style="color:#e6db74">&#34;Eb2&#34;</span>, <span style="color:#e6db74">&#34;F#2&#34;</span>, <span style="color:#e6db74">&#34;Ab2&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb2&#34;</span>, <span style="color:#e6db74">&#34;C#3&#34;</span>, <span style="color:#e6db74">&#34;Eb3&#34;</span>, <span style="color:#e6db74">&#34;F#3&#34;</span>, <span style="color:#e6db74">&#34;Ab3&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb3&#34;</span>, <span style="color:#e6db74">&#34;C#4&#34;</span>, <span style="color:#e6db74">&#34;Eb4&#34;</span>, <span style="color:#e6db74">&#34;F#4&#34;</span>, <span style="color:#e6db74">&#34;Ab4&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb4&#34;</span>, <span style="color:#e6db74">&#34;C#5&#34;</span>, <span style="color:#e6db74">&#34;Eb5&#34;</span>, <span style="color:#e6db74">&#34;F#5&#34;</span>, <span style="color:#e6db74">&#34;Ab5&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb5&#34;</span>, <span style="color:#e6db74">&#34;C#6&#34;</span>, <span style="color:#e6db74">&#34;Eb6&#34;</span>, <span style="color:#e6db74">&#34;F#6&#34;</span>, <span style="color:#e6db74">&#34;Ab6&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb6&#34;</span>, <span style="color:#e6db74">&#34;C#7&#34;</span>, <span style="color:#e6db74">&#34;Eb7&#34;</span>, <span style="color:#e6db74">&#34;F#7&#34;</span>, <span style="color:#e6db74">&#34;Ab7&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Bb7&#34;</span>, <span style="color:#e6db74">&#34;C#8&#34;</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Indices in the white key list where black keys are positioned (for visual overlay)</span>
+</span></span><span style="display:flex;"><span>black_key_indices <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">13</span>, <span style="color:#ae81ff">14</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">17</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">21</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">24</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">27</span>, <span style="color:#ae81ff">28</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">31</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">36</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">39</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">42</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">45</span>, <span style="color:#ae81ff">46</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">49</span>, <span style="color:#ae81ff">50</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Convert the OpenCV image to a PIL image for easier drawing</span>
+</span></span><span style="display:flex;"><span>cropped_pil <span style="color:#f92672">=</span> Image<span style="color:#f92672">.</span>fromarray(cv2<span style="color:#f92672">.</span>cvtColor(cropped_piano, cv2<span style="color:#f92672">.</span>COLOR_BGR2RGB))
+</span></span><span style="display:flex;"><span>draw <span style="color:#f92672">=</span> ImageDraw<span style="color:#f92672">.</span>Draw(cropped_pil)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --- Draw white key labels ---</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Check that the number of key intervals matches the number of white keys</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> len(xs_to_use) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> len(white_keys):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(xs_to_use) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        note <span style="color:#f92672">=</span> white_keys[i]
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Calculate the midpoint between the current and next vertical key line</span>
+</span></span><span style="display:flex;"><span>        mid_x <span style="color:#f92672">=</span> int((xs_to_use[i] <span style="color:#f92672">+</span> xs_to_use[i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>]) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Draw the note label or marker at the midpoint</span>
+</span></span><span style="display:flex;"><span>        draw_note_circle(draw, mid_x, note)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --- Draw black key labels ---</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> idx, note <span style="color:#f92672">in</span> zip(black_key_indices, black_keys):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Make sure the index is within bounds of the x positions</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> idx <span style="color:#f92672">&lt;</span> len(xs_to_use) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Use the x position directly for black keys</span>
+</span></span><span style="display:flex;"><span>        mid_x <span style="color:#f92672">=</span> int(xs_to_use[idx])
+</span></span><span style="display:flex;"><span>        draw_note_circle(draw, mid_x, note)
+</span></span></code></pre></div><br>
+<h2 id="section-2-note-parsing">Section 2: Note Parsing</h2>
+<p>Sheet music in PDF format is converted to MusicXML using <a href="https://github.com/Audiveris/audiveris">Audiveris</a>, an open-source OMR tool. I parsed each bar, identify the notes, and highlight them on the keyboard: yellow for the treble clef (right hand), orange for the bass clef (left hand). The example below shows the fourth note in this bar highlighted on the keyboard. The accompanying code demonstrates how a MusicXML file is converted into a sequence of notes to be displayed on the keyboard labels for both hands.</p>
+<p><figure class="center"><img src="/img/blog/AIPianoTutor/BarDisplay_2.png"
+    alt="BarDisplay" width="60%">
+</figure>
+
+<figure class="center"><img src="/img/blog/AIPianoTutor/pianoKeyHighlight_2.png"
+    alt="pianoKeyHighlight" width="95%">
+</figure>
+</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">parse_sheet</span>(filepath):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Parse the sheet music file into a music21 Score object</span>
+</span></span><span style="display:flex;"><span>    score <span style="color:#f92672">=</span> converter<span style="color:#f92672">.</span>parse(filepath)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Map part indices to clef labels: 0 for treble, 1 for bass</span>
+</span></span><span style="display:flex;"><span>    part_labels <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>: <span style="color:#e6db74">&#34;treble&#34;</span>, <span style="color:#ae81ff">1</span>: <span style="color:#e6db74">&#34;bass&#34;</span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Dictionary to group notes by their time offset (rounded), and store by clef</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Each entry stores treble notes, bass notes, and the measure number</span>
+</span></span><span style="display:flex;"><span>    grouped <span style="color:#f92672">=</span> defaultdict(<span style="color:#66d9ef">lambda</span>: {<span style="color:#e6db74">&#34;treble&#34;</span>: [], <span style="color:#e6db74">&#34;bass&#34;</span>: [], <span style="color:#e6db74">&#34;measure&#34;</span>: <span style="color:#66d9ef">None</span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Iterate over each part (e.g., treble and bass staves)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i, part <span style="color:#f92672">in</span> enumerate(score<span style="color:#f92672">.</span>parts):
+</span></span><span style="display:flex;"><span>        label <span style="color:#f92672">=</span> part_labels<span style="color:#f92672">.</span>get(i, <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;part</span><span style="color:#e6db74">{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)  <span style="color:#75715e"># Label the part</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Iterate through all notes and chords in the part</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> part<span style="color:#f92672">.</span>flat<span style="color:#f92672">.</span>notes:
+</span></span><span style="display:flex;"><span>            key <span style="color:#f92672">=</span> round(n<span style="color:#f92672">.</span>offset, <span style="color:#ae81ff">3</span>)  <span style="color:#75715e"># Use offset as grouping key, rounded for precision</span>
+</span></span><span style="display:flex;"><span>            measure <span style="color:#f92672">=</span> n<span style="color:#f92672">.</span>getContextByClass(<span style="color:#e6db74">&#34;Measure&#34;</span>)  <span style="color:#75715e"># Get the measure the note belongs to</span>
+</span></span><span style="display:flex;"><span>            mnum <span style="color:#f92672">=</span> measure<span style="color:#f92672">.</span>number <span style="color:#66d9ef">if</span> measure <span style="color:#66d9ef">else</span> <span style="color:#ae81ff">1</span>   <span style="color:#75715e"># Default to measure 1 if not found</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># If it&#39;s a single note, store its pitch with octave</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> isinstance(n, note<span style="color:#f92672">.</span>Note):
+</span></span><span style="display:flex;"><span>                grouped[key][label]<span style="color:#f92672">.</span>append(n<span style="color:#f92672">.</span>nameWithOctave)
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># If it&#39;s a chord, store all its pitches with octave</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">elif</span> isinstance(n, chord<span style="color:#f92672">.</span>Chord):
+</span></span><span style="display:flex;"><span>                grouped[key][label]<span style="color:#f92672">.</span>extend(p<span style="color:#f92672">.</span>nameWithOctave <span style="color:#66d9ef">for</span> p <span style="color:#f92672">in</span> n<span style="color:#f92672">.</span>pitches)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Save the measure number for this offset</span>
+</span></span><span style="display:flex;"><span>            grouped[key][<span style="color:#e6db74">&#34;measure&#34;</span>] <span style="color:#f92672">=</span> mnum
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Convert the grouped dictionary to a sorted list of (treble_notes, bass_notes, measure)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [
+</span></span><span style="display:flex;"><span>        (entry[<span style="color:#e6db74">&#34;treble&#34;</span>], entry[<span style="color:#e6db74">&#34;bass&#34;</span>], entry[<span style="color:#e6db74">&#34;measure&#34;</span>])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> offset, entry <span style="color:#f92672">in</span> sorted(grouped<span style="color:#f92672">.</span>items())
+</span></span><span style="display:flex;"><span>    ]
+</span></span></code></pre></div><br>
+<h2 id="section-3-note-detection">Section 3: Note detection</h2>
+<h3 id="spectrogram-analysis-and-thresholding">Spectrogram analysis and thresholding</h3>
+<p>To detect which notes are played, I use the webcam’s microphone to capture audio and compute its spectrogram using FFT. A 3-second background spectrogram is first recorded to capture ambient noise, which is then subtracted from incoming frames.</p>
+<p>The cleaned spectrum is scanned for frequency peaks. These are compared against the expected frequencies of piano notes, derived from the equal temperament system. A4 is defined as 440 Hz, and each semitone differs by a factor of \(\sqrt[12]{2}\). For example, the frequency of the 7th semitone above A4 corresponds to: \(f = 440 Hz \cdot 2^{\frac{7}{12}}\).</p>
+\[f = 440 \cdot 2^{\frac{n-69}{12}}\]<p>
+where:</p>
+<ul>
+<li>\(f\) is the frequency of the note.</li>
+<li>\(n\) is the MIDI note number.</li>
+</ul>
+<p>The advantage of using MIDI note numbers is that both the pitch class (note name) and octave can be derived directly, where the note name is determined by \(n \bmod 12\) and the octave is given by \(\left\lfloor \frac{n}{12}\right\rfloor - 1\).</p>
+<p>The image below shows the background-subtracted spectrum in real time as A4 is played. A threshold removes residual noise and harmonics. The 440 Hz peak is correctly identified as A4. If multiple peaks exceed the threshold, the system interprets them as simultaneous notes. The code shows how I convert a detected frequency into a note label such as &ldquo;C4&rdquo; or &ldquo;A#5&rdquo;.</p>
+<figure class="center"><img src="/img/blog/AIPianoTutor/Spectrogram.png"
+    alt="Spectrum" width="45%">
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">freq_to_note</span>(freq):
+</span></span><span style="display:flex;"><span>    A4 <span style="color:#f92672">=</span> <span style="color:#ae81ff">440</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> freq <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> round(<span style="color:#ae81ff">12</span> <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>log2(freq <span style="color:#f92672">/</span> A4)) <span style="color:#f92672">+</span> <span style="color:#ae81ff">69</span>  <span style="color:#75715e"># MIDI note number</span>
+</span></span><span style="display:flex;"><span>    note_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;C#&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>, <span style="color:#e6db74">&#39;Eb&#39;</span>, <span style="color:#e6db74">&#39;E&#39;</span>, <span style="color:#e6db74">&#39;F&#39;</span>, <span style="color:#e6db74">&#39;F#&#39;</span>, <span style="color:#e6db74">&#39;G&#39;</span>, <span style="color:#e6db74">&#39;Ab&#39;</span>, <span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;Bb&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>]
+</span></span><span style="display:flex;"><span>    note <span style="color:#f92672">=</span> note_names[n <span style="color:#f92672">%</span> <span style="color:#ae81ff">12</span>]
+</span></span><span style="display:flex;"><span>    octave <span style="color:#f92672">=</span> n <span style="color:#f92672">//</span> <span style="color:#ae81ff">12</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> note <span style="color:#f92672">+</span> str(octave)
+</span></span></code></pre></div><br>
+<h2 id="section-4-video-demo">Section 4: Video Demo</h2>
+<p>The first video demonstrates a simple single-note progression. It displays both the sheet music and a visual of the keyboard. As each bar is displayed in the score, the corresponding key is shown on the keyboard, guiding the player in real time. This showcases the system’s ability to assist with sight-reading and hand-eye coordination for beginners.
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/fyLVFQRLTO8?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+<p>The second video highlights chord recognition. In addition to showing the sheet music and keyboard, it illustrates how the system waits for accurate input before progressing. If a wrong note is played—or if any note in a chord is missing—the playback does not advance. This feature reinforces correct playing and helps train precise chord execution.
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ToxRqkAhbZA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+</p>
+<h2 id="section-5-limitation-and-whats-next">Section 5: Limitation and What’s Next</h2>
+<ul>
+<li>Improving audio note detection robustness using better signal processing or machine learning.</li>
+<li>Integrating PDF-to-XML conversion for a smoother workflow.</li>
+<li>Adding dynamic note highlighting to the bar display.</li>
+<li>Expanding hand tracking to suggest posture and position corrections.</li>
+<li>Incorporating fingering suggestions, a valuable but challenging feature.</li>
+</ul>
+<br>
+<p>Icon credits: <em>Input Icon</em>: Kamin Ginkaew (Noun Project), <em>Processing Icon</em>: Deylotus Creative Design (Noun Project), <em>Output Icon</em>: Ian Rahmadi Kurniawan (Noun Project)</p></div>
+        </div>
+
+        <aside class="content-browser light-border-top">
+            Continue reading
+            <div>
+                
+                    <a class="previous" href="/blog/bestformlens/">↩ What is the best form lens? </a>
+                
+                 ■ 
+                
+            </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <div class="footer__copy">
+        © Aaron Mok. All rights reserved.
+      </div>
+    </div>
+    <div class="footer__links">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link" href="https://aaron-mok.github.io/">🏠 HOME</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="footer__right">
+      
+    </div>
+  </div>
+</footer>
+ <script>
+  window.addEventListener("load", function() {
+    try{
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      }); 
+      observer.observe();
+    } catch(e) {
+      console.error(e);
+    }
+  });
+</script>
+<script defer src='https://aaron-mok.github.io/js/rad-animations.js'></script>
+<script defer src='https://aaron-mok.github.io/js/library/smooth-scroll.polyfills.min.js'></script>
+<script defer src='https://aaron-mok.github.io/js/sticky-header.js'></script>
+<script defer src='https://aaron-mok.github.io/js/smooth-scroll-init.js'></script>
+<script defer src='https://aaron-mok.github.io/js/library/bootstrap.min.js'></script>
+
+
+
+
+
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+
+
+
+  </body>
+</html>
+
