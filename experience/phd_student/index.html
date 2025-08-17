@@ -89,7 +89,8 @@ p + mjx-container[display="true"] {
 
 ul,
 ol {
-  margin-top: 0.7em !important;  
+  margin-top: 1.0em !important;  
+  margin-bottom: 1.0em !important;  
 }
 
 p:has(+ figure.center) {
@@ -114,10 +115,53 @@ table th {
 
 pre {
   width: 95%;            
-  margin: 1em auto;      
+  margin: 0em auto;      
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+
+p:has(+ pre),
+p:has(+ div.highlight),
+p:has(+ div.chroma) {
+  margin-bottom: 0.5em;    
+}
+
+pre + h1,
+pre + h2,
+pre + h3,
+div.highlight + h1,
+div.highlight + h2,
+div.highlight + h3 {
+  margin-top: revert;
+}
+
+pre + p,
+div.highlight + p,
+div.chroma + p {
+  margin-top: 0.5em;
+}
+
+li,
+li p {
+  line-height: 1.6;  
+  margin: 1.0em;         
+}
+
+pre + div,
+div.highlight + div,
+div.chroma + div {
+  margin-top: 1.0em;  
+}
+
+p + div {
+  margin-top: 0.0em;
 }
 
 </style>
+
 
   </head>
 

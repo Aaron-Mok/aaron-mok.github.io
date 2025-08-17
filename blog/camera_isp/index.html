@@ -1,0 +1,776 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<meta name="theme-color" content="#478079"/>
+
+
+
+<title>Aaron Mok | System Architect</title>
+<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect specializing in the design and optimization of complex optical systems.'>
+<meta name="generator-mode" content='production'>
+<style data-generator="critical-css">
+</style>
+  <link rel="stylesheet" href="https://aaron-mok.github.io/scss/adritian.min.c43980c726e1de153bec9c6b98a1e28b34cd282522a8f596ab3bb88d4b55c066.css" integrity="sha256-xDmAxybh3hU77JxrmKHiizTNKCUiqPWWqzu4jUtVwGY=" crossorigin="anonymous"/>
+
+<link
+  rel="preload"
+  href="/css/bundle.min.102305a2784647e8254386fe7c72c7438fa33d258f54fb52032992a991d8caa5.css"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+  integrity="sha256-ECMFonhGR+glQ4b+fHLHQ4+jPSWPVPtSAymSqZHYyqU="
+    crossorigin="anonymous"
+/>
+<noscript>
+  <link 
+    rel="stylesheet"
+    href="/css/bundle.min.102305a2784647e8254386fe7c72c7438fa33d258f54fb52032992a991d8caa5.css"
+    integrity="sha256-ECMFonhGR+glQ4b+fHLHQ4+jPSWPVPtSAymSqZHYyqU="
+    crossorigin="anonymous"
+  />
+</noscript>
+
+
+
+
+
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-32S011CNTY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-32S011CNTY');
+  </script>
+
+
+
+<link rel="icon" href="/icon_cropped_30x30.png" type="image/x-icon" /> 
+<style>
+ 
+.math.display + ul,
+p.math + ul,
+p:has(+ ul) {
+  margin-bottom: 0.2em !important;
+}
+
+ul {
+  margin-top: 0.2em !important;
+}
+
+table {
+  margin-bottom: 1.0em;
+}
+
+p:has(+ mjx-container[display="true"]) {
+  margin-bottom: 1.0em !important;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  margin-top: 1.0em !important;    
+  margin-bottom: 1.0em !important;
+}
+
+ 
+table + mjx-container[display="true"] {
+  margin-top: 2em !important;
+}
+
+ 
+p + mjx-container[display="true"] {
+  margin-top: 0em !important;
+  margin-bottom: 1.0em !important;
+}
+
+ul,
+ol {
+  margin-top: 1.0em !important;  
+  margin-bottom: 1.0em !important;  
+}
+
+p:has(+ figure.center) {
+  margin-bottom: 0.7em !important;
+}
+
+ 
+figure.center {
+  margin-top: 0 !important;
+}
+
+ 
+table td,
+table th {
+  padding-top: 0.2em !important;
+  padding-bottom: 0.2 em !important;
+}
+
+.spacer {
+  height: 1.0em !important;
+}
+
+pre {
+  width: 95%;            
+  margin: 0em auto;      
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+
+p:has(+ pre),
+p:has(+ div.highlight),
+p:has(+ div.chroma) {
+  margin-bottom: 0.5em;    
+}
+
+pre + h1,
+pre + h2,
+pre + h3,
+div.highlight + h1,
+div.highlight + h2,
+div.highlight + h3 {
+  margin-top: revert;
+}
+
+pre + p,
+div.highlight + p,
+div.chroma + p {
+  margin-top: 0.5em;
+}
+
+li,
+li p {
+  line-height: 1.6;  
+  margin: 1.0em;         
+}
+
+pre + div,
+div.highlight + div,
+div.chroma + div {
+  margin-top: 1.0em;  
+}
+
+p + div {
+  margin-top: 0.0em;
+}
+
+</style>
+
+
+    
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+    
+  </head>
+
+  <body>
+    
+
+<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-auto" href="https://aaron-mok.github.io/">
+          <span>Aaron</span>
+          <span>Mok</span>
+        </a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent, #header"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-lg-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="https://aaron-mok.github.io/">HOME</a>
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#about"
+                >ABOUT</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#experience"
+                >EXPERIENCE</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#portfolio"
+                >PORTFOLIO</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/blog"
+                >BLOG</a
+              >
+            </li>
+            
+            <li class="nav-item">
+              <a data-scroll class="nav-link" href="/#contact"
+                >CONTACT</a
+              >
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<section id="breadcrumb-bar" class="breadcrumb-bar container">
+        <ul class="breadcrumbs">
+            <li class="breadcrum-item"><span><a href="/">Home</a></span></li><li class="breadcrum-item"><span><a href="/blog">Blog</a></span></li><li class="breadcrum-item current">Custom Camera Image Signal Processing (ISP) Pipeline with Raspberry Pi</li></ul>
+</section>
+
+
+    <section
+      id="blog-single"
+      class="section section--border-bottom rad-animation-group"
+    >
+      <div class="container">
+        <h1><a href="/blog/camera_isp/">Custom Camera Image Signal Processing (ISP) Pipeline with Raspberry Pi</a></h1>
+
+        <aside id="meta" class="light-border-bottom">
+          <div>
+            <section>
+              Published on
+              <h4 id="date">Sun Aug 17, 2025</h4>
+              ·
+              <h4 id="wordcount">3225 Words</h4>
+            </section>
+             
+          </div>
+        </aside>
+
+        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+          <div class="col-12"><p><img src="/img/blog/CameraISP/CoverArt_3.png" alt="ISP art"></p>
+<p>This post presents a custom, real-time camera image signal processing (ISP) pipeline developed from scratch for the Raspberry Pi HQ camera, designed to meet the precise control requirements for future stereo vision applications. The pipeline encompasses raw Bayer capture, stride correction, black level subtraction, demosaicing, white balance, and color correction calibration, and gamma mapping to sRGB. A reusable Python library is provided to support others working with raw data from the Pi HQ camera (See <a href="https://github.com/Aaron-Mok/Stereo-Camera/tree/main">GitHub</a>).</p>
+<hr>
+<h2 id="why-build-a-custom-isp">Why Build a Custom ISP?</h2>
+<p>Most consumer cameras process images automatically, hiding the underlying pipeline from the user. However, for scientific, stereo, or robotics applications, treating the image pipeline as a black box is not sufficient.</p>
+<p>My motivation for developing a custom ISP is two-fold:</p>
+<ul>
+<li>
+<p><strong>Stereo Vision Demands Geometric Precision</strong>: Building an accurate stereo camera system requires precise image alignment, something achievable only with full control over the image pipeline. Essential steps like lens distortion correction, rectification, and synchronized color/lighting handling (demosaicing, white balance, and color correction.
+) must be tightly managed.</p>
+</li>
+<li>
+<p><strong>Lack of Open Resources on ISP for Pi HQ Camera</strong>: While the Raspberry Pi HQ camera provides raw Bayer output, existing documentation and libraries for low-level raw image processing are either fragmented or incomplete. This project aims to address that gap with a reusable and customizable pipeline.</p>
+</li>
+</ul>
+<p>By developing this ISP from scratch, I have laid the foundation for a DIY stereo vision platform that ensures both image accuracy and geometric integrity—key components for depth estimation and 3D reconstruction. A lightweight Python library for reproducible raw processing is released for others building their own computer vision system (See <a href="https://github.com/Aaron-Mok/Stereo-Camera/tree/main">GitHub</a>).
+Below is a comparison of the raw Bayer image and the custom real-time ISP-processed raw Bayer images from the Pi HQ Camera:</p>
+<div style="display: flex; gap: 1em; justify-content: center; margin-bottom: 1.0em;">
+  <div style="flex: 1;">
+    <h4>Raw Bayer image – Pi HQ camera:</h4>
+    <img src="/img/blog/CameraISP/raw_u8_01.png" alt="raw_u8" style="max-width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <h4>Processed Image – custom real-time ISP:</h4>
+    <img src="/img/blog/CameraISP/bgr_image_awb_gamma_u801.png" alt="final image" style="max-width: 100%;">
+  </div>
+</div>
+<hr>
+<h2 id="capturing-raw-bayer-data">Capturing Raw Bayer Data</h2>
+<p>I use the Picamera2 library to access raw Bayer frames from the Raspberry Pi HQ camera live. This gives me full control over the raw image data before any automatic processing occurs.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize_camera</span>(camera_id, image_size):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Initialize a Raspberry Pi camera using Picamera2.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        camera_id (int): ID of the camera to use (0 or 1 for CSI port).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        image_size (tuple): Desired image resolution as (width, height), e.g., (2028, 1520).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        picam2: Initialized camera object.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        output_im_size (tuple): Actual image size as (width, height).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    picam2 <span style="color:#f92672">=</span> Picamera2(camera_id)
+</span></span><span style="display:flex;"><span>    config <span style="color:#f92672">=</span> picam2<span style="color:#f92672">.</span>create_preview_configuration(raw<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;format&#39;</span>: <span style="color:#e6db74">&#39;SBGGR12&#39;</span>, <span style="color:#e6db74">&#39;size&#39;</span>: image_size})
+</span></span><span style="display:flex;"><span>    picam2<span style="color:#f92672">.</span>configure(config)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Camera configuration:&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(picam2<span style="color:#f92672">.</span>camera_configuration())
+</span></span><span style="display:flex;"><span>    img_width_px, image_height_px <span style="color:#f92672">=</span> picam2<span style="color:#f92672">.</span>camera_configuration()[<span style="color:#e6db74">&#39;sensor&#39;</span>][<span style="color:#e6db74">&#39;output_size&#39;</span>]
+</span></span><span style="display:flex;"><span>    picam2<span style="color:#f92672">.</span>start()
+</span></span><span style="display:flex;"><span>    output_im_size <span style="color:#f92672">=</span> (img_width_px, image_height_px)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> picam2, output_im_size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example</span>
+</span></span><span style="display:flex;"><span>cam_obj, output_im_size_px <span style="color:#f92672">=</span> initialize_camera(camera_id<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, image_size<span style="color:#f92672">=</span>(<span style="color:#ae81ff">2028</span>, <span style="color:#ae81ff">1520</span>))
+</span></span><span style="display:flex;"><span>raw_u8 <span style="color:#f92672">=</span> capture_raw_image(cam_obj)
+</span></span></code></pre></div><hr>
+<h2 id="reconstructing-16-bit-images-and-stride-correction">Reconstructing 16 bit images and Stride Correction</h2>
+<p>The Raspberry Pi HQ Camera produces 12-bit raw sensor data that is packaged into a 16-bit container. Instead of standard 16-bit raw images, the data is stored in a split 8-bit format, where the two bytes must be combined to recover the original values. Understanding the roles of the Most Significant Byte (MSB) and Least Significant Byte (LSB) is key:</p>
+<ul>
+<li>MSB: The upper 8 bits of a 16-bit number (captures the coarse, higher-order information).</li>
+<li>LSB: The lower 8 bits of a 16-bit number (captures the finer detail).</li>
+</ul>
+<p>For example, suppose a pixel’s true value is 0xABCD (hex) = 43981 (decimal).</p>
+<ul>
+<li>MSB = 0xAB = 171 (decimal)</li>
+<li>LSB = 0xCD = 205 (decimal)</li>
+</ul>
+<p>When recombined, (MSB &laquo; 8) | LSB = 43981. If reduced to 8-bit, dividing by 256 gives int(43981 / 256) = 171, which matches the MSB. In practice, this means the 16-bit value can be approximated in 8-bit form using only the MSB, though with some loss of fine detail.</p>
+<p>The camera outputs data in two interleaved 8-bit columns: even columns store the LSB, and odd columns store the MSB. Thus, the raw image has shape (H, 2*W) for an image of height H and width W, where each adjacent pair of columns encodes one 16-bit pixel value. The code snippet below reconstructs the full 16-bit image; if only an 8-bit representation is needed, the MSB alone can be used:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># raw: 8-bit interleaved data (shape: H, 2*W)</span>
+</span></span><span style="display:flex;"><span>lsb <span style="color:#f92672">=</span> raw_u8[:, ::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
+</span></span><span style="display:flex;"><span>msb <span style="color:#f92672">=</span> raw_u8[:, <span style="color:#ae81ff">1</span>::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
+</span></span><span style="display:flex;"><span>raw16 <span style="color:#f92672">=</span> (msb <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> lsb  <span style="color:#75715e"># Combine into 16-bit values</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>raw8 <span style="color:#f92672">=</span> raw_u8[:, <span style="color:#ae81ff">1</span>::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint8)
+</span></span></code></pre></div><h3 id="stride-correction">Stride correction</h3>
+<p>Striding refers to the number of bytes in memory used to store a single row of image data — including any extra padding bytes added after the actual image pixels. Padding is typically introduced so that each row begins at a memory address that is efficient for the hardware to access.</p>
+<p>In most imaging systems, the stride is aligned to specific memory boundaries such as 8, 64, 128, or 256 bytes, depending on the hardware’s memory and direct memory access (DMA) requirements. These alignments allow faster memory transfers and simplify address calculations.</p>
+<p>For the Raspberry Pi HQ Camera, the raw output is 8-bit per pixel. With 2×2 binning, the image width is 2028 pixels (half of the IMX477 sensor’s 4056 active pixels). Because MSB and LSB values are interleaved, this results in 2028 × 2 = 4056 pixels per row, at 8 bits each.</p>
+<p>Thus, one row contains 4056 bytes of pixel data. Since DMA requires the stride to be a multiple of 256, the row length is padded with an additional 40 bytes. This makes the actual stride 4096 bytes per row. The figure below illustrates the interleaved MSB/LSB columns and how striding is applied.</p>
+<figure class="center"><img src="/img/blog/CameraISP/Striding_illstration.png"
+    alt="Striding_illstration" width="80%">
+</figure>
+
+<p>The code below demonstrates how to reconstruct either a 16-bit or 8-bit image with stride correction applied. The figure shows the raw interleaved 8-bit output from the camera alongside the properly reconstructed 16-bit image. Notice the black edge on the right side of the Raw Bayer Image—this corresponds to the 40 padded pixels added at the end of each row.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">unpack_and_trim_raw</span>(raw, img_width_px, bit_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Remove padding or stride artifacts from a raw Bayer image.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    For 16-bit raw images (from Pi HQ camera), the data is packed into two interleaved 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    8-bit columns: the lower 8 bits (LSB, Least Significant Bit) and higher 8 bits (MSB, Most Significant Bit). This function 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    reconstructs the 16-bit image and removes stride artifacts.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    For 8-bit raw images, only stride correction and trimming are applied.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        raw (np.ndarray): Raw image array. For 16-bit, shape (H, 2*W) with LSB and MSB interleaved.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        img_width_px (int): Target width (in pixels) after correction.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        bit_depth (int): Bit depth of raw image. Must be 8 or 16.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        np.ndarray: Corrected raw image with shape (H, img_width_px) and dtype uint8 or uint16.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> bit_depth <span style="color:#f92672">==</span> <span style="color:#ae81ff">16</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Extract LSB and MSB from interleaved columns and reconstruct 16-bit raw</span>
+</span></span><span style="display:flex;"><span>        lsb <span style="color:#f92672">=</span> raw[:, ::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
+</span></span><span style="display:flex;"><span>        msb <span style="color:#f92672">=</span> raw[:, <span style="color:#ae81ff">1</span>::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
+</span></span><span style="display:flex;"><span>        raw_corrected <span style="color:#f92672">=</span> (msb <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> lsb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> bit_depth <span style="color:#f92672">==</span> <span style="color:#ae81ff">8</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># For 8-bit data, simply remove padding (if any) and use as-is</span>
+</span></span><span style="display:flex;"><span>        lsb <span style="color:#f92672">=</span> raw[:, ::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
+</span></span><span style="display:flex;"><span>        msb <span style="color:#f92672">=</span> raw[:, <span style="color:#ae81ff">1</span>::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
+</span></span><span style="display:flex;"><span>        raw_corrected <span style="color:#f92672">=</span> (msb <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> lsb
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Convert to 8-bit, this is same as (raw_corrected/256).astype(&#39;uint8&#39;), but faster. </span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 65535/256 = 255.99, int (255.99) = 255, 65535 is 2^16 - 1</span>
+</span></span><span style="display:flex;"><span>        raw_corrected <span style="color:#f92672">=</span> (raw_corrected <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">8</span>)<span style="color:#f92672">.</span>astype(<span style="color:#e6db74">&#39;uint8&#39;</span>) 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;bit_depth must be either 8 or 16&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Trim to the exact target width</span>
+</span></span><span style="display:flex;"><span>    raw_corrected <span style="color:#f92672">=</span> raw_corrected[:, :img_width_px]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> raw_corrected
+</span></span></code></pre></div><div style="display: flex; gap: 1em; justify-content: center; align-items: flex-start; margin-bottom: 1.0em;">
+  <div style="flex: 1;">
+    <h4>Raw Bayer image:</h4>
+    <img src="/img/blog/CameraISP/raw_u8_01.png" alt="raw_u8" style="max-width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <h4>Reconstructed Bayer image:</h4>
+    <img src="/img/blog/CameraISP/raw_u16_01.png" alt="raw_u16" style="max-width: 100%;">
+  </div>
+</div>
+<!--Add a zoom in to show it is a bayer image-->
+<hr>
+<h2 id="black-offset-correction">Black Offset Correction</h2>
+<p>The black offset was characterized with the camera’s optical path completely blocked by a lens cap to ensure no incident light. The analog gain was set to 4.0, corresponding to the midpoint of the Raspberry Pi HQ camera’s gain range (1.0–8.0), and the exposure time was set to 500 µs. This short exposure minimizes the contribution of dark current to the measurement. The black offset is defined here as the mean pixel value, expressed in gray levels (GL), computed over the entire image frame. Under these conditions, the measured black offset was approximately 4110 GL, as shown in the histogram below. This offset is subtracted from all subsequent raw images as part of the preprocessing pipeline. The implementation of the black offset subtraction function is also provided below.</p>
+<figure class="center"><img src="/img/blog/CameraISP/black_offset_histogram.png"
+    alt="black_offset_histogram" width="auto">
+</figure>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">apply_black_offset</span>(image, offset):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Subtracts a constant black offset from the image. 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Offset can be measured from the black_offset_measurement.py script.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        image (np.ndarray): Input raw image (can be float or integer type), 8bit or 16 bit image.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        offset (int): The constant black level to subtract.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        np.ndarray (int): Black-offset corrected image (clipped to [0, inf]).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Subtract black offset and clip</span>
+</span></span><span style="display:flex;"><span>    corrected <span style="color:#f92672">=</span> image<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>float32) <span style="color:#f92672">-</span> offset   <span style="color:#75715e">#Convert to float to prevent overflow</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> image<span style="color:#f92672">.</span>dtype <span style="color:#f92672">==</span> np<span style="color:#f92672">.</span>uint8:
+</span></span><span style="display:flex;"><span>        corrected <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>clip(corrected, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>)<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint8)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> image<span style="color:#f92672">.</span>dtype <span style="color:#f92672">==</span> np<span style="color:#f92672">.</span>uint16:
+</span></span><span style="display:flex;"><span>        corrected <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>clip(corrected, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">65535</span>)<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> corrected
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example</span>
+</span></span><span style="display:flex;"><span>raw_unstrided_blckoff_u16 <span style="color:#f92672">=</span> apply_black_offset(raw_u16, offset<span style="color:#f92672">=</span><span style="color:#ae81ff">4110</span>)
+</span></span></code></pre></div><hr>
+<h2 id="demosaicing">Demosaicing</h2>
+<p>A simple bilinear demosaicing algorithm from the OpenCV library is used to convert the Bayer image into a three-channel RGB image. In bilinear demosaicing, each missing color value is estimated by averaging the nearest four pixels of that color channel. The figure below compares the linear image before and after demosaicing. For visual reference, the Bayer mosaic pattern used here is BGGR, as shown in the inserted diagram. Note that the images are presented in linear RGB space (with no gamma encoding applied). While bilinear interpolation is straightforward, there are many more advanced demosaicing algorithms that can produce higher-quality results. The implications of different demosaicing choices will be discussed in the next blog post.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>linear_bgr <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(raw_unstrided_blckoff_u16, cv2<span style="color:#f92672">.</span>COLOR_BAYER_BGGR2BGR)
+</span></span></code></pre></div><div style="display: flex; gap: 1em; justify-content: center; align-items: flex-start; margin-bottom: 1.0em;">
+  <div style="flex: 1;">
+    <h4>Raw Bayer image:</h4>
+    <img src="/img/blog/CameraISP/bayer_raw_image_illustration_2.png" alt="bayer_raw_image_illustration_2" style="max-width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <h4>Demosaic image:</h4>
+    <img src="/img/blog/CameraISP/linear_bgr_image_u16_01.png" alt="linear_bgr_image_u16_01" style="max-width: 100%;">
+  </div>
+</div>
+<hr>
+<h2 id="white-balance-using-a-gray-neutral-patch">White Balance Using a Gray Neutral Patch</h2>
+<p>To ensure accurate color reproduction—making white in the scene appear white under the scene’s lighting conditions, or making a gray patch render as gray, i.e. \(R \approx G \approx B\), I calibrated and applied per-channel gains (white balance) using a known neutral patch in the scene.</p>
+<p>Let the measured RGB values of the patch from the captured image and the reference (grouth truth) values be:</p>
+\[
+\text{measured} =
+\begin{bmatrix}
+R_m \\ 
+G_m \\ 
+B_m
+\end{bmatrix}
+\quad
+\text{reference} =
+\begin{bmatrix}
+R_r \\ 
+G_r \\ 
+B_r
+\end{bmatrix}
+\]<p>The gain per each color channel are:</p>
+\[ 
+\text{gain} = 
+\begin{bmatrix}
+G_r \\ 
+G_g \\ 
+G_b
+\end{bmatrix} =
+\begin{bmatrix}
+R_r/R_m \\ 
+G_r/G_m \\ 
+B_r/B_m
+\end{bmatrix}
+\]<p>I then normalize so that the mean of the all gains is 1:</p>
+\[
+\bar{g} = \frac{G_r + G_g + G_b}{3}
+\]\[
+\text{gain} = 
+\begin{bmatrix}
+G_r/\bar{g} \\ 
+G_g/\bar{g} \\ 
+G_b/\bar{g}
+\end{bmatrix}
+\]<p>Since no perfectly neutral gray patch was available, I selected the most neutral patch from the SpyderCHECKR chart, with sRGB values of [80,80,78]. The implications of this choice will be discussed in the next post. The images below show the scene before and after white balance. Both are gamma-encoded to sRGB for correct display, the white balance calculations themselves were done in linear RGB space.</p>
+<div style="display: flex; gap: 1em; justify-content: center; align-items: flex-start; margin-bottom: 1.0em;">
+  <div style="flex: 1;">
+    <h4>Demosaic image:</h4>
+    <img src="/img/blog/CameraISP/SpyderCHECKR_srgb_before_wb_flip.png" alt="SpyderCHECKR_srgb_before_wb_flip" style="max-width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <h4>Image after white balance:</h4>
+    <img src="/img/blog/CameraISP/white_balanced_image.png" alt="white_balanced_image" style="max-width: 100%;">
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">white_balance_to_gray_patch</span>(img_rgb_f01, measured_patch_rgb_f01, reference_patch_rgb_f01):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Applies white balance correction based on a reference gray patch.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    The function computes per-channel gains so that the measured RGB value of a gray patch
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    matches a given reference value. The correction is applied globally to the image, and
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    the gains are normalized so that the mean channel gain is fixed at 1.0.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        img_rgb_f01 (np.ndarray): Input image in linear RGB, float32/float64, values in [0, 1].
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                  Shape (H, W, 3).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        measured_patch_rgb_f01 (np.ndarray): Measured average RGB value of the gray patch,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                             shape (3,), float, in [0, 1].
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        reference_patch_rgb_f01 (np.ndarray): Target RGB value for the gray patch,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                              shape (3,), float, in [0, 1].
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        tuple:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            np.ndarray: White-balanced image, same shape as input, clipped to [0, 1].
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            np.ndarray: Per-channel gains applied (R, G, B).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Compute per-channel gains (avoid divide-by-zero with np.clip)</span>
+</span></span><span style="display:flex;"><span>    wb_gains <span style="color:#f92672">=</span> reference_patch_rgb_f01 <span style="color:#f92672">/</span> np<span style="color:#f92672">.</span>clip(measured_patch_rgb_f01, <span style="color:#ae81ff">1e-6</span>, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Normalize so that the average of R, G, B gains is 1</span>
+</span></span><span style="display:flex;"><span>    wb_gains <span style="color:#f92672">=</span> wb_gains <span style="color:#f92672">/</span> wb_gains<span style="color:#f92672">.</span>mean()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;White balance gains: </span><span style="color:#e6db74">{</span>wb_gains<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Apply gains to image</span>
+</span></span><span style="display:flex;"><span>    img_wb_f01 <span style="color:#f92672">=</span> img_rgb_f01 <span style="color:#f92672">*</span> wb_gains
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Rescale if any values exceed 1.0</span>
+</span></span><span style="display:flex;"><span>    max_val <span style="color:#f92672">=</span> img_wb_f01<span style="color:#f92672">.</span>max()
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> max_val <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1.0</span>:
+</span></span><span style="display:flex;"><span>        img_wb_f01 <span style="color:#f92672">/=</span> max_val
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>clip(img_wb_f01, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>), wb_gains
+</span></span></code></pre></div><hr>
+<h3 id="color-correction-matrix-ccm">Color Correction Matrix (CCM)</h3>
+<p>After white balance, a 3×3 Color Correction Matrix (CCM) is applied to map the camera’s linear RGB values to a target color space. The CCM is estimated using a least-squares fit between the 24 measured patch colors from the captured chart and the corresponding ground-truth patch values.</p>
+<p>Each measured patch value is multiplied by the CCM to produce its corrected color, minimizing overall color error across all patches. This step compensates for the sensor’s spectral sensitivity and lens transmission characteristics, allowing the rendered colors to more closely match their true appearance. The correction is performed entirely in the linear domain, and the correction result is gamma-encoded to sRGB for display.</p>
+<p>Using the measured RGB values from the 24 color patches and their known ground-truth values (in linear RGB), the CCM is solved via least squares.</p>
+<p>Let:</p>
+\[
+\mathbf{M} =
+\begin{bmatrix}
+R_1 & G_1 & B_1 \\
+R_2 & G_2 & B_2 \\
+\vdots & \vdots & \vdots \\
+R_{24} & G_{24} & B_{24}
+\end{bmatrix}
+\quad\text{(measured 24-patch colors in linear RGB)}
+\]\[
+\mathbf{R} =
+\begin{bmatrix}
+R'_1 & G'_1 & B'_1 \\
+R'_2 & G'_2 & B'_2 \\
+\vdots & \vdots & \vdots \\
+R'_{24} & G'_{24} & B'_{24}
+\end{bmatrix}
+\quad\text{(reference 24-patch colors in linear RGB)}
+\]<p>We solve for the 3×3 Color Correction Matrix \(\mathbf{A}\) such that</p>
+\[
+\mathbf{M} \, \mathbf{A} \approx \mathbf{R}
+\]<p>The least-squares solution is</p>
+\[
+\mathbf{A} = \left( \mathbf{M}^\mathsf{T} \mathbf{M} \right)^{-1} \mathbf{M}^\mathsf{T} \mathbf{R}
+\]<p>Once \(\mathbf{A}\) is found, each pixel of the white-balanced image \(\mathbf{I}_{\text{measured}}\) can be color corrected as:</p>
+\[
+\mathbf{I}_{\text{corrected}} = \mathbf{I}_{\text{measured}} \cdot \mathbf{A}
+\]\[
+\begin{bmatrix}
+R^c_1 & G^c_1 & B^c_1 \\
+R^c_2 & G^c_2 & B^c_2 \\
+\vdots & \vdots & \vdots \\
+R^c_N & G^c_N & B^c_N
+\end{bmatrix} = 
+\begin{bmatrix}
+R^m_1 & G^m_1 & B^m_1 \\
+R^m_2 & G^m_2 & B^m_2 \\
+\vdots & \vdots & \vdots \\
+R^m_N & G^m_N & B^m_N
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+a_{RR} & a_{RG} & a_{RB} \\
+a_{GR} & a_{GG} & a_{GB} \\
+a_{BR} & a_{BG} & a_{BB}
+\end{bmatrix}
+\]<p>Here, the first column of \(A\) controls how much of the input (R, G, B) contributes to the corrected R channel; the second column controls the contributions to corrected G; and the third column controls contributions to corrected B. In other words, each corrected RGB channels is formed as a linear mix of the input RGB channels. This can be thought of as “color mixing” for each pixel, adjusting the camera’s raw response so that the rendered colors align with the ground-truth values of the ColorChecker patches.</p>
+<p>For this calibration, the chart was illuminated by a D50, 5000K, CRI 90, anti-flicker light bulb. While reasonably neutral, such light sources can still introduce small errors because their spectral power distribution differs from a true reference illuminant. In color science, the true references are the CIE Standard Illuminants (e.g., D65, 6500 K, which defines the white point of sRGB). These standardized spectra provide the benchmark for accurate color reproduction. The implications of using a D50 light bulb instead of a standard illuminant will be discussed in the next blog post.</p>
+<div style="display: flex; gap: 1em; justify-content: center; align-items: flex-start; margin-bottom: 1.0em;">
+  <div style="flex: 1;">
+    <h4>Image after white balance (gamma-encoded for display):</h4>
+    <img src="/img/blog/CameraISP/white_balanced_image.png" alt="white_balanced_image" style="max-width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <h4>Image after color correction (gamma-encoded for display):</h4>
+    <img src="/img/blog/CameraISP/white_balanced_ccm_image.png" alt="white_balanced_ccm_image" style="max-width: 100%;">
+  </div>
+</div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">srgb_to_linear</span>(srgb_f01: np<span style="color:#f92672">.</span>ndarray) <span style="color:#f92672">-&gt;</span> np<span style="color:#f92672">.</span>ndarray:
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Convert sRGB to linear RGB (IEC 61966-2-1 standard).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Parameters
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ----------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    srgb_f01 : np.ndarray
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        sRGB image or array with values in [0, 1].
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    -------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    linear : np.ndarray
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Linear RGB image or array with values in [0, 1].
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    srgb <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>clip(srgb_f01, <span style="color:#ae81ff">0.0</span>, <span style="color:#ae81ff">1.0</span>)
+</span></span><span style="display:flex;"><span>    linear <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(
+</span></span><span style="display:flex;"><span>        srgb <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0.04045</span>,
+</span></span><span style="display:flex;"><span>        srgb <span style="color:#f92672">/</span> <span style="color:#ae81ff">12.92</span>,
+</span></span><span style="display:flex;"><span>        ((srgb <span style="color:#f92672">+</span> <span style="color:#ae81ff">0.055</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">1.055</span>) <span style="color:#f92672">**</span> <span style="color:#ae81ff">2.4</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>clip(linear, <span style="color:#ae81ff">0.0</span>, <span style="color:#ae81ff">1.0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Ground-truth SpyderCHECKR patch colors (sRGB in [0,1])</span>
+</span></span><span style="display:flex;"><span>ground_truth_patches_srgb_f01 <span style="color:#f92672">=</span> (np<span style="color:#f92672">.</span>array([
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">98</span>, <span style="color:#ae81ff">187</span>, <span style="color:#ae81ff">166</span>], [<span style="color:#ae81ff">126</span>, <span style="color:#ae81ff">125</span>, <span style="color:#ae81ff">174</span>], [<span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">106</span>, <span style="color:#ae81ff">60</span>], [<span style="color:#ae81ff">87</span>, <span style="color:#ae81ff">120</span>, <span style="color:#ae81ff">155</span>], [<span style="color:#ae81ff">197</span>, <span style="color:#ae81ff">145</span>, <span style="color:#ae81ff">125</span>], [<span style="color:#ae81ff">112</span>, <span style="color:#ae81ff">76</span>, <span style="color:#ae81ff">60</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">222</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">32</span>], [<span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">88</span>, <span style="color:#ae81ff">159</span>], [<span style="color:#ae81ff">195</span>, <span style="color:#ae81ff">79</span>, <span style="color:#ae81ff">95</span>], [<span style="color:#ae81ff">83</span>, <span style="color:#ae81ff">58</span>, <span style="color:#ae81ff">106</span>], [<span style="color:#ae81ff">157</span>, <span style="color:#ae81ff">188</span>, <span style="color:#ae81ff">54</span>], [<span style="color:#ae81ff">238</span>, <span style="color:#ae81ff">158</span>, <span style="color:#ae81ff">25</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">127</span>, <span style="color:#ae81ff">159</span>], [<span style="color:#ae81ff">192</span>, <span style="color:#ae81ff">75</span>, <span style="color:#ae81ff">145</span>], [<span style="color:#ae81ff">245</span>, <span style="color:#ae81ff">205</span>, <span style="color:#ae81ff">0</span>], [<span style="color:#ae81ff">186</span>, <span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">51</span>], [<span style="color:#ae81ff">57</span>, <span style="color:#ae81ff">146</span>, <span style="color:#ae81ff">64</span>], [<span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">135</span>],
+</span></span><span style="display:flex;"><span>    [<span style="color:#ae81ff">249</span>, <span style="color:#ae81ff">242</span>, <span style="color:#ae81ff">238</span>], [<span style="color:#ae81ff">202</span>, <span style="color:#ae81ff">198</span>, <span style="color:#ae81ff">195</span>], [<span style="color:#ae81ff">161</span>, <span style="color:#ae81ff">157</span>, <span style="color:#ae81ff">154</span>], [<span style="color:#ae81ff">122</span>, <span style="color:#ae81ff">118</span>, <span style="color:#ae81ff">116</span>], [<span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">78</span>], [<span style="color:#ae81ff">43</span>, <span style="color:#ae81ff">41</span>, <span style="color:#ae81ff">43</span>]
+</span></span><span style="display:flex;"><span>], dtype<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>float32) <span style="color:#f92672">/</span> <span style="color:#ae81ff">255.0</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Convert reference patches to linear RGB</span>
+</span></span><span style="display:flex;"><span>ground_truth_patches_linear_rgb_f01 <span style="color:#f92672">=</span> srgb_to_linear(ground_truth_patches_srgb_f01)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --- Solve for 3×3 Color Correction Matrix (CCM) ---</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Least squares: measured @ A ≈ reference</span>
+</span></span><span style="display:flex;"><span>A, _, _, _ <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>lstsq(
+</span></span><span style="display:flex;"><span>    measured_patches_rgb_linear_f01 <span style="color:#f92672">*</span> wb_gains,   <span style="color:#75715e"># shape (24,3), linear, after WB, 24 patches</span>
+</span></span><span style="display:flex;"><span>    ground_truth_patches_linear_rgb_f01,           <span style="color:#75715e"># shape (24,3), linear</span>
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># --- Apply CCM to a white balanced image (still in linear) ---</span>
+</span></span><span style="display:flex;"><span>H, W, _ <span style="color:#f92672">=</span> img_rgb_wb_linear_f01<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>img_lin <span style="color:#f92672">=</span> img_rgb_wb_linear_f01<span style="color:#f92672">.</span>reshape(<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">3</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>corrected_lin <span style="color:#f92672">=</span> img_lin <span style="color:#f92672">@</span> A
+</span></span><span style="display:flex;"><span>corrected_lin <span style="color:#f92672">=</span> corrected_lin<span style="color:#f92672">.</span>reshape(H, W, <span style="color:#ae81ff">3</span>)
+</span></span></code></pre></div><hr>
+<h3 id="gamma-correction-to-srgb">Gamma Correction to sRGB</h3>
+<p>After white balance and color correction, the image is still represented in linear RGB. To make it suitable for display, I apply gamma correction to map the linear values into the sRGB color space using IEC 61966-2-1 standard. This step ensures that brightness and contrast appear natural to the human eye, since human vision is non-linear, and also matches the expectations of most displays and file formats.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">linear_to_srgb</span>(linear_rgb):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Convert linear RGB to sRGB (IEC 61966-2-1 gamma encoding).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        linear_rgb (np.ndarray): Image or array in linear RGB with values in [0, 1].
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                 Shape (..., 3). dtype float recommended.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        np.ndarray: sRGB-encoded image/array with values in [0, 1], same shape as input.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Notes:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Piecewise transfer function:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          if x &lt;= 0.0031308:  f(x) = 12.92 * x
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          else:               f(x) = 1.055 * x^(1/2.4) - 0.055
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    linear_rgb <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>clip(linear_rgb, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)  <span style="color:#75715e"># Clamp to valid range</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    threshold <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.0031308</span>
+</span></span><span style="display:flex;"><span>    a <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.055</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    srgb <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(
+</span></span><span style="display:flex;"><span>        linear_rgb <span style="color:#f92672">&lt;=</span> threshold,
+</span></span><span style="display:flex;"><span>        linear_rgb <span style="color:#f92672">*</span> <span style="color:#ae81ff">12.92</span>,
+</span></span><span style="display:flex;"><span>        (<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> a) <span style="color:#f92672">*</span> np<span style="color:#f92672">.</span>power(linear_rgb, <span style="color:#ae81ff">1</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.4</span>) <span style="color:#f92672">-</span> a
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> np<span style="color:#f92672">.</span>clip(srgb, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example, applying gamma correction for display</span>
+</span></span><span style="display:flex;"><span>img_rgb_wb_ccm_srgb_f01 <span style="color:#f92672">=</span> linear_to_srgb(img_rgb_wb_ccm_linear_f01)
+</span></span><span style="display:flex;"><span>img_corrected_u8 <span style="color:#f92672">=</span> normalize01_to_8bit(img_rgb_wb_ccm_srgb_f01)  <span style="color:#75715e"># Convert to 8-bit for saving/display</span>
+</span></span></code></pre></div><div style="display: flex; gap: 1em; justify-content: center; align-items: flex-start; margin-bottom: 1.0em;">
+  <div style="flex: 1;">
+    <h4>Linear image (before gamma):</h4>
+    <img src="/img/blog/CameraISP/linear_bgr_image_awb_u16.png" alt="linear" style="max-width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <h4>Gamma-corrected sRGB image (for display):</h4>
+    <img src="/img/blog/CameraISP/bgr_image_awb_gamma_u801.png" alt="gamma" style="max-width: 100%;">
+  </div>
+</div>
+<hr>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<p>This custom ISP pipeline gave me complete control over every step of the imaging process — from raw Bayer capture to final gamma-encoded sRGB output. That level of control is essential for debugging, calibration, and understanding how each stage affects the final image. It also provides a solid foundation for more advanced work, such as stereo vision and high-dynamic-range imaging.</p>
+<p>That said, several sources of error remain to be addressed. In this post I used the most neutral patch available on the SpyderCHECKR chart for white balance; because it is not a true gray patch, it introduces bias. Likewise, the Color Correction Matrix was calibrated under a 5000 K, CRI-90 light bulb—reasonable, but not a true reference illuminant like CIE D65 (the sRGB white point)—so absolute color accuracy is affected. In addition, I used simple bilinear demosaicing for clarity; higher-performing methods can reduce zippering, moiré, and color aliasing and will likely improve results. I will dig into these error sources—gray-patch choice, illuminant standards, and demosaicing algorithm selection—in the next blog post.</p>
+<p>Other corrections — such as lens shading and distortion correction — were not included here. With a low-distortion lens, these effects are not visually obvious for single-camera use, but they become critical when moving to a stereo setup where geometric precision directly impacts depth accuracy. These corrections will therefore be part of the upcoming stereo camera pipeline.</p>
+<p>This pipeline is the beginning. By building everything from scratch, we now have a transparent and customizable imaging system that can evolve toward:</p>
+<ul>
+<li>Per-channel lens shading correction</li>
+<li>Geometric distortion correction</li>
+<li>Real-time performance optimization</li>
+<li>Integration into a stereo depth camera</li>
+</ul>
+<p>The next step is to extend this single-camera ISP to a calibrated stereo camera system — the real motivation behind this work.</p>
+<p>Stay tuned!</p></div>
+        </div>
+
+        <aside class="content-browser light-border-top">
+            Continue reading
+            <div>
+                
+                    <a class="previous" href="/blog/pianokeydetection/">↩ My AI Piano Tutor</a>
+                
+                 ■ 
+                
+            </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <div class="footer__copy">
+        © Aaron Mok. All rights reserved.
+      </div>
+    </div>
+    <div class="footer__links">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+            <a class="nav-link" href="https://aaron-mok.github.io/">🏠 HOME</a>
+        </li>
+        
+      </ul>
+    </div>
+    <div class="footer__right">
+      
+    </div>
+  </div>
+</footer>
+ <script>
+  window.addEventListener("load", function() {
+    try{
+      var observer = window.lozad(".lozad", {
+        rootMargin: window.innerHeight / 2 + "px 0px",
+        threshold: 0.01
+      }); 
+      observer.observe();
+    } catch(e) {
+      console.error(e);
+    }
+  });
+</script>
+<script defer src='https://aaron-mok.github.io/js/rad-animations.js'></script>
+<script defer src='https://aaron-mok.github.io/js/library/smooth-scroll.polyfills.min.js'></script>
+<script defer src='https://aaron-mok.github.io/js/sticky-header.js'></script>
+<script defer src='https://aaron-mok.github.io/js/smooth-scroll-init.js'></script>
+<script defer src='https://aaron-mok.github.io/js/library/bootstrap.min.js'></script>
+
+
+
+
+
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+
+
+
+  </body>
+</html>
+

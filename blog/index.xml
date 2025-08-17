@@ -6,8 +6,15 @@
     <description>Recent content in Blogs on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aaron-mok.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Camera Image Signal Processing (ISP) Pipeline with Raspberry Pi</title>
+      <link>https://aaron-mok.github.io/blog/camera_isp/</link>
+      <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://aaron-mok.github.io/blog/camera_isp/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://aaron-mok.github.io/img/blog/CameraISP/CoverArt_3.png&#34; alt=&#34;ISP art&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This post presents a custom, real-time camera image signal processing (ISP) pipeline developed from scratch for the Raspberry Pi HQ camera, designed to meet the precise control requirements for future stereo vision applications. The pipeline encompasses raw Bayer capture, stride correction, black level subtraction, demosaicing, white balance, and color correction calibration, and gamma mapping to sRGB. A reusable Python library is provided to support others working with raw data from the Pi HQ camera (See &lt;a href=&#34;https://github.com/Aaron-Mok/Stereo-Camera/tree/main&#34;&gt;GitHub&lt;/a&gt;).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My AI Piano Tutor</title>
       <link>https://aaron-mok.github.io/blog/pianokeydetection/</link>
