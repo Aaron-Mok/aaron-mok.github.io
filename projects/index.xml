@@ -6,8 +6,22 @@
     <description>Recent content in Projects on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aaron-mok.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Custom Camera Image Signal Processing (ISP) Pipeline with Raspberry Pi</title>
+      <link>https://aaron-mok.github.io/projects/cameraisp/</link>
+      <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://aaron-mok.github.io/projects/cameraisp/</guid>
+      <description>&lt;p&gt;This post presents a custom, real-time camera image signal processing (ISP) pipeline developed from scratch for the Raspberry Pi HQ camera.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My AI Piano Tutor</title>
+      <link>https://aaron-mok.github.io/projects/ai_piano/</link>
+      <pubDate>Sun, 06 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://aaron-mok.github.io/projects/ai_piano/</guid>
+      <description>&lt;p&gt;In this project, I made an AI piano tutor. I demonstrate how I use a webcam and computer vision to identify individual piano keys in real time, display which key to press based on sheet music, and detect which notes are actually played using audio.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Patent: Optical pulse generator and method</title>
       <link>https://aaron-mok.github.io/projects/patent/</link>
@@ -20,14 +34,14 @@
       <link>https://aaron-mok.github.io/projects/presentation_winner/</link>
       <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://aaron-mok.github.io/projects/presentation_winner/</guid>
-      <description>&lt;p&gt;Presentation of Better penetration at longer wavelength.&#xA;Winner of the Frontiers in Neurophotonics Highlights video contest.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Winner of the Frontiers in Neurophotonics Highlights video contest.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Interview with Optica</title>
       <link>https://aaron-mok.github.io/projects/optica_interview/</link>
       <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://aaron-mok.github.io/projects/optica_interview/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m excited to share my interview with Optica at CLEO! It was a great opportunity to present in the post-deadline section and discuss my work.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Interview with Optica at CLEO! It was a great opportunity to present in the post-deadline section and discuss my work.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A large field-of-view, single-cell-resolution two- and three-photon microscope for deep and wide imaging</title>
@@ -44,7 +58,7 @@
       <description>&lt;p&gt;&amp;ldquo;This study reports a way to record neural structures and activity in behaving Drosophila for up to 12 hours, without removing the cuticle. This opens the way to longer and more intact recordings, including post-imaging recovery of the flies.&amp;rdquo; eLife editor&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Spatially resolved measurements of ballistic and total transmission in microscale tissue samples from 450 nm to 1624 nm</title>
+      <title>Hybrid camera and spectrometer for micro-samples, 450 nm to 1624 nm</title>
       <link>https://aaron-mok.github.io/projects/tissuespec/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://aaron-mok.github.io/projects/tissuespec/</guid>
