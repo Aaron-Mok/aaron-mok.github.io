@@ -9,8 +9,8 @@
 
 
 
-<title>Aaron Mok | System Architect</title>
-<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect specializing in the design and optimization of complex optical systems.'>
+<title>Aaron Mok | Camera System Engineer</title>
+<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a Camera System Engineer specializing in the design and optimization of complex and miniaturized optical systems.'>
 <meta name="generator-mode" content='production'>
 <style data-generator="critical-css">
 </style>
@@ -261,7 +261,7 @@ p + div {
               Published on
               <h4 id="date">Sat May 24, 2025</h4>
               ·
-              <h4 id="wordcount">691 Words</h4>
+              <h4 id="wordcount">693 Words</h4>
             </section>
              
           </div>
@@ -279,9 +279,9 @@ p + div {
 </ul>
 <p>Many standard optical design textbooks identify the plano-convex lens as the &ldquo;best form&rdquo; when minimizing primary aberrations. The plot below, taken from Optical Systems Engineering by Keith Kasunic (and originally from Fundamentals of Optics by Jenkins and White), shows how aberrations vary with shape factor \(q\). Spherical aberration is minimized around \(q =0.714\), and coma is zero at \(q=0.800\). A plano-convex lens, with the curved side facing the collimated light, closely matches this ideal.</p>
 <figure class="center"><img src="/img/blog/BestFormLens/singlet%20aberration.png"
-    alt="simpleModel" width="40%"><figcaption>
-      <p>Figure from Optical Systems Engineering from Keith Kasunic</p>
-    </figcaption>
+			alt="simpleModel" width="40%"><figcaption>
+			<p>Figure from Optical Systems Engineering from Keith Kasunic</p>
+		</figcaption>
 </figure>
 
 <p>We can confirm this with a Zemax simulation. I designed a lens with the following constraints:</p>
@@ -292,156 +292,160 @@ p + div {
 </ul>
 <p>Below are the optimization results:</p>
 <figure class="center"><img src="/img/blog/BestFormLens/plano_Convex.png"
-    alt="planoConvex" width="auto">
+			alt="planoConvex" width="auto">
 </figure>
 
 <table>
-  <thead>
-      <tr>
-          <th>Surface Type</th>
-          <th>Radius</th>
-          <th>Thickness</th>
-          <th>Material</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>(OBJECT)  Standard</td>
-          <td>Infinity</td>
-          <td>Infinity</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>(STOP)    Standard</td>
-          <td>76.889</td>
-          <td>5.000</td>
-          <td>BK7</td>
-      </tr>
-      <tr>
-          <td>Standard</td>
-          <td>-475.000</td>
-          <td>124.324</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>(IMAGE)</td>
-          <td>Infinity</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Surface Type</th>
+					<th>Radius</th>
+					<th>Thickness</th>
+					<th>Material</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>(OBJECT)  Standard</td>
+					<td>Infinity</td>
+					<td>Infinity</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>(STOP)    Standard</td>
+					<td>76.889</td>
+					<td>5.000</td>
+					<td>BK7</td>
+			</tr>
+			<tr>
+					<td>Standard</td>
+					<td>-475.000</td>
+					<td>124.324</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>(IMAGE)</td>
+					<td>Infinity</td>
+					<td></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 <p>Not very surprising — it is a plano-convex — but things get more interesting when we consider the field of view.</p>
 <div class="spacer"></div>
 <h2 id="adding-field-of-view-changes-everything">Adding Field of View Changes Everything</h2>
 <p>The plano-convex lens performs well for collimated light (on-axis). But what if we introduce a 50° field of view and optimize again? The result is no longer plano-convex. It’s a meniscus lens. Below are the optimization results:</p>
 <figure class="center"><img src="/img/blog/BestFormLens/meniscus.png"
-    alt="meniscus" width="auto">
+			alt="meniscus" width="auto">
 </figure>
 
 <table>
-  <thead>
-      <tr>
-          <th>Surface Type</th>
-          <th>Radius</th>
-          <th>Thickness</th>
-          <th>Material</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>(OBJECT)  Standard</td>
-          <td>Infinity</td>
-          <td>Infinity</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>(STOP)    Standard</td>
-          <td>-53.012</td>
-          <td>10.000</td>
-          <td>BK7</td>
-      </tr>
-      <tr>
-          <td>Standard</td>
-          <td>-28.987</td>
-          <td>94.699</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>(IMAGE)</td>
-          <td>Infinity</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Surface Type</th>
+					<th>Radius</th>
+					<th>Thickness</th>
+					<th>Material</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>(OBJECT)  Standard</td>
+					<td>Infinity</td>
+					<td>Infinity</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>(STOP)    Standard</td>
+					<td>-53.012</td>
+					<td>10.000</td>
+					<td>BK7</td>
+			</tr>
+			<tr>
+					<td>Standard</td>
+					<td>-28.987</td>
+					<td>94.699</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>(IMAGE)</td>
+					<td>Infinity</td>
+					<td></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 <div class="spacer"></div>
 <h2 id="why-is-a-meniscus-lens-better-for-large-field-of-view">Why Is a Meniscus Lens Better for Large Field of View?</h2>
 <p>This is quite fascinating—let’s delve deeper into the transverse aberration coefficients for spherical aberration (TSPH), coma (TTCO), and astigmatism (TAST).</p>
 <h4 id="plano-convex-transverse-aberration-coefficients">Plano-Convex Transverse Aberration Coefficients:</h4>
 <table>
-  <thead>
-      <tr>
-          <th>Surface</th>
-          <th>TSPH</th>
-          <th>TTCO</th>
-          <th>TAST</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1</td>
-          <td>0.0649</td>
-          <td>1.404</td>
-          <td>6.753</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td>0.0610</td>
-          <td>-1.722</td>
-          <td>10.80</td>
-      </tr>
-      <tr>
-          <td>Total</td>
-          <td>0.1259</td>
-          <td>-0.318</td>
-          <td>17.55</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Surface</th>
+					<th>TSPH</th>
+					<th>TTCO</th>
+					<th>TAST</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1</td>
+					<td>0.0649</td>
+					<td>1.404</td>
+					<td>6.753</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td>0.0610</td>
+					<td>-1.722</td>
+					<td>10.80</td>
+			</tr>
+			<tr>
+					<td>Total</td>
+					<td>0.1259</td>
+					<td>-0.318</td>
+					<td>17.55</td>
+			</tr>
+	</tbody>
 </table>
 <h4 id="meniscus-transverse-aberration-coefficients">Meniscus Transverse Aberration Coefficients:</h4>
 <table>
-  <thead>
-      <tr>
-          <th>Surface</th>
-          <th>TSPH</th>
-          <th>TTCO</th>
-          <th>TAST</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1</td>
-          <td>-0.229</td>
-          <td>3.185</td>
-          <td>-9.841</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td>3.3795</td>
-          <td>-14.05</td>
-          <td>12.987</td>
-      </tr>
-      <tr>
-          <td>Total</td>
-          <td>3.1504</td>
-          <td>-10.87</td>
-          <td>3.146</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Surface</th>
+					<th>TSPH</th>
+					<th>TTCO</th>
+					<th>TAST</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1</td>
+					<td>-0.229</td>
+					<td>3.185</td>
+					<td>-9.841</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td>3.3795</td>
+					<td>-14.05</td>
+					<td>12.987</td>
+			</tr>
+			<tr>
+					<td>Total</td>
+					<td>3.1504</td>
+					<td>-10.87</td>
+					<td>3.146</td>
+			</tr>
+	</tbody>
 </table>
 <p>To interpret these values meaningfully, it is helpful to recall how each type of transverse aberration scales with pupil coordinate \(\rho\) and image height \(h\):</p>
-\[e_y(\rho, h) = TSPH\cdot \rho^3\]\[e_y(\rho, h) = TTCO\cdot \rho^2h\]\[e_y(\rho, h) = TAST\cdot \rho h^2\]<p>Astigmatism in the plano-convex lens is high — and since it scales with \(h^2\), it quickly dominates at large field angles. The meniscus lens, though it has more coma, maintains low astigmatism, which is more important off-axis. This can be seen in the transverse ray plot below, where Plano-convex lens demonstrate large astigmatism at \(50^o\) field angle.The meniscus lens shows smaller overall error — except near the edge. This suggests we can do better by shifting the stop and optimizing again.</p>
+\[e_y(\rho, h) = TSPH\cdot \rho^3\]<p>
+</p>
+\[e_y(\rho, h) = TTCO\cdot \rho^2h\]<p>
+</p>
+\[e_y(\rho, h) = TAST\cdot \rho h^2\]<p>Astigmatism in the plano-convex lens is high — and since it scales with \(h^2\), it quickly dominates at large field angles. The meniscus lens, though it has more coma, maintains low astigmatism, which is more important off-axis. This can be seen in the transverse ray plot below, where Plano-convex lens demonstrate large astigmatism at \(50^o\) field angle.The meniscus lens shows smaller overall error — except near the edge. This suggests we can do better by shifting the stop and optimizing again.</p>
 <div style="display: flex; gap: 1em; justify-content: center; align-items: flex-start; margin-bottom: 1.0em;">
   <div style="flex: 1;">
     <h4>Plano-Convex Ray Fan:</h4>
@@ -456,85 +460,85 @@ p + div {
 <h2 id="stop-shifted-meniscus-lens">Stop-shifted Meniscus Lens</h2>
 <p>If we stop-shift the meniscus lens, we can achieve a even better performance across all aberrations! The transverse aberration coefficients are further optimized.</p>
 <figure class="center"><img src="/img/blog/BestFormLens/meniscus_withStopShift.png"
-    alt="simpleModel" width="40%">
+			alt="simpleModel" width="40%">
 </figure>
 
 <table>
-  <thead>
-      <tr>
-          <th>Surface Type</th>
-          <th>Radius</th>
-          <th>Thickness</th>
-          <th>Material</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>(OBJECT)  Standard</td>
-          <td>Infinity</td>
-          <td>Infinity</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>(STOP)    Standard</td>
-          <td>Infinity</td>
-          <td>12.052</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Standard</td>
-          <td>-151.505</td>
-          <td>20.000</td>
-          <td>BK7</td>
-      </tr>
-      <tr>
-          <td>Standard</td>
-          <td>-41.130</td>
-          <td>97.046</td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>(IMAGE)</td>
-          <td>Infinity</td>
-          <td></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Surface Type</th>
+					<th>Radius</th>
+					<th>Thickness</th>
+					<th>Material</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>(OBJECT)  Standard</td>
+					<td>Infinity</td>
+					<td>Infinity</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>(STOP)    Standard</td>
+					<td>Infinity</td>
+					<td>12.052</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Standard</td>
+					<td>-151.505</td>
+					<td>20.000</td>
+					<td>BK7</td>
+			</tr>
+			<tr>
+					<td>Standard</td>
+					<td>-41.130</td>
+					<td>97.046</td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>(IMAGE)</td>
+					<td>Infinity</td>
+					<td></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 <figure class="center"><img src="/img/blog/BestFormLens/Meniscus%20RayFanWithStopShift.png"
-    alt="simpleModel" width="40%">
+			alt="simpleModel" width="40%">
 </figure>
 
 <h4 id="stop-shifted-meniscus-transverse-aberration-coefficients">Stop-shifted Meniscus Transverse Aberration Coefficients:</h4>
 <table>
-  <thead>
-      <tr>
-          <th>Surface</th>
-          <th>TSPH</th>
-          <th>TTCO</th>
-          <th>TAST</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>1</td>
-          <td>-0.006</td>
-          <td>0.267</td>
-          <td>-2.326</td>
-      </tr>
-      <tr>
-          <td>2</td>
-          <td>1.525</td>
-          <td>-1.098</td>
-          <td>0.176</td>
-      </tr>
-      <tr>
-          <td>Total</td>
-          <td>1.344</td>
-          <td>-0.8318</td>
-          <td>-2.150</td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Surface</th>
+					<th>TSPH</th>
+					<th>TTCO</th>
+					<th>TAST</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>1</td>
+					<td>-0.006</td>
+					<td>0.267</td>
+					<td>-2.326</td>
+			</tr>
+			<tr>
+					<td>2</td>
+					<td>1.525</td>
+					<td>-1.098</td>
+					<td>0.176</td>
+			</tr>
+			<tr>
+					<td>Total</td>
+					<td>1.344</td>
+					<td>-0.8318</td>
+					<td>-2.150</td>
+			</tr>
+	</tbody>
 </table>
 <div class="spacer"></div>
 <h2 id="conclusion-meniscus-vs-plano-convex">Conclusion: Meniscus vs. Plano-Convex</h2>

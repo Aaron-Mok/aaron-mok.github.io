@@ -9,8 +9,8 @@
 
 
 
-<title>Aaron Mok | System Architect</title>
-<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect specializing in the design and optimization of complex optical systems.'>
+<title>Aaron Mok | Camera System Engineer</title>
+<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a Camera System Engineer specializing in the design and optimization of complex and miniaturized optical systems.'>
 <meta name="generator-mode" content='production'>
 <style data-generator="critical-css">
 </style>
@@ -261,7 +261,7 @@ p + div {
               Published on
               <h4 id="date">Sun Aug 17, 2025</h4>
               ·
-              <h4 id="wordcount">3225 Words</h4>
+              <h4 id="wordcount">3231 Words</h4>
             </section>
              
           </div>
@@ -298,7 +298,7 @@ Below is a comparison of the raw Bayer image and the custom real-time ISP-proces
 <hr>
 <h2 id="capturing-raw-bayer-data">Capturing Raw Bayer Data</h2>
 <p>I use the Picamera2 library to access raw Bayer frames from the Raspberry Pi HQ camera live. This gives me full control over the raw image data before any automatic processing occurs.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize_camera</span>(camera_id, image_size):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize_camera</span>(camera_id, image_size):
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Initialize a Raspberry Pi camera using Picamera2.
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
@@ -337,7 +337,7 @@ Below is a comparison of the raw Bayer image and the custom real-time ISP-proces
 </ul>
 <p>When recombined, (MSB &laquo; 8) | LSB = 43981. If reduced to 8-bit, dividing by 256 gives int(43981 / 256) = 171, which matches the MSB. In practice, this means the 16-bit value can be approximated in 8-bit form using only the MSB, though with some loss of fine detail.</p>
 <p>The camera outputs data in two interleaved 8-bit columns: even columns store the LSB, and odd columns store the MSB. Thus, the raw image has shape (H, 2*W) for an image of height H and width W, where each adjacent pair of columns encodes one 16-bit pixel value. The code snippet below reconstructs the full 16-bit image; if only an 8-bit representation is needed, the MSB alone can be used:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># raw: 8-bit interleaved data (shape: H, 2*W)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># raw: 8-bit interleaved data (shape: H, 2*W)</span>
 </span></span><span style="display:flex;"><span>lsb <span style="color:#f92672">=</span> raw_u8[:, ::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
 </span></span><span style="display:flex;"><span>msb <span style="color:#f92672">=</span> raw_u8[:, <span style="color:#ae81ff">1</span>::<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>astype(np<span style="color:#f92672">.</span>uint16)
 </span></span><span style="display:flex;"><span>raw16 <span style="color:#f92672">=</span> (msb <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">8</span>) <span style="color:#f92672">|</span> lsb  <span style="color:#75715e"># Combine into 16-bit values</span>
@@ -349,11 +349,11 @@ Below is a comparison of the raw Bayer image and the custom real-time ISP-proces
 <p>For the Raspberry Pi HQ Camera, the raw output is 8-bit per pixel. With 2×2 binning, the image width is 2028 pixels (half of the IMX477 sensor’s 4056 active pixels). Because MSB and LSB values are interleaved, this results in 2028 × 2 = 4056 pixels per row, at 8 bits each.</p>
 <p>Thus, one row contains 4056 bytes of pixel data. Since DMA requires the stride to be a multiple of 256, the row length is padded with an additional 40 bytes. This makes the actual stride 4096 bytes per row. The figure below illustrates the interleaved MSB/LSB columns and how striding is applied.</p>
 <figure class="center"><img src="/img/blog/CameraISP/Striding_illstration.png"
-    alt="Striding_illstration" width="80%">
+			alt="Striding_illstration" width="80%">
 </figure>
 
 <p>The code below demonstrates how to reconstruct either a 16-bit or 8-bit image with stride correction applied. The figure shows the raw interleaved 8-bit output from the camera alongside the properly reconstructed 16-bit image. Notice the black edge on the right side of the Raw Bayer Image—this corresponds to the 40 padded pixels added at the end of each row.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">unpack_and_trim_raw</span>(raw, img_width_px, bit_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">unpack_and_trim_raw</span>(raw, img_width_px, bit_depth<span style="color:#f92672">=</span><span style="color:#ae81ff">16</span>):
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Remove padding or stride artifacts from a raw Bayer image.
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
@@ -408,10 +408,10 @@ Below is a comparison of the raw Bayer image and the custom real-time ISP-proces
 <h2 id="black-offset-correction">Black Offset Correction</h2>
 <p>The black offset was characterized with the camera’s optical path completely blocked by a lens cap to ensure no incident light. The analog gain was set to 4.0, corresponding to the midpoint of the Raspberry Pi HQ camera’s gain range (1.0–8.0), and the exposure time was set to 500 µs. This short exposure minimizes the contribution of dark current to the measurement. The black offset is defined here as the mean pixel value, expressed in gray levels (GL), computed over the entire image frame. Under these conditions, the measured black offset was approximately 4110 GL, as shown in the histogram below. This offset is subtracted from all subsequent raw images as part of the preprocessing pipeline. The implementation of the black offset subtraction function is also provided below.</p>
 <figure class="center"><img src="/img/blog/CameraISP/black_offset_histogram.png"
-    alt="black_offset_histogram" width="auto">
+			alt="black_offset_histogram" width="auto">
 </figure>
 
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">apply_black_offset</span>(image, offset):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">apply_black_offset</span>(image, offset):
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Subtracts a constant black offset from the image. 
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Offset can be measured from the black_offset_measurement.py script.
@@ -438,7 +438,7 @@ Below is a comparison of the raw Bayer image and the custom real-time ISP-proces
 </span></span></code></pre></div><hr>
 <h2 id="demosaicing">Demosaicing</h2>
 <p>A simple bilinear demosaicing algorithm from the OpenCV library is used to convert the Bayer image into a three-channel RGB image. In bilinear demosaicing, each missing color value is estimated by averaging the nearest four pixels of that color channel. The figure below compares the linear image before and after demosaicing. For visual reference, the Bayer mosaic pattern used here is BGGR, as shown in the inserted diagram. Note that the images are presented in linear RGB space (with no gamma encoding applied). While bilinear interpolation is straightforward, there are many more advanced demosaicing algorithms that can produce higher-quality results. The implications of different demosaicing choices will be discussed in the next blog post.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>linear_bgr <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(raw_unstrided_blckoff_u16, cv2<span style="color:#f92672">.</span>COLOR_BAYER_BGGR2BGR)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>linear_bgr <span style="color:#f92672">=</span> cv2<span style="color:#f92672">.</span>cvtColor(raw_unstrided_blckoff_u16, cv2<span style="color:#f92672">.</span>COLOR_BAYER_BGGR2BGR)
 </span></span></code></pre></div><div style="display: flex; gap: 1em; justify-content: center; align-items: flex-start; margin-bottom: 1.0em;">
   <div style="flex: 1;">
     <h4>Raw Bayer image:</h4>
@@ -483,7 +483,9 @@ B_r/B_m
 \]<p>I then normalize so that the mean of the all gains is 1:</p>
 \[
 \bar{g} = \frac{G_r + G_g + G_b}{3}
-\]\[
+\]<p>
+</p>
+\[
 \text{gain} = 
 \begin{bmatrix}
 G_r/\bar{g} \\ 
@@ -501,7 +503,7 @@ G_b/\bar{g}
     <img src="/img/blog/CameraISP/white_balanced_image.png" alt="white_balanced_image" style="max-width: 100%;">
   </div>
 </div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">white_balance_to_gray_patch</span>(img_rgb_f01, measured_patch_rgb_f01, reference_patch_rgb_f01):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">white_balance_to_gray_patch</span>(img_rgb_f01, measured_patch_rgb_f01, reference_patch_rgb_f01):
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Applies white balance correction based on a reference gray patch.
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
@@ -572,7 +574,9 @@ R'_{24} & G'_{24} & B'_{24}
 \]<p>Once \(\mathbf{A}\) is found, each pixel of the white-balanced image \(\mathbf{I}_{\text{measured}}\) can be color corrected as:</p>
 \[
 \mathbf{I}_{\text{corrected}} = \mathbf{I}_{\text{measured}} \cdot \mathbf{A}
-\]\[
+\]<p>Expanded for all \(N\) pixels:
+</p>
+\[
 \begin{bmatrix}
 R^c_1 & G^c_1 & B^c_1 \\
 R^c_2 & G^c_2 & B^c_2 \\
@@ -603,7 +607,7 @@ a_{BR} & a_{BG} & a_{BB}
     <img src="/img/blog/CameraISP/white_balanced_ccm_image.png" alt="white_balanced_ccm_image" style="max-width: 100%;">
   </div>
 </div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">srgb_to_linear</span>(srgb_f01: np<span style="color:#f92672">.</span>ndarray) <span style="color:#f92672">-&gt;</span> np<span style="color:#f92672">.</span>ndarray:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">srgb_to_linear</span>(srgb_f01: np<span style="color:#f92672">.</span>ndarray) <span style="color:#f92672">-&gt;</span> np<span style="color:#f92672">.</span>ndarray:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Convert sRGB to linear RGB (IEC 61966-2-1 standard).
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
@@ -652,7 +656,7 @@ a_{BR} & a_{BG} & a_{BB}
 </span></span></code></pre></div><hr>
 <h3 id="gamma-correction-to-srgb">Gamma Correction to sRGB</h3>
 <p>After white balance and color correction, the image is still represented in linear RGB. To make it suitable for display, I apply gamma correction to map the linear values into the sRGB color space using IEC 61966-2-1 standard. This step ensures that brightness and contrast appear natural to the human eye, since human vision is non-linear, and also matches the expectations of most displays and file formats.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">linear_to_srgb</span>(linear_rgb):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">linear_to_srgb</span>(linear_rgb):
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Convert linear RGB to sRGB (IEC 61966-2-1 gamma encoding).
 </span></span></span><span style="display:flex;"><span><span style="color:#e6db74">

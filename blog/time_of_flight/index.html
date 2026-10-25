@@ -9,8 +9,8 @@
 
 
 
-<title>Aaron Mok | System Architect</title>
-<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect specializing in the design and optimization of complex optical systems.'>
+<title>Aaron Mok | Camera System Engineer</title>
+<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a Camera System Engineer specializing in the design and optimization of complex and miniaturized optical systems.'>
 <meta name="generator-mode" content='production'>
 <style data-generator="critical-css">
 </style>
@@ -261,7 +261,7 @@ p + div {
               Published on
               <h4 id="date">Sat Dec 28, 2024</h4>
               ·
-              <h4 id="wordcount">1172 Words</h4>
+              <h4 id="wordcount">1180 Words</h4>
             </section>
              
           </div>
@@ -273,7 +273,7 @@ p + div {
 <h2 id="the-simplest-model-of-time-of-flight-tof">The simplest model of Time-of-Flight (ToF)</h2>
 <p>In a nutshell, optical time-of-flight (ToF) is a technique to measure distance from A to B.</p>
 <figure class="center"><img src="/img/blog/ToF/simpleModel.png"
-    alt="simpleModel" width="auto">
+			alt="simpleModel" width="auto">
 </figure>
 
 <p>A simple equation that relates speed \(c\), distance \(d\), and time \(t_{AB}\) is as follows.</p>
@@ -288,9 +288,11 @@ p + div {
 <p>However, the above method will need a light source at point A and a detector at point B, and they need to be connected such that the detector knows when a light pulse get emitted from point A, mark at time 0, and when the pulse arrive at point B, mark as t. This makes no sense. Do I have to use a cable to connect the light source and detector? Do I need to place a sensor to every point I want the distance measured? How can I make tens, or hundreds, or thousands of measurements?</p>
 <p>ToF device usually has the light source and detector packaged together. If we want distance from A to B, put the device at point A, then measure the time needed for light to get reflected from point B back to point A.</p>
 <figure class="center"><img src="/img/blog/ToF/ToF_module.png"
-    alt="simpleModel" width="auto">
+			alt="simpleModel" width="auto">
 </figure>
 
+<p>The equation then need to be modified:
+</p>
 \[c = \frac{2\cdot d}{t_{ABA}}\]<p>where:</p>
 <ul>
 <li>\(c\) is the speed of light (\(\approx 3\times10^8\) m/s),a constant.</li>
@@ -319,7 +321,9 @@ p + div {
 <p>Here, if we can measure \(\phi_{ABA}\), then can know the time needed for light to travel from A to B, then back to A, since,</p>
 \[\phi_{ABA} = 2\pi ft_{ABA}\]<h2 id="lock-in-detection">Lock-in detection</h2>
 <p>Lock-in detection can help us to get \(\phi_{ABA}\). It will multiply \(D(t)\) to two reference signals, i.e.</p>
-\[R_1(t) = sin(2\pi ft)\]\[R_2(t) = cos(2\pi ft)\]<p>For the multiplication of \(R_1(t)\), it gives an in-phase component \(I\).</p>
+\[R_1(t) = sin(2\pi ft)\]<p>
+</p>
+\[R_2(t) = cos(2\pi ft)\]<p>For the multiplication of \(R_1(t)\), it gives an in-phase component \(I\).</p>
 \[I = D(t)\cdot R_1(t) = A_2sin(2\pi ft + \phi_{ABA})\cdot sin(2\pi ft)\]<p>Using trigonometric identity, we can get,</p>
 \[I = \frac{A_2}{2}cos(\phi_{ABA}) - \frac{A_2}{2}cos(4\pi ft + \phi_{ABA})\]<p>A simple low pass filter to extract the DC term can give us:</p>
 \[I = \frac{A_2}{2}cos(\phi_{ABA})\]<p>Following the same treatment, the multiplication of \(R_2(t)\) gives an quadrature component \(Q\).
@@ -329,22 +333,22 @@ After a low-pass filter to extract the DC term,</p>
 <h2 id="lock-in-detection-in-action">Lock-in detection in action</h2>
 <p>Let&rsquo;s see how lock-in detection works in action. First, I define a light source with an amplitude of 1 and a modulation frequency of 10 MHz.</p>
 <figure class="center"><img src="/img/blog/ToF/AM_lightsource.png"
-    alt="simpleModel" width="auto">
+			alt="simpleModel" width="auto">
 </figure>
 
 <p>Assume the distance I want to measure is exactly 1m and the reflectivity of the object is 10%. The light that travel back will have a phase-shift and an amplitude of 0.1 (Denoted in &ldquo;noiseless phase-shifted light&rdquo;). To be more realistic, I also add some normal-distributed noise with standard deviation of 0.1 to the detected signal (Denoted in &ldquo;detected signal&rdquo;).</p>
 <figure class="center"><img src="/img/blog/ToF/detected_signal.png"
-    alt="detected_signal" width="auto">
+			alt="detected_signal" width="auto">
 </figure>
 
 <p>Then, we can multiply the detected signal with \(R_1(t)\) to get the in-phase component \(I\) and \(R_2(t)\) to get the quadrature component \(Q\). Below shows the in-phase component \(I\).</p>
 <figure class="center"><img src="/img/blog/ToF/in_phase_component.png"
-    alt="in_phase_component" width="auto">
+			alt="in_phase_component" width="auto">
 </figure>
 
 <p>After that, we can extract the DC term of \(I\) and \(Q\) to complete the calculation. Below shows the Fourier transform of \(I\). The DC term of \(I\) is ~0.0458 and \(Q\) is ~0.0189.</p>
 <figure class="center"><img src="/img/blog/ToF/FFT_I.png"
-    alt="png" width="auto">
+			alt="png" width="auto">
 </figure>
 
 <p>We measured a distance of 0.93 m (Ground-truth is 1m). It is remarkable! The error is &lt;7% with this noisy detected signal! In fact, the SNR of the detected signal is ~0.7 only!</p>
@@ -352,7 +356,7 @@ After a low-pass filter to extract the DC term,</p>
 <h2 id="script-for-simulation">Script for simulation:</h2>
 <p>See below or use this
 <a href="https://github.com/Aaron-Mok/projects/tree/main/ToF_and_lockin/ToF_and_lockin.py">link</a> for the script with plotting.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.fftpack <span style="color:#f92672">import</span> fft
 </span></span><span style="display:flex;"><span>

@@ -9,8 +9,8 @@
 
 
 
-<title>Aaron Mok | System Architect</title>
-<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a System Architect specializing in the design and optimization of complex optical systems.'>
+<title>Aaron Mok | Camera System Engineer</title>
+<meta name="description" content='This is Aaron Mok&#39;s personal website. He is a Camera System Engineer specializing in the design and optimization of complex and miniaturized optical systems.'>
 <meta name="generator-mode" content='production'>
 <style data-generator="critical-css">
 </style>
@@ -279,78 +279,78 @@ The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF
 <h3 id="1-mechanical-scanning">(1) Mechanical Scanning</h3>
 <p>In mechanical scanning, a single beam is swept across the scene using a mechanical scanner. This is done via raster scanning, where the beam moves horizontally (left to right or right to left), then moves down one line, and repeats until the entire field is covered. The illustration below shows the concept:</p>
 <figure class="center"><img src="/img/blog/LiDAR/scanningLiDAR.png"
-    alt="scanning_LiDAR" width="auto">
+			alt="scanning_LiDAR" width="auto">
 </figure>
 
 <p>Numerous scanning methods can achieve this. The table below lists several scanning technologies, along with the typical speed (line rate) and maximum achievable scanning angle for each. To perform 2D scanning, one can pair two scanning methods (identical or different), depending on specific design criteria. Note that for a given scanning method, increasing speed usually reduces the maximum scanning angle.</p>
 <table>
-  <thead>
-      <tr>
-          <th>Scanning Method</th>
-          <th>Line rate</th>
-          <th>Optical scanning angle</th>
-          <th>Common Applications</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>Galvo-mirrors</td>
-          <td>&lt; kHz</td>
-          <td>10<sup>o</sup>-40<sup>o</sup></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Resonant-mirrors</td>
-          <td>~10 kHz</td>
-          <td>1<sup>o</sup>-15<sup>o</sup></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Polygon mirror</td>
-          <td>~10-100 kHz</td>
-          <td>90<sup>o</sup>-360<sup>o</sup></td>
-          <td>Automative LiDAR</td>
-      </tr>
-      <tr>
-          <td>MEMS</td>
-          <td>~10-50 kHz</td>
-          <td>1<sup>o</sup>-10<sup>o</sup></td>
-          <td>AR/VR headsets, smartphones, compact devices</td>
-      </tr>
-      <tr>
-          <td>Fiber optics</td>
-          <td>~1 MHz</td>
-          <td>5<sup>o</sup>-30<sup>o</sup></td>
-          <td></td>
-      </tr>
-      <tr>
-          <td>Rotating mirror</td>
-          <td>10-100 Hz</td>
-          <td>90<sup>o</sup>-360<sup>o</sup></td>
-          <td>Automative LiDAR</td>
-      </tr>
-      <tr>
-          <td>Optical Phased Array (OPA)</td>
-          <td>~ MHz</td>
-          <td>10<sup>o</sup>-120<sup>o</sup></td>
-          <td></td>
-      </tr>
-  </tbody>
+	<thead>
+			<tr>
+					<th>Scanning Method</th>
+					<th>Line rate</th>
+					<th>Optical scanning angle</th>
+					<th>Common Applications</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Galvo-mirrors</td>
+					<td>&lt; kHz</td>
+					<td>10<sup>o</sup>-40<sup>o</sup></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Resonant-mirrors</td>
+					<td>~10 kHz</td>
+					<td>1<sup>o</sup>-15<sup>o</sup></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Polygon mirror</td>
+					<td>~10-100 kHz</td>
+					<td>90<sup>o</sup>-360<sup>o</sup></td>
+					<td>Automative LiDAR</td>
+			</tr>
+			<tr>
+					<td>MEMS</td>
+					<td>~10-50 kHz</td>
+					<td>1<sup>o</sup>-10<sup>o</sup></td>
+					<td>AR/VR headsets, smartphones, compact devices</td>
+			</tr>
+			<tr>
+					<td>Fiber optics</td>
+					<td>~1 MHz</td>
+					<td>5<sup>o</sup>-30<sup>o</sup></td>
+					<td></td>
+			</tr>
+			<tr>
+					<td>Rotating mirror</td>
+					<td>10-100 Hz</td>
+					<td>90<sup>o</sup>-360<sup>o</sup></td>
+					<td>Automative LiDAR</td>
+			</tr>
+			<tr>
+					<td>Optical Phased Array (OPA)</td>
+					<td>~ MHz</td>
+					<td>10<sup>o</sup>-120<sup>o</sup></td>
+					<td></td>
+			</tr>
+	</tbody>
 </table>
 <p><br><br></p>
 <h3 id="2-wide-field-illumination">(2) Wide-field illumination</h3>
 <p>In wide-field illumination, the entire scene is illuminated at once, eliminating the need for mechanical scanning. This approach is sometimes called Flash LiDAR. It is used in Apple’s iPhone and iPad LiDAR modules (see image below):</p>
 <figure class="center"><img src="/img/blog/LiDAR/Apple_LiDAR.webp"
-    alt="Apple_LiDAR" width="500px"><figcaption>
-      <p>Image from Magicplan.app</p>
-    </figcaption>
+			alt="Apple_LiDAR" width="500px"><figcaption>
+			<p>Image from Magicplan.app</p>
+		</figcaption>
 </figure>
 
 <p>This is not to be confused with the Face ID depth-sensing technology, which uses “light coding”. In this post, we focus on ToF-based depth sensing.</p>
 <p>The schematic below illustrates the principle. We flood the entire scene with light (usually infrared), then capture the reflected or scattered light on a sensor (e.g., Sony IMX591). The depth for the entire scene is determined in a single shot—akin to a camera flash—thus the name Flash LiDAR.</p>
 <p>Flash LiDAR illumination typically uses VCSEL (Vertical Cavity Surface-Emitting Laser) arrays that emit short pulses (on the order of nanoseconds) and form dot patterns. Temporal (pulsing) and spatial (dot pattern) modulation both help improve the signal-to-noise ratio (SNR). We’ll cover more details in a separate post. Briefly, pulsed lasers enable temporal separation of the laser signal from ambient light and dot patterns enable spatial separation of the laser signal from ambient light. For ToF detection, avalanche photodiodes (APDs) or silicon photomultipliers (SiPMs) measure the ToF of the laser pulses directly, typically with resolutions on the order of hundreds of picoseconds. These photodiodes are arranged in a 2D array to capture the entire scene’s depth information simultaneously, just like a camera sensor.</p>
 <figure class="center"><img src="/img/blog/LiDAR/wideField_LiDAR.png"
-    alt="wideField_LiDAR" width="auto">
+			alt="wideField_LiDAR" width="auto">
 </figure>
 
 <p><br><br></p>
@@ -359,9 +359,9 @@ The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF
 <h3 id="illumination-system">Illumination system</h3>
 <p>A key goal in Flash LiDAR illumination is to project a dot-pattern over the target area. Below is an example of a VCSEL array as the light source:
 <figure class="center"><img src="/img/blog/LiDAR/VCSEL_array.png"
-    alt="VCSEL_array" width="50%"><figcaption>
-      <p>Image from lighttrans.com</p>
-    </figcaption>
+			alt="VCSEL_array" width="50%"><figcaption>
+			<p>Image from lighttrans.com</p>
+		</figcaption>
 </figure>
 </p>
 <p>Our aim is to project the 1.6 × 1.6 mm square source to approximately a 160 × 160 mm area at 1 m from the last lens surface. This can be achieved using an aspheric collimating lens of fixed focal length.</p>
@@ -382,34 +382,34 @@ The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF
 <p><br><br></p>
 <p>We find that a focal length \(f\) of 10 mm is needed. The collimator below shows the lens we need. The VCSEL array will be placed at the object plane. The object plane in the Zemax model is about 2.26 mm diagonally — this corresponds to the diagonal of a 1.6 mm square that the optical design must accommodate.
 <figure class="center"><img src="/img/blog/LiDAR/Collimator_optics.png"
-    alt="Collimator_optics" width="50%">
+			alt="Collimator_optics" width="50%">
 </figure>
 
 <figure class="center"><img src="/img/blog/LiDAR/illuminationOptics_projection.png"
-    alt="illuminationOptics_projection" width="50%"><figcaption>
-      <p>Lenses from Zemax.com</p>
-    </figcaption>
+			alt="illuminationOptics_projection" width="50%"><figcaption>
+			<p>Lenses from Zemax.com</p>
+		</figcaption>
 </figure>
 </p>
 <p>Using Zemax, we can visualize the intensity distribution from the 1.6 × 1.6 mm square at the image plane, which is roughly 200 mm × 200 mm (the diagonal is about 283 mm):
 <figure class="center"><img src="/img/blog/LiDAR/LiDARImage_nodiffraction_small.jpg"
-    alt="LiDARImage_nodiffraction" width="50%">
+			alt="LiDARImage_nodiffraction" width="50%">
 </figure>
 </p>
 <p>If 283 mm of illumination is insufficient, we can add two diffraction gratings oriented perpendicularly to expand the illumination Field of View (FOV). The images below show the effect of these gratings. Notice that higher-order diffraction patterns become distorted because the diffraction angle depends on the incidence angle. Different points on the VCSEL array hit the grating at slightly different angles, leading to different diffraction angle.</p>
 <p><figure class="center"><img src="/img/blog/LiDAR/illuminationOptics.jpg"
-    alt="illuminationOptics" width="50%">
+			alt="illuminationOptics" width="50%">
 </figure>
 
 <figure class="center"><img src="/img/blog/LiDAR/LiDARImage_withdiffraction_small.jpg"
-    alt="LiDARImage_withdiffraction" width="50%">
+			alt="LiDARImage_withdiffraction" width="50%">
 </figure>
 </p>
 <p>Here, we show the intensity distribution of the whole FOV. However, if the object plane is a VCSEL array, the final projected pattern is a grid of dots. The iPhone LiDAR pattern below illustrates how Apple uses a VCSEL array and diffraction gratings for the flash LiDAR system:</p>
 <figure class="center"><img src="/img/blog/LiDAR/iphoneLidar_pattern.jpg"
-    alt="iphoneLidar_pattern" width="50%"><figcaption>
-      <p>Image from medium.com</p>
-    </figcaption>
+			alt="iphoneLidar_pattern" width="50%"><figcaption>
+			<p>Image from medium.com</p>
+		</figcaption>
 </figure>
 
 <h3 id="imaging-system">Imaging system</h3>
@@ -417,14 +417,14 @@ The answer lies in Light Detection and Ranging (LiDAR) — a system based on ToF
 <p>With the crossed diffraction gratings, we expanded the illumination FOV to a 600 × 600 mm area at 1 m (i.e., 3 × 200 mm). The half-FOV required for the imaging system then becomes:</p>
 \[tan (\theta_{FOV}) = \frac{424 mm}{1000 mm} \Rightarrow  \theta_{FOV} = 23^o\]<p>The 424 mm is the half diagonal of the 600 x 600 mm square. We can image this FOV with a common Cooke triplet imaging lens—essentially a high-index negative lens sandwiched between two low-index positive lenses:
 <figure class="center"><img src="/img/blog/LiDAR/imagingOptics.png"
-    alt="imagingOptics" width="40%"><figcaption>
-      <p>Lenses from Zemax.com</p>
-    </figcaption>
+			alt="imagingOptics" width="40%"><figcaption>
+			<p>Lenses from Zemax.com</p>
+		</figcaption>
 </figure>
 </p>
 <p>Simulating the optical performance at a 23° FOV shows that it approaches diffraction-limited quality:
 <figure class="center"><img src="/img/blog/LiDAR/imaging_MTF.jpg"
-    alt="imaging_MTF" width="50%">
+			alt="imaging_MTF" width="50%">
 </figure>
 </p>
 <p>In summary, by combining dot-pattern illumination (Flash LiDAR) with a suitably designed imaging lens, we can capture depth information of an entire scene in one shot. Combined with a ToF sensor, we can achieve a truly camera-like Tof depth measurement system.</p>
